@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="374px" height="376px" viewBox="0 0 374 376" version="1.1" xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>编组 8</title>
+    <defs>
+        <circle id="path-1" cx="187" cy="187" r="187"></circle>
+        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="374"
+              height="374" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+    </defs>
+    <g id="安监平台大屏" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="实时视频" transform="translate(0.000000, 1.000000)" stroke="#62FFCB">
+            <use id="椭圆形" mask="url(#mask-2)" stroke-width="4" stroke-dasharray="2,4" xlink:href="#path-1"></use>
+            <path d="M1.0600321,362.042458 C21.5667853,369.77136 43.7895668,374 67,374 C170.277248,374 254,290.277248 254,187 C254,83.7227518 170.277248,0 67,0 C43.8069803,0 21.600131,4.22229693 1.10619033,11.9401523"
+                  id="路径" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  transform="translate(127.530016, 187.000000) scale(-1, 1) translate(-127.530016, -187.000000) "></path>
+        </g>
+    </g>
+</svg>

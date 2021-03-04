@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="88px" height="78px" viewBox="0 0 88 78" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>证件过期</title>
+    <defs>
+        <circle id="path-1" cx="49" cy="39" r="39"></circle>
+        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="78" height="78" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+    </defs>
+    <g id="数据大屏" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="安监主屏2" transform="translate(-595.000000, -300.000000)">
+            <g id="证件过期" transform="translate(595.000000, 300.000000)">
+                <use id="椭圆形" stroke="#06F398" mask="url(#mask-2)" stroke-width="2" fill-opacity="0.3" fill="#000000" stroke-dasharray="2,2" xlink:href="#path-1"></use>
+                <circle id="椭圆形" stroke="#C41D12" fill-opacity="0.5" fill="#000000" cx="49" cy="39" r="19.5"></circle>
+                <circle id="椭圆形" fill="#FF2516" cx="49" cy="39" r="6"></circle>
+                <g id="证" transform="translate(0.000000, 29.000000)">
+                    <path d="M13,0.866025404 L19.9592921,4.8839746 C20.8874954,5.41987298 21.4592921,6.41025404 21.4592921,7.48205081 L21.4592921,15.5179492 C21.4592921,16.589746 20.8874954,17.580127 19.9592921,18.1160254 L13,22.1339746 C12.0717968,22.669873 10.9282032,22.669873 10,22.1339746 L3.04070786,18.1160254 C2.11250463,17.580127 1.54070786,16.589746 1.54070786,15.5179492 L1.54070786,7.48205081 C1.54070786,6.41025404 2.11250463,5.41987298 3.04070786,4.8839746 L10,0.866025404 C10.9282032,0.330127019 12.0717968,0.330127019 13,0.866025404 Z" id="多边形" fill="#A90850" transform="translate(11.500000, 11.500000) rotate(90.000000) translate(-11.500000, -11.500000) "></path>
+                    <text font-family="PingFangSC-Regular, PingFang SC" font-size="12" font-weight="normal" letter-spacing="0.5" fill="#000000">
+                        <tspan x="5" y="16">证</tspan>
+                    </text>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

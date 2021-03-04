@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="205px" height="34px" viewBox="0 0 205 34" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>LOGO</title>
+    <g id="功能界面" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" font-weight="normal" letter-spacing="1">
+        <g id="数据看板/实时视频/镶嵌模式" transform="translate(-16.000000, -13.000000)" fill="#FFFFFF">
+            <g id="LOGO" transform="translate(16.000000, 9.000000)">
+                <text id="SHENMU-Data-monitori" opacity="0.600000024" font-family="GoodTimes, Good Times" font-size="10">
+                    <tspan x="1" y="37">SHENMU Data monitoring</tspan>
+                </text>
+                <text id="神木市煤矿安监平台" font-family="PingFangSC-Regular, PingFang SC" font-size="22">
+                    <tspan x="0" y="23">神木市煤矿安监平台</tspan>
+                </text>
+            </g>
+        </g>
+    </g>
+</svg>

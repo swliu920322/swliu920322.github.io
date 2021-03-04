@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="316" height="280" viewBox="0 0 316 280" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+ <g>
+  <circle transform="rotate(25,158,152.5)" cx="158" cy="152.5" r="6" fill="#62FFCB"/>
+  <circle transform="rotate(25,158,152.5)" cx="158" cy="60" r="5" stroke="#62FFCB" stroke-width="1" fill="transparent"/>
+  <circle transform="rotate(25,158,152.5)" cx="224.0325" cy="190.625" r="5" stroke="#62FFCB" stroke-width="1" fill="transparent"/>
+  <circle transform="rotate(25,158,152.5)" cx="101.71" cy="185" r="5" stroke="#62FFCB" stroke-width="1" fill="transparent"/>
+  <line transform="rotate(25,158,152.5)" x1="158" y1="152.5" x2="158" y2="65" stroke="#62FFCB" stroke-width="2" stroke-dasharray="2,2"/>
+  <line transform="rotate(25,158,152.5)" x1="158" y1="152.5" x2="219.7025" y2="188.125" stroke="#62FFCB" stroke-width="2" stroke-dasharray="2,2"/>
+  <line transform="rotate(25,158,152.5)" x1="158" y1="152.5" x2="106.04" y2="182.5" stroke="#62FFCB" stroke-width="2" stroke-dasharray="2,2"/>
+  <polygon transform="rotate(25,158,152.5)" points="158,114.375 191.01625,171.5625 124.98375,171.5625" stroke="#62FFCB" stroke-width="2" fill="rgba(236,236,236,0.2)"/>
+ </g>
+</svg>
+

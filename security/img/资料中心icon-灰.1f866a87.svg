@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="14px" height="14px" viewBox="0 0 14 14" version="1.1" xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>资料中心icon-灰</title>
+    <g id="功能界面" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.649999976">
+        <g id="通用控件-切图" transform="translate(-16.000000, -385.000000)">
+            <g id="B-管控-关" transform="translate(0.000000, 144.000000)">
+                <g id="5资料中心" transform="translate(0.000000, 228.000000)">
+                    <g id="资料中心icon-灰" transform="translate(16.000000, 13.000000)">
+                        <path d="M4.63848323,1.5 L6.65287818,3.34489565 L12.5,3.4879193 L12.5,12.5 L1.5,12.5 L1.5,1.5 L4.63848323,1.5 Z"
+                              id="矩形" stroke="#FFFFFF"></path>
+                        <line x1="1.5" y1="6.5" x2="12.5" y2="6.5" id="直线" stroke="#FFFFFF"
+                              stroke-linecap="square"></line>
+                        <line x1="1.5" y1="6.5" x2="12.5" y2="6.5" id="直线" stroke="#FFFFFF"
+                              stroke-linecap="square"></line>
+                        <line x1="7" y1="9" x2="10.0105591" y2="9" id="直线" stroke="#FFFFFF"
+                              stroke-linecap="square"></line>
+                        <rect id="矩形" fill="#FFFFFF" fill-rule="nonzero" opacity="0" x="0" y="0" width="14"
+                              height="14"></rect>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="21px" height="51px" viewBox="0 0 21 51" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>按钮</title>
+    <g id="数据大屏" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="安监主屏2" transform="translate(-860.000000, -690.000000)">
+            <g id="选中煤矿" transform="translate(650.000000, 498.000000)">
+                <g id="编组-34" transform="translate(168.000000, 124.000000)">
+                    <g id="按钮" transform="translate(42.000000, 68.000000)">
+                        <g id="编组-33" fill="#FF2516" opacity="0.340000004">
+                            <path d="M10,0 C15.5228475,0 20,4.4771525 20,10 L20,10 L12,10 C10.8954305,10 10,10.8954305 10,12 L10,12 L10,20 C4.4771525,20 0,15.5228475 0,10 C0,4.4771525 4.4771525,0 10,0 Z" id="形状结合"></path>
+                        </g>
+                        <path d="M13,11 L19,11 C20.1045695,11 21,11.8954305 21,13 L21,39 C21,40.1045695 20.1045695,41 19,41 L13,41 C11.8954305,41 11,40.1045695 11,39 L11,13 C11,11.8954305 11.8954305,11 13,11 Z" id="矩形" fill="#64E1F2"></path>
+                        <path d="M14.3990289,42 L19,42 C20.1045695,42 21,42.8954305 21,44 L21,49 C21,50.1045695 20.1045695,51 19,51 L18.3536134,51 C16.9009449,51 15.5624625,50.2124325 14.8569843,48.9425717 L12.6507144,44.9712859 C12.114288,44.0057184 12.4621756,42.7881118 13.4277431,42.2516854 C13.7248591,42.086621 14.0591404,42 14.3990289,42 Z" id="矩形" fill="#FE0271"></path>
+                        <text id="L02" transform="translate(15.500000, 26.000000) rotate(90.000000) translate(-15.500000, -26.000000) " font-family="PingFangSC-Regular, PingFang SC" font-size="6" font-weight="normal" fill="#101010">
+                            <tspan x="10" y="28">L02</tspan>
+                        </text>
+                        <circle id="椭圆形" fill="#101010" cx="14.5" cy="14.5" r="1.5"></circle>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="14px" height="15px" viewBox="0 0 14 15" version="1.1" xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>煤矿管理icon-灰</title>
+    <g id="功能界面" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.65">
+        <g id="通用控件-切图" transform="translate(-16.000000, -192.000000)">
+            <g id="B-管控-关" transform="translate(0.000000, 144.000000)">
+                <g id="1煤矿管理" transform="translate(0.000000, 36.000000)">
+                    <g id="煤矿管理icon-灰" transform="translate(16.000000, 13.000000)">
+                        <path d="M1.94848633,9.95678711 L5.50354004,1 L8.17048633,7.772 L10.1772461,4.03051758 L12.2578125,9.95678711 L1.94848633,9.95678711 Z"
+                              id="形状结合" stroke="#FFFFFF"></path>
+                        <rect id="矩形" fill="#FFFFFF" x="4" y="12" width="6" height="1"></rect>
+                        <rect id="矩形" fill="#FFFFFF" fill-rule="nonzero" opacity="0" x="-4.54747351e-13" y="0"
+                              width="14" height="14"></rect>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

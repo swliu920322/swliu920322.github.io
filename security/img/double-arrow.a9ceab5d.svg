@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="36px" height="36px" viewBox="0 0 36 36" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>方向向右-双</title>
+    <g id="安监平台大屏" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="综合图表" transform="translate(-942.000000, -346.000000)" fill-rule="nonzero">
+            <g id="箭头" transform="translate(942.000000, 194.000000)">
+                <g id="方向向右-双" transform="translate(0.000000, 152.000000)">
+                    <rect id="矩形" fill="#000000" opacity="0" x="0" y="0" width="36" height="36"></rect>
+                    <path d="M15.036,6.00000001 L24.0585,6.00000001 L36,18 L24.0585,30 L15.036,30 L26.9775,18 L15.036,6.00000001 Z M0,30 L9.0225,30 L20.964,18 L9.0225,6.00000001 L0,6.00000001 L11.9415,18 L0,30 Z" id="形状" fill="#62FFCB" transform="translate(18.000000, 18.000000) rotate(-90.000000) translate(-18.000000, -18.000000) "></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
