@@ -4,6 +4,35 @@
   
     
     <entry>
+      <title>项目脚手架解决方案</title>
+      <link href="2021/08/01/%E6%8A%80%E6%9C%AF/%E9%A1%B9%E7%9B%AE%E8%84%9A%E6%89%8B%E6%9E%B6/"/>
+      <url>2021/08/01/%E6%8A%80%E6%9C%AF/%E9%A1%B9%E7%9B%AE%E8%84%9A%E6%89%8B%E6%9E%B6/</url>
+      
+        <content type="html"><![CDATA[<h1 id="脚手架解决方案"><a href="#脚手架解决方案" class="headerlink" title="脚手架解决方案"></a>脚手架解决方案</h1><p>在多个项目中，很多内容都是可以复用的，手动通过脚手架创建的只是一个很基础的功能，所以需要构建自己的脚手架</p><h2 id="yeoman"><a href="#yeoman" class="headerlink" title="yeoman"></a><a href="https://yeoman.io/">yeoman</a></h2><h3 id="yeoman是什么"><a href="#yeoman是什么" class="headerlink" title="yeoman是什么"></a>yeoman是什么</h3><p>yeoman 是一个快速建立项目的工具，它其实是下面的集合</p><ul><li>yo –脚手架，生成工具</li><li>grunt，gulp – 构建工具</li><li>bower，npm – 包管理工具  </li></ul><p>任何人可以通过它创建通用的模板，命名为generator-xxx, 执行的时候运行yo xxx就行</p><h3 id="yeoman-快速创建项目"><a href="#yeoman-快速创建项目" class="headerlink" title="yeoman 快速创建项目"></a>yeoman 快速创建项目</h3><ol><li>首先(全局)安装yo  <code>yarn global add yo</code></li><li>我们以generator-node模块为例，安装  <code>yarn global add generator-node</code> 里面有很多功能</li><li>创建文件夹<code>mkdir yo-quick</code>, 进入运行 <code>yo node</code>,回答一些问题，会自动创建模板文件<br><img src="/images/2021/8/1/yo-quick.png"></li></ol><h3 id="yeoman-创建自定义的脚手架"><a href="#yeoman-创建自定义的脚手架" class="headerlink" title="yeoman 创建自定义的脚手架"></a>yeoman 创建自定义的脚手架</h3><p>创建generator，其实就是创建一个npm模块，依赖于<a href="https://yeoman.io/authoring/index.html">yeoman-generator</a> 模块</p><ol><li>创建一个文件夹叫generator-self,新建<code>generators/app/index.js</code>文件，</li><li>问题的内容在prompting中，把答案存入this上下文的内容中,写入文件的内容在writing中，<ul><li>直接写文件 <code>this.fs.write(目标地址, 携带参数(用于ejs解析))</code></li><li>写入模板 <code>this.fs.copyTml(源文件, 目标地址, 携带参数(用于ejs解析))</code></li></ul></li><li>本地使用的话 <code>yarn link</code>，或者发到npm包里</li><li>运行的时候需要yo 包名，跑的是app目录下的</li><li>可以在app同级目录简历其他名称，yo 包名:名称就可以跑额外任务了</li></ol><p>列举一些this上下文方法</p><ul><li>安装依赖npm <code>this.npmInstall([&#39;lodash&#39;], &#123; &#39;save-dev&#39;: true &#125;);</code></li><li>安装依赖yarn <code>this.yarnInstall([&#39;lodash&#39;], &#123; &#39;dev&#39;: true &#125;);</code></li><li>运行脚本 <code>this.spawnCommand(&#39;composer&#39;, [&#39;install&#39;]);</code></li><li>用户输入<pre class="line-numbers language-none"><code class="language-none">this.prompt([&#123;  type: &quot;confirm&quot;,  name: &quot;cool&quot;,  message: &quot;Would you like to enable the Cool feature?&quot;&#125;])<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre></li><li>打印log <code>this.log(&quot;cool feature&quot;, this.answers.cool);</code> // user answer <code>cool</code> used</li><li>验证额外参数 <pre class="line-numbers language-none"><code class="language-none">this.option(&quot;coffee&quot;);  this.scriptSuffix &#x3D; this.options.coffee ? &quot;.coffee&quot; : &quot;.js&quot;;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li><li>获取根级目录 <code>this.destinationRoot();</code></li><li>获取目标路径 <code>this.destinationPath(&#39;index.js&#39;);</code></li><li>使用ejs模板和数据填充内容<pre class="line-numbers language-none"><code class="language-none">this.fs.copyTpl(  this.templatePath(&#39;index.html&#39;),  this.destinationPath(&#39;public&#x2F;index.html&#39;),  &#123; title: &#39;Templating with Yeoman&#39; &#125;);<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre></li></ul><h2 id="plop"><a href="#plop" class="headerlink" title="plop"></a><a href="https://plopjs.com/">plop</a></h2><p>plop是一个帮你节省时间，帮助你的团队创建一致的新文件的小工具。<br>plop是根据配置模板，统一创建新文件的工具，类似 ng g page那种类型<br>其实类似webstorm创建项目的一些模板</p><ol><li>使用plop，首先在项目中安装plop依赖 <code>yarn add global plop</code>也行</li><li>在项目根目录创建<code>plopfile.js</code>文件<pre class="line-numbers language-none"><code class="language-none">   module.exports &#x3D; function (plop) &#123;    &#x2F;&#x2F; create your generators here    plop.setGenerator(&#39;component&#39;, &#123;        description: &#39;create component&#39;,        prompts: [&#123; &#x2F;&#x2F; 类似之前的提问            type: &#39;input&#39;,            name: &#39;name&#39;,            message: &#39;component name&#39;,            default: &#39;my component&#39;        &#125;],        actions: [&#123; &#x2F;&#x2F; 创建的操作            type: &#39;add&#39;,            path: &#39;src&#x2F;components&#x2F;&#123;&#123;name&#125;&#125;&#x2F;&#123;&#123;name&#125;&#125;.vue&#39;,            templateFile: &#39;template&#x2F;components.hbs&#39;        &#125;]    &#125;);&#125;;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li><li>创建生成的模板,以hbs文件结尾，内部用<code>&#123;&#123;name&#125;&#125;</code>来表示变量</li><li><code>yarn link</code>后可以使用了，运行用<code>yarn plop 名称</code>代替比如说<code>yarn plop component</code></li></ol><h2 id="node自己实现"><a href="#node自己实现" class="headerlink" title="node自己实现"></a>node自己实现</h2><p>node自己实现原理也都是脚手架的原理 </p><ol><li>在项目里面加入cli.js,第一行写成 <code>#!/usr/bin/env node</code>，里面可以写node对文件的操作</li><li>先在package.json里面加入<code>bin: &quot;cli.js&quot;</code>，</li><li>之后npm link之后就可以使用包名来执行了,</li><li>问答库可以使用<code>inquirer</code>，用法和以上类似</li><li>渲染库使用 <code>ejs</code>,用法是<code>ejs.renderFile(path.join(tmplDir,file), answer, (err,res) =&gt; &#123; fs.writeFileSync(path.join(destDir,file), result) &#125;,</code></li><li>基本上使用的都是node的fs文件模块的命令。</li></ol><h2 id="代码查看，以上的实践代码，点击查看"><a href="#代码查看，以上的实践代码，点击查看" class="headerlink" title="代码查看，以上的实践代码，点击查看"></a>代码查看，以上的实践代码，<a href="https://github.com/swliu920322/lagou-code/tree/main/2.%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%8C%96%E5%AE%9E%E6%88%98/2.%E8%84%9A%E6%89%8B%E6%9E%B6%E5%B7%A5%E5%85%B7">点击查看</a></h2>]]></content>
+      
+      
+      <categories>
+          
+          <category> 脚手架解决方案 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 脚手架 </tag>
+            
+            <tag> 工程化 </tag>
+            
+            <tag> 拉钩大前端 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>105.从前序与中序遍历序列构造二叉树</title>
       <link href="2021/07/14/%E7%AE%97%E6%B3%95/leetcode/105.%E4%BB%8E%E5%89%8D%E5%BA%8F%E4%B8%8E%E4%B8%AD%E5%BA%8F%E9%81%8D%E5%8E%86%E5%BA%8F%E5%88%97%E6%9E%84%E9%80%A0%E4%BA%8C%E5%8F%89%E6%A0%91/"/>
       <url>2021/07/14/%E7%AE%97%E6%B3%95/leetcode/105.%E4%BB%8E%E5%89%8D%E5%BA%8F%E4%B8%8E%E4%B8%AD%E5%BA%8F%E9%81%8D%E5%8E%86%E5%BA%8F%E5%88%97%E6%9E%84%E9%80%A0%E4%BA%8C%E5%8F%89%E6%A0%91/</url>
@@ -127,6 +156,33 @@
             <tag> vue3 </tag>
             
             <tag> 闭包 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>lodash.concat</title>
+      <link href="2021/03/20/%E6%BA%90%E7%A0%81/lodash/lodash_array/concat/"/>
+      <url>2021/03/20/%E6%BA%90%E7%A0%81/lodash/lodash_array/concat/</url>
+      
+        <content type="html"><![CDATA[<pre class="line-numbers language-typescript" data-language="typescript"><code class="language-typescript"><span class="token comment">// 自己实现</span><span class="token keyword">function</span> <span class="token function">concat</span><span class="token punctuation">(</span><span class="token operator">...</span>args<span class="token operator">:</span> <span class="token builtin">any</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>    <span class="token keyword">return</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">concat</span><span class="token punctuation">(</span><span class="token operator">...</span>args<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> 源码 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> lodash </tag>
+            
+            <tag> lodash_array </tag>
             
         </tags>
       
