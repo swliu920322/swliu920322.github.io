@@ -96,7 +96,7 @@
 
 
 
-  <meta name="keywords" content="算法,leetcode," />
+  <meta name="keywords" content="算法,leetcode,二叉树," />
 
 
 
@@ -107,18 +107,19 @@
 
 
 
-<meta name="description" content="105.从前序与中序遍历序列构造二叉树给定一棵树的前序遍历 preorder 与中序遍历  inorder。请构造二叉树并返回其根节点 示例 1: Input: preorder &#x3D; [3,9,20,15,7], inorder &#x3D; [9,3,15,20,7] Output: [3,9,20,null,null,15,7] 解题思路 前序遍历是，先遍历根节点，再遍历左子树，再遍">
+<meta name="description" content="105.从前序与中序遍历序列构造二叉树给定一棵树的前序遍历 preorder 与中序遍历 inorder。请构造二叉树并返回其根节点 示例 1: Input: preorder &#x3D; [3,9,20,15,7], inorder &#x3D; [9,3,15,20,7] Output: [3,9,20,null,null,15,7]  解题思路 前序遍历是，先遍历根节点，再遍历左子树，再遍">
 <meta property="og:type" content="article">
 <meta property="og:title" content="105.从前序与中序遍历序列构造二叉树">
 <meta property="og:url" content="https://swliu920322.github.io/2021/07/14/%E7%AE%97%E6%B3%95/leetcode/105.%E4%BB%8E%E5%89%8D%E5%BA%8F%E4%B8%8E%E4%B8%AD%E5%BA%8F%E9%81%8D%E5%8E%86%E5%BA%8F%E5%88%97%E6%9E%84%E9%80%A0%E4%BA%8C%E5%8F%89%E6%A0%91/index.html">
 <meta property="og:site_name" content="技术博客">
-<meta property="og:description" content="105.从前序与中序遍历序列构造二叉树给定一棵树的前序遍历 preorder 与中序遍历  inorder。请构造二叉树并返回其根节点 示例 1: Input: preorder &#x3D; [3,9,20,15,7], inorder &#x3D; [9,3,15,20,7] Output: [3,9,20,null,null,15,7] 解题思路 前序遍历是，先遍历根节点，再遍历左子树，再遍">
+<meta property="og:description" content="105.从前序与中序遍历序列构造二叉树给定一棵树的前序遍历 preorder 与中序遍历 inorder。请构造二叉树并返回其根节点 示例 1: Input: preorder &#x3D; [3,9,20,15,7], inorder &#x3D; [9,3,15,20,7] Output: [3,9,20,null,null,15,7]  解题思路 前序遍历是，先遍历根节点，再遍历左子树，再遍">
 <meta property="og:locale">
 <meta property="article:published_time" content="2021-07-14T14:30:47.000Z">
-<meta property="article:modified_time" content="2021-07-14T14:53:04.459Z">
+<meta property="article:modified_time" content="2021-08-05T16:09:55.963Z">
 <meta property="article:author" content="刘圣伟">
 <meta property="article:tag" content="算法">
 <meta property="article:tag" content="leetcode">
+<meta property="article:tag" content="二叉树">
 <meta name="twitter:card" content="summary">
 
 
@@ -462,7 +463,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  256 words
+                  478 words
                 </span>
               
 
@@ -478,7 +479,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  1 min
+                  2 min
                 </span>
               
             </div>
@@ -499,10 +500,11 @@
       
 
       
-        <h3 id="105-从前序与中序遍历序列构造二叉树"><a href="#105-从前序与中序遍历序列构造二叉树" class="headerlink" title="105.从前序与中序遍历序列构造二叉树"></a>105.从前序与中序遍历序列构造二叉树</h3><p>给定一棵树的前序遍历 preorder 与中序遍历  inorder。请构造二叉树并返回其根节点</p>
+        <h3 id="105-从前序与中序遍历序列构造二叉树"><a href="#105-从前序与中序遍历序列构造二叉树" class="headerlink" title="105.从前序与中序遍历序列构造二叉树"></a>105.从前序与中序遍历序列构造二叉树</h3><p>给定一棵树的前序遍历 preorder 与中序遍历 inorder。请构造二叉树并返回其根节点</p>
 <p>示例 1:</p>
 <pre class="line-numbers language-none"><code class="language-none">Input: preorder &#x3D; [3,9,20,15,7], inorder &#x3D; [9,3,15,20,7]
 Output: [3,9,20,null,null,15,7]<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
 <h4 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h4><ol>
 <li>前序遍历是，先遍历根节点，再遍历左子树，再遍历右子树</li>
 <li>中序遍历是，先遍历左子树，再遍历根节点，再遍历右子树</li>
@@ -510,13 +512,60 @@ Output: [3,9,20,null,null,15,7]<span aria-hidden="true" class="line-numbers-rows
 <li>如何记忆，只看某一个节点，前序遍历在遍历左右之前，中序遍历在遍历左右之中，右序遍历在遍历左右之后.</li>
 </ol>
 <ul>
-<li>解题例子<br>前序[1, 2, 4, 7, 3, 5, 6, 8]<br>中序[4, 7, 2, 1, 5, 3, 8, 6];</li>
+<li>解题例子 前序[1, 2, 4, 7, 3, 5, 6, 8]<br>中序[4, 7, 2, 1, 5, 3, 8, 6];</li>
 </ul>
 <ol>
 <li>前序第一个肯定是根节点，从中序中找到根节点位置，分成左右2部分.</li>
 <li>对左右部分的前序继续进行处理，</li>
 </ol>
-<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h4 id="硬解法，复杂度为O-n2"><a href="#硬解法，复杂度为O-n2" class="headerlink" title="硬解法，复杂度为O(n2)"></a>硬解法，复杂度为O(n2)</h4><pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token comment">/**
+ * Definition for a binary tree node.
+ * function TreeNode(val, left, right) &#123;
+ *     this.val = (val===undefined ? 0 : val)
+ *     this.left = (left===undefined ? null : left)
+ *     this.right = (right===undefined ? null : right)
+ * &#125;
+ */</span>
+<span class="token comment">/**
+ * @param &#123;number[]&#125; preorder
+ * @param &#123;number[]&#125; inorder
+ * @return &#123;TreeNode&#125;
+ */</span>
+<span class="token keyword">var</span> <span class="token function-variable function">buildTree</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">preorder<span class="token punctuation">,</span> inorder</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token operator">!</span>preorder<span class="token punctuation">.</span>length <span class="token operator">||</span> <span class="token operator">!</span>inorder<span class="token punctuation">.</span>length<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+        <span class="token keyword">return</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+    <span class="token keyword">const</span> root <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">TreeNode</span><span class="token punctuation">(</span>preorder<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> i <span class="token operator">=</span> preorder<span class="token punctuation">.</span>length <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">;</span> i <span class="token operator">>=</span> <span class="token number">0</span><span class="token punctuation">;</span> <span class="token operator">--</span>i<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>preorder<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">===</span> inorder<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+            <span class="token keyword">const</span> preLeft <span class="token operator">=</span> preorder<span class="token punctuation">.</span><span class="token function">slice</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> i <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">const</span> inorLeft <span class="token operator">=</span> inorder<span class="token punctuation">.</span><span class="token function">slice</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> i<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            root<span class="token punctuation">.</span>left <span class="token operator">=</span> <span class="token function">buildTree</span><span class="token punctuation">(</span>preLeft<span class="token punctuation">,</span> inorLeft<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">const</span> preRight <span class="token operator">=</span> preorder<span class="token punctuation">.</span><span class="token function">slice</span><span class="token punctuation">(</span>i <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">const</span> inorRight <span class="token operator">=</span> inorder<span class="token punctuation">.</span><span class="token function">slice</span><span class="token punctuation">(</span>i <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            root<span class="token punctuation">.</span>right <span class="token operator">=</span> <span class="token function">buildTree</span><span class="token punctuation">(</span>preRight<span class="token punctuation">,</span> inorRight<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">break</span><span class="token punctuation">;</span>
+        <span class="token punctuation">&#125;</span>
+    <span class="token punctuation">&#125;</span>
+    <span class="token keyword">return</span> root<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h4 id="缓存解法-少了循环"><a href="#缓存解法-少了循环" class="headerlink" title="缓存解法,少了循环"></a>缓存解法,少了循环</h4><pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">var</span> <span class="token function-variable function">buildTree</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">preorder<span class="token punctuation">,</span> inorder</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+  <span class="token keyword">let</span> cache <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Map</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  inorder<span class="token punctuation">.</span><span class="token function">map</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">i<span class="token punctuation">,</span> index</span><span class="token punctuation">)</span> <span class="token operator">=></span> cache<span class="token punctuation">.</span><span class="token function">set</span><span class="token punctuation">(</span>i<span class="token punctuation">,</span> index<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token keyword">const</span> <span class="token function-variable function">dfs</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">pStart<span class="token punctuation">,</span> pEnd<span class="token punctuation">,</span> iStart<span class="token punctuation">,</span> iEnd</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">&#123;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>pStart <span class="token operator">></span> pEnd<span class="token punctuation">)</span> <span class="token keyword">return</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+    <span class="token keyword">const</span> rootNode <span class="token operator">=</span> preorder<span class="token punctuation">[</span>pStart<span class="token punctuation">]</span>
+    <span class="token keyword">const</span> root <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">TreeNode</span><span class="token punctuation">(</span>rootNode<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">const</span> midIndex <span class="token operator">=</span> cache<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span>rootNode<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">const</span> leftNum <span class="token operator">=</span> midIndex <span class="token operator">-</span> iStart<span class="token punctuation">;</span>
+    root<span class="token punctuation">.</span>left <span class="token operator">=</span> <span class="token function">dfs</span><span class="token punctuation">(</span>pStart <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">,</span> pStart <span class="token operator">+</span> leftNum<span class="token punctuation">,</span> iStart<span class="token punctuation">,</span> midIndex <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    rooot<span class="token punctuation">.</span>right <span class="token operator">=</span> <span class="token function">dfs</span><span class="token punctuation">(</span>pStart <span class="token operator">+</span> <span class="token number">1</span> <span class="token operator">+</span> leftNum<span class="token punctuation">,</span> pEnd<span class="token punctuation">,</span> midIndex <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">,</span> iEnd<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> root<span class="token punctuation">;</span>
+  <span class="token punctuation">&#125;</span>
+  <span class="token keyword">return</span> <span class="token function">dfs</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> preorder<span class="token punctuation">.</span>length <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> inorder<span class="token punctuation">.</span>length <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
       
     </div>
@@ -555,6 +604,8 @@ Output: [3,9,20,null,null,15,7]<span aria-hidden="true" class="line-numbers-rows
             <a href="/tags/%E7%AE%97%E6%B3%95/" rel="tag"># 算法</a>
           
             <a href="/tags/leetcode/" rel="tag"># leetcode</a>
+          
+            <a href="/tags/%E4%BA%8C%E5%8F%89%E6%A0%91/" rel="tag"># 二叉树</a>
           
         </div>
       
@@ -685,7 +736,7 @@ Output: [3,9,20,null,null,15,7]<span aria-hidden="true" class="line-numbers-rows
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">16</span>
+                  <span class="site-state-item-count">17</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -734,7 +785,7 @@ Output: [3,9,20,null,null,15,7]<span aria-hidden="true" class="line-numbers-rows
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#105-%E4%BB%8E%E5%89%8D%E5%BA%8F%E4%B8%8E%E4%B8%AD%E5%BA%8F%E9%81%8D%E5%8E%86%E5%BA%8F%E5%88%97%E6%9E%84%E9%80%A0%E4%BA%8C%E5%8F%89%E6%A0%91"><span class="nav-number">1.</span> <span class="nav-text">105.从前序与中序遍历序列构造二叉树</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%A7%A3%E9%A2%98%E6%80%9D%E8%B7%AF"><span class="nav-number">1.1.</span> <span class="nav-text">解题思路</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#105-%E4%BB%8E%E5%89%8D%E5%BA%8F%E4%B8%8E%E4%B8%AD%E5%BA%8F%E9%81%8D%E5%8E%86%E5%BA%8F%E5%88%97%E6%9E%84%E9%80%A0%E4%BA%8C%E5%8F%89%E6%A0%91"><span class="nav-number">1.</span> <span class="nav-text">105.从前序与中序遍历序列构造二叉树</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%A7%A3%E9%A2%98%E6%80%9D%E8%B7%AF"><span class="nav-number">1.1.</span> <span class="nav-text">解题思路</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%A1%AC%E8%A7%A3%E6%B3%95%EF%BC%8C%E5%A4%8D%E6%9D%82%E5%BA%A6%E4%B8%BAO-n2"><span class="nav-number">1.2.</span> <span class="nav-text">硬解法，复杂度为O(n2)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%BC%93%E5%AD%98%E8%A7%A3%E6%B3%95-%E5%B0%91%E4%BA%86%E5%BE%AA%E7%8E%AF"><span class="nav-number">1.3.</span> <span class="nav-text">缓存解法,少了循环</span></a></li></ol></li></ol></div>
             
 
           </div>
