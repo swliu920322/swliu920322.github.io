@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>eslint指南</title>
+      <link href="2021/10/17/%E6%8A%80%E6%9C%AF/eslint%E6%8C%87%E5%8D%97/"/>
+      <url>2021/10/17/%E6%8A%80%E6%9C%AF/eslint%E6%8C%87%E5%8D%97/</url>
+      
+        <content type="html"><![CDATA[<h1 id="eslint指南"><a href="#eslint指南" class="headerlink" title="eslint指南"></a>eslint指南</h1><h2 id="eslint是什么"><a href="#eslint是什么" class="headerlink" title="eslint是什么"></a>eslint是什么</h2><p>eslint是node写出来的一个代码静态分析工具，与之匹配的还有prettier代码美化工具</p><h2 id="eslint特点"><a href="#eslint特点" class="headerlink" title="eslint特点"></a>eslint特点</h2><ul><li>可插拔</li><li>规则独立</li><li>不限制编码风格，规则自由</li></ul><h2 id="eslint-使用指南"><a href="#eslint-使用指南" class="headerlink" title="eslint 使用指南"></a>eslint 使用指南</h2><ol><li>安装</li></ol><p><code>npm install eslint --save-dev</code></p><ol start="2"><li>生成配置文件</li></ol><p><code>./node_modules/.bin/eslint --init</code></p><ol start="3"><li>校验文件</li></ol><p><code>./node_modules/.bin/eslint yourfile.js</code></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 技术 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> eslint </tag>
+            
+            <tag> 代码规范 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>项目脚手架解决方案</title>
       <link href="2021/08/01/%E6%8A%80%E6%9C%AF/%E9%A1%B9%E7%9B%AE%E8%84%9A%E6%89%8B%E6%9E%B6/"/>
       <url>2021/08/01/%E6%8A%80%E6%9C%AF/%E9%A1%B9%E7%9B%AE%E8%84%9A%E6%89%8B%E6%9E%B6/</url>
