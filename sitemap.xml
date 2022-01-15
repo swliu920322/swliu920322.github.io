@@ -151,6 +151,20 @@
   </url>
   
   <url>
+    <loc>https://swliu920322.github.io/tags/vue3/</loc>
+    <lastmod>2022-01-15</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://swliu920322.github.io/tags/%E9%97%AD%E5%8C%85/</loc>
+    <lastmod>2022-01-15</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://swliu920322.github.io/tags/%E8%84%9A%E6%89%8B%E6%9E%B6/</loc>
     <lastmod>2022-01-15</lastmod>
     <changefreq>daily</changefreq>
@@ -172,20 +186,6 @@
   </url>
   
   <url>
-    <loc>https://swliu920322.github.io/tags/vue3/</loc>
-    <lastmod>2022-01-15</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://swliu920322.github.io/tags/%E9%97%AD%E5%8C%85/</loc>
-    <lastmod>2022-01-15</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://swliu920322.github.io/tags/%E4%BA%BA%E6%80%A7/</loc>
     <lastmod>2022-01-15</lastmod>
     <changefreq>daily</changefreq>
@@ -200,13 +200,6 @@
   </url>
   
   <url>
-    <loc>https://swliu920322.github.io/tags/%E6%97%B6%E9%97%B4%E7%AE%A1%E7%90%86/</loc>
-    <lastmod>2022-01-15</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://swliu920322.github.io/tags/%E7%A8%BB%E7%9B%9B%E5%92%8C%E5%A4%AB/</loc>
     <lastmod>2022-01-15</lastmod>
     <changefreq>daily</changefreq>
@@ -215,6 +208,13 @@
   
   <url>
     <loc>https://swliu920322.github.io/tags/%E8%AE%A4%E7%9F%A5/</loc>
+    <lastmod>2022-01-15</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://swliu920322.github.io/tags/%E6%97%B6%E9%97%B4%E7%AE%A1%E7%90%86/</loc>
     <lastmod>2022-01-15</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
