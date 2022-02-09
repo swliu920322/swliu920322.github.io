@@ -96,7 +96,7 @@
 
 
 
-  <meta name="keywords" content="博客" />
+  <meta name="keywords" content="工程化," />
 
 
 
@@ -107,17 +107,17 @@
 
 
 
-<meta name="description" content="成长">
-<meta property="og:type" content="website">
-<meta property="og:title" content="schedule">
-<meta property="og:url" content="https://swliu920322.github.io/schedule/index.html">
+<meta name="description" content="pnpm一直以前使用的都是npm和yarn,在看modern.js的时候发现已经开始大规模使用pnpm了，突然就感觉自己落伍了。所以看到了，就来研究下pnpm到底是什么。 npm, yarn, pnpm首先，这三个都是前端的包管理工具。  首先前端项目的包会很多，所以会出现互相依赖的情况 npm在处理互相依赖的时候，需要先遍历完在决定如何生成扁平的结构，所以安装会慢 yarn在npm基础上默认了并">
+<meta property="og:type" content="article">
+<meta property="og:title" content="pnpm">
+<meta property="og:url" content="https://swliu920322.github.io/2022/02/09/%E9%9A%8F%E7%AC%94/pnpm/index.html">
 <meta property="og:site_name" content="技术博客">
-<meta property="og:description" content="成长">
+<meta property="og:description" content="pnpm一直以前使用的都是npm和yarn,在看modern.js的时候发现已经开始大规模使用pnpm了，突然就感觉自己落伍了。所以看到了，就来研究下pnpm到底是什么。 npm, yarn, pnpm首先，这三个都是前端的包管理工具。  首先前端项目的包会很多，所以会出现互相依赖的情况 npm在处理互相依赖的时候，需要先遍历完在决定如何生成扁平的结构，所以安装会慢 yarn在npm基础上默认了并">
 <meta property="og:locale">
-<meta property="article:published_time" content="2021-07-15T08:20:15.000Z">
-<meta property="article:modified_time" content="2021-07-15T08:21:14.274Z">
+<meta property="article:published_time" content="2022-02-09T09:07:38.888Z">
+<meta property="article:modified_time" content="2022-02-09T09:37:11.484Z">
 <meta property="article:author" content="刘圣伟">
-<meta property="article:tag" content="成长是一个过程">
+<meta property="article:tag" content="工程化">
 <meta name="twitter:card" content="summary">
 
 
@@ -152,7 +152,7 @@
 
 
 
-  <title>日程表 | 技术博客</title>
+  <title>pnpm | 技术博客</title>
   
 
 
@@ -181,7 +181,7 @@
     
   
 
-  <div class="container sidebar-position-left page-post-detail page-calendar">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -348,18 +348,272 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
   
   
   
-  <div class="post-block schedule">
-    <div id="schedule">
-      <ul id="event-list">
-      </ul>
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://swliu920322.github.io/2022/02/09/%E9%9A%8F%E7%AC%94/pnpm/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/%5Bobject%20Object%5D">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="技术博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">pnpm</h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2022-02-09T17:07:38+08:00">
+                2022-02-09
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E9%9A%8F%E7%AC%94/" itemprop="url" rel="index">
+                    <span itemprop="name">随笔</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2022/02/09/%E9%9A%8F%E7%AC%94/pnpm/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2022/02/09/%E9%9A%8F%E7%AC%94/pnpm/" itemprop="commentCount"></span> 条回复
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv"><i class="fa fa-file-o"></i>
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>次已读
+            </span>
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  521 words
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  1 min
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="pnpm"><a href="#pnpm" class="headerlink" title="pnpm"></a>pnpm</h1><p>一直以前使用的都是npm和yarn,在看modern.js的时候发现已经开始大规模使用pnpm了，突然就感觉自己落伍了。<br>所以看到了，就来研究下pnpm到底是什么。</p>
+<h3 id="npm-yarn-pnpm"><a href="#npm-yarn-pnpm" class="headerlink" title="npm, yarn, pnpm"></a>npm, yarn, pnpm</h3><p>首先，这三个都是前端的包管理工具。</p>
+<ul>
+<li>首先前端项目的包会很多，所以会出现互相依赖的情况</li>
+<li>npm在处理互相依赖的时候，需要先遍历完在决定如何生成扁平的结构，所以安装会慢</li>
+<li>yarn在npm基础上默认了并行安装的配置，缓存可以离线安装，增加了包的签名和安全性校验。</li>
+<li>pnpm运行非常快，超过了上面2个，它有很大的优势<ul>
+<li>多项目共享依赖，无需都安装，通过软连接来索引包依赖。大大节省了空间</li>
+<li>支持monorepo，比如在根目录下 pnpm add A -r，所有的package都会安装A</li>
+<li>安全性高，pnpm自创了一套依赖管理方式，解决了互相依赖非法访问的问题。</li>
+<li>使用起来几乎没有区别，简单上手，这样的话会继续推进所有项目使用pnpm。</li>
+</ul>
+</li>
+</ul>
+<h3 id="monorepo-lerna-workspace"><a href="#monorepo-lerna-workspace" class="headerlink" title="monorepo, lerna, workspace"></a>monorepo, lerna, workspace</h3><p>monorepo 是管理项目的一种方式，</p>
+<ul>
+<li>一个项目中有很多独立的包，有自己的package.json,发布调试都是在自己内部进行，比较方便</li>
+<li>但是带来了一个问题就是，很多包会共享依赖，目前常用解决方案是yarn的wordspaces</li>
+</ul>
+<p>yarn workspace解决了monorepo共享依赖的问题</p>
+<ul>
+<li>配置好packages目录后，会自动分析共享依赖</li>
+<li>可以在根级通过workspace名直接运行内部的命令行</li>
+</ul>
+<p>lerna 是一个互相独立包的git库管理方式</p>
+<ul>
+<li>通过lerna.json配置来一键发布所有管理的包</li>
+</ul>
+<p>总结 </p>
+<ul>
+<li>使用monorepo管理项目，使用yarn workspace管理依赖， 使用lerna管理发布</li>
+<li>上面提到了pnpm支持monorepo，配置pnpm-workspace.yaml</li>
+<li>可以使用pnpm管理依赖和项目结构，lerna发布也是一种不错的选择</li>
+</ul>
+
+      
     </div>
+    
+    
+    
+
+    
+
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者：</strong>
+    刘圣伟
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://swliu920322.github.io/2022/02/09/%E9%9A%8F%E7%AC%94/pnpm/" title="pnpm">https://swliu920322.github.io/2022/02/09/%E9%9A%8F%E7%AC%94/pnpm/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>
+    本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/%E5%B7%A5%E7%A8%8B%E5%8C%96/" rel="tag"># 工程化</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2021/10/17/%E6%8A%80%E6%9C%AF/eslint%E6%8C%87%E5%8D%97/" rel="next" title="eslint指南">
+                <i class="fa fa-chevron-left"></i> eslint指南
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2022/02/09/%E7%9B%AE%E6%A0%87/2022/" rel="prev" title="2022年度目标">
+                2022年度目标 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
 
           </div>
           
@@ -393,8 +647,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -474,6 +737,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#pnpm"><span class="nav-number">1.</span> <span class="nav-text">pnpm</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#npm-yarn-pnpm"><span class="nav-number">1.0.1.</span> <span class="nav-text">npm, yarn, pnpm</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#monorepo-lerna-workspace"><span class="nav-number">1.0.2.</span> <span class="nav-text">monorepo, lerna, workspace</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -643,6 +922,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 

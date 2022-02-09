@@ -116,7 +116,7 @@
 <meta property="og:locale">
 <meta property="og:image" content="https://swliu920322.github.io/images/2021/8/1/yo-quick.png">
 <meta property="article:published_time" content="2021-08-01T07:30:47.000Z">
-<meta property="article:modified_time" content="2022-02-09T08:59:35.461Z">
+<meta property="article:modified_time" content="2022-02-09T09:06:32.442Z">
 <meta property="article:author" content="刘圣伟">
 <meta property="article:tag" content="工程化">
 <meta property="article:tag" content="拉钩大前端">
@@ -464,7 +464,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  963 words
+                  1k words
                 </span>
               
 
@@ -575,11 +575,12 @@
 <h2 id="node自己实现"><a href="#node自己实现" class="headerlink" title="node自己实现"></a>node自己实现</h2><p>node自己实现原理也都是脚手架的原理 </p>
 <ol>
 <li>在项目里面加入cli.js,第一行写成 <code>#!/usr/bin/env node</code>，里面可以写node对文件的操作</li>
-<li>先在package.json里面加入<code>bin: &quot;cli.js&quot;</code>，</li>
+<li>先在package.json里面加入<code>bin: &quot;cli.js&quot;</code>，这样link之后通过名称会自动找到对应的执行文件，</li>
 <li>之后npm link之后就可以使用包名来执行了,</li>
 <li>问答库可以使用<code>inquirer</code>，用法和以上类似</li>
 <li>渲染库使用 <code>ejs</code>,用法是<code>ejs.renderFile(path.join(tmplDir,file), answer, (err,res) =&gt; &#123; fs.writeFileSync(path.join(destDir,file), result) &#125;,</code></li>
 <li>基本上使用的都是node的fs文件模块的命令。</li>
+<li>总结下，通过包名找到执行的node文件，通过命令行输入参数，保存临时变量，通过node把文件写出来</li>
 </ol>
 <h2 id="代码查看，以上的实践代码，点击查看"><a href="#代码查看，以上的实践代码，点击查看" class="headerlink" title="代码查看，以上的实践代码，点击查看"></a>代码查看，以上的实践代码，<a target="_blank" rel="noopener" href="https://github.com/swliu920322/lagou-code/tree/main/2.FE-Engine/2.scaffold">点击查看</a></h2>
       
@@ -727,7 +728,7 @@
               
                 <a href="/archives/%7C%7C%20archive">
               
-                  <span class="site-state-item-count">12</span>
+                  <span class="site-state-item-count">13</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -738,7 +739,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-count">7</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
