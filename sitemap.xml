@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://swliu920322.github.io/2022/02/09/%E7%9B%AE%E6%A0%87/2022/</loc>
+    
+    <lastmod>2022-02-09</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://swliu920322.github.io/2022/02/09/%E9%9A%8F%E7%AC%94/pnpm/</loc>
     
     <lastmod>2022-02-09</lastmod>
@@ -10,13 +17,6 @@
   
   <url>
     <loc>https://swliu920322.github.io/2021/08/01/%E6%8A%80%E6%9C%AF/%E9%A1%B9%E7%9B%AE%E8%84%9A%E6%89%8B%E6%9E%B6/</loc>
-    
-    <lastmod>2022-02-09</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://swliu920322.github.io/2022/02/09/%E7%9B%AE%E6%A0%87/2022/</loc>
     
     <lastmod>2022-02-09</lastmod>
     
@@ -151,20 +151,6 @@
 
   
   <url>
-    <loc>https://swliu920322.github.io/tags/eslint/</loc>
-    <lastmod>2022-02-09</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://swliu920322.github.io/tags/%E4%BB%A3%E7%A0%81%E8%A7%84%E8%8C%83/</loc>
-    <lastmod>2022-02-09</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://swliu920322.github.io/tags/vue3/</loc>
     <lastmod>2022-02-09</lastmod>
     <changefreq>daily</changefreq>
@@ -187,6 +173,20 @@
   
   <url>
     <loc>https://swliu920322.github.io/tags/%E6%8B%89%E9%92%A9%E5%A4%A7%E5%89%8D%E7%AB%AF/</loc>
+    <lastmod>2022-02-09</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://swliu920322.github.io/tags/eslint/</loc>
+    <lastmod>2022-02-09</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://swliu920322.github.io/tags/%E4%BB%A3%E7%A0%81%E8%A7%84%E8%8C%83/</loc>
     <lastmod>2022-02-09</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
