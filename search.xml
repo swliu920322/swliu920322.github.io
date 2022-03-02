@@ -4,6 +4,87 @@
   
     
     <entry>
+      <title>聊聊加班</title>
+      <link href="2022/03/02/%E9%9A%8F%E7%AC%94/%E5%8A%A0%E7%8F%AD/"/>
+      <url>2022/03/02/%E9%9A%8F%E7%AC%94/%E5%8A%A0%E7%8F%AD/</url>
+      
+        <content type="html"><![CDATA[<h2 id="加班是什么"><a href="#加班是什么" class="headerlink" title="加班是什么"></a>加班是什么</h2><p>中文解释 在规定的工作时间结束后增加工作时间<br>我的理解 利用休息时间来解决工作时间没有完成但本该完成的事，有几个重点</p><ul><li>工作时间没完成</li><li>工作时间应该完成<br>很多时候，加班的量真的是工作时间该完成的么，还有加班的意义。</li></ul><h2 id="这么多年来我印象中的加班"><a href="#这么多年来我印象中的加班" class="headerlink" title="这么多年来我印象中的加班"></a>这么多年来我印象中的加班</h2><ul><li>刚进去工作，那个时候团队加班一起下班，刚毕业很不喜欢这样。</li><li>苏州开始做前端，加班学习，因为无知和挑战性，所以觉得很有意思</li><li>苏州后来客户出差，时间紧任务重，但是团队成员为了共同目标，积极努力，寻求最优解。</li><li>大连一家公司，负责人保证了结果，赶进度加班，很累，完全是超出了正常的工作的度，效果还不好，问题很大。</li><li>大连后面，为了在客户面前表现，或是平时大家工作效率低下，从风险控制上强制加班。</li></ul><p>总之，加班如果是为了提升还是团队的共同目标偏优化方向，没有人会有异议。如果是为了面子工程，或者弥补其他时候的效率，反而是很让人厌恶的。<br>归纳 提升自己，提高团队是好的，其他，从发展的角度来看，都不是合适的。</p><h2 id="为什么要说这个"><a href="#为什么要说这个" class="headerlink" title="为什么要说这个"></a>为什么要说这个</h2><p>今天宣布强制加班，其实也点名了是面子工程。</p><ul><li>个人原因，特别讨厌对个人和团队没有提升的加班</li><li>心态原因，本来在一个大家低效的团队里，我高效的运转，还要额外加班。</li><li>家庭原因，在工作的时候认真工作，休息的时候，需要对家庭负责。</li></ul><p>也不知道我写的东西会不会有人看，it行业现在比较卷，卷的有时候我真想知道我还能做什么，<br>最近出了开发，还要做管理，我的风格是把我觉得好的方法传授给别人，很多人不理解我，会觉得我是<br>在他们毛病，觉得我是好表现，想升职。</p><p>我一直都以我们是一个团队，目标就是追求更好，不管是代码的优雅，还是设计的优雅，我希望能够<br>带每一个人，写的更好。或许管理应该中庸，毕竟不是每个人都是我，我不该强迫每一个人。</p><p>现在的思路，大概就是，我会去理业务细节和实现思路，虽然你做出来的不一样，不优雅，我知道就行了，<br>如果你和我的期望相似，我会觉得你理解我，虽然我不是神，你可以比我期望的更好，你一定是优秀的，<br>我愿意把我的想法和你沟通，我们碰撞出火花，把工作做的更好。<br>如果不是我期望的，看上去也不太优雅，hack出来的，我也不会怪你，毕竟工作，某个生计。<br>晚安。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 随笔 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 闲谈 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>uniapp多个小程序和app开发复盘</title>
+      <link href="2022/02/16/%E9%9A%8F%E7%AC%94/uniapp%E5%A4%8D%E7%9B%98/"/>
+      <url>2022/02/16/%E9%9A%8F%E7%AC%94/uniapp%E5%A4%8D%E7%9B%98/</url>
+      
+        <content type="html"><![CDATA[<h2 id="uniapp-开发复盘"><a href="#uniapp-开发复盘" class="headerlink" title="uniapp 开发复盘"></a>uniapp 开发复盘</h2><h3 id="开发时间线"><a href="#开发时间线" class="headerlink" title="开发时间线"></a>开发时间线</h3><ul><li>2021年11月4号，开始单端小程序开发，1月7号停止维护</li><li>2021年11月20号，开始另一端小程序开发，1月10号停止维护</li><li>2021年12月16号，开始APP开发</li><li>2021年12月29号，准备改造成双端小程序和app共用。</li><li>2021年1月17号，整体改造完成</li></ul><h3 id="改造初衷"><a href="#改造初衷" class="headerlink" title="改造初衷"></a>改造初衷</h3><ul><li>本身两个小程序都是app的一部分，适合做在一起</li><li>两个小程序单独发布，多个环境，切换比较麻烦</li><li>多个项目，并行开发起来较为麻烦，一致性不方便，dry也很严重</li></ul><h3 id="改造后"><a href="#改造后" class="headerlink" title="改造后"></a>改造后</h3><ul><li><p>优点</p><ul><li>在一个分支里面可以进行多个小程序和app的发布。</li><li>共用一份代码，保持一致性</li><li>不同平台有各自独自的代码，保持可不一致性</li><li>通过路由配置各端可灵活配置</li></ul></li><li><p>仍未解决</p><ul><li>不能同时开发多个项目，原因是路由是共用一份的，uniapp的规则</li></ul></li><li><p>如何解决</p><ul><li>多个小程序可以指定目录进行调试，避免互相干扰</li><li>app是HbuilderX启动的，暂时不清楚可不可以单项目多端开发</li></ul><h3 id="改造思路"><a href="#改造思路" class="headerlink" title="改造思路"></a>改造思路</h3></li></ul><ol><li>确认uniapp是可以支持多端的</li><li>不同端的区别分为路由和环境和运行时的代码<ul><li>路由通过配置，node做区分</li><li>环境通过配置，node区分和运行时动态判断</li><li>运行时通过uniapp运行时区分和当前的运行环境区分</li></ul></li><li>以上都可以解决之后，做出设计方案</li></ol><h3 id="其他心得"><a href="#其他心得" class="headerlink" title="其他心得"></a>其他心得</h3><ol><li>软件需要做整体设计</li><li>软件的设计并不是整体设计完就好了，在后续的时候得不停的去思考去优化</li><li>小程序分包比较简单，主要是考虑好，入口和模块就行</li><li>分层是减少软件间互相依赖的问题</li></ol><h3 id="闲谈"><a href="#闲谈" class="headerlink" title="闲谈"></a>闲谈</h3><p>代码倒没有太多参考的，因为业务场景和遇到的情况大家都不一样，简单说是dry和solid原则。</p><ul><li>避免dry，避免重复，要求我们尽可能提高复用性，不要害怕变化</li><li>solid<ul><li>srp 单一职责 一个类只有一个职责，一个方法只有一个功能</li><li>ocp 开放封闭原则,类应该支持拓展，但是避免修改</li><li>LSP 里式替换 子类是可以替换父类的，要注意出现异常</li><li>ISP 接口隔离 接口减少关联度</li><li>DIP 依赖倒置 高层模块不该依赖低层，减少耦合，应该面向接口编程</li></ul></li><li>做到随时可迁移，这个是我个人想法，其实也是高内聚低耦合的表现。</li></ul><h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>所以编程本质是整体思维和细节思维的结合，需要在过程中不断思考，不断优化。<br>尽可能的去偷懒，可能为了偷一点懒，反而设计了一套短期收益低长期收益高的东西。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 随笔 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> uniapp </tag>
+            
+            <tag> 多端开发 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>storybook和mdx</title>
+      <link href="2022/02/15/%E6%8A%80%E6%9C%AF/storybook/"/>
+      <url>2022/02/15/%E6%8A%80%E6%9C%AF/storybook/</url>
+      
+        <content type="html"><![CDATA[<h1 id="storybook"><a href="#storybook" class="headerlink" title="storybook"></a>storybook</h1><p>storybook体验下来，应该是一个框架，专注于做ui组件相关的内容，无需前端项目可启动<br>比较适合做组件库和想统一组件规范的团队</p><h2 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h2><ul><li>核心是.storybook文件夹的配置<ul><li>main.js storybook的核心配置，决定解析那里的故事，和插件</li><li>preview.js 用来处理预览的情况</li></ul></li><li>故事是用来展示组件的。<ul><li>默认导出的是组件的描述，定义输出和不需要渲染的信息</li><li>命名导出的是真实渲染的组件，可以通过参数来传值渲染</li><li></li></ul></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> 技术 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 组件库 </tag>
+            
+            <tag> 可视化 </tag>
+            
+            <tag> 提效 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>pnpm</title>
       <link href="2022/02/09/%E9%9A%8F%E7%AC%94/pnpm/"/>
       <url>2022/02/09/%E9%9A%8F%E7%AC%94/pnpm/</url>
