@@ -83,33 +83,6 @@
     
     
     <entry>
-      <title>前端设计模式</title>
-      <link href="2022/04/06/%E9%80%9A%E7%94%A8%E6%8A%80%E6%9C%AF/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E4%BF%AE%E8%A8%80/"/>
-      <url>2022/04/06/%E9%80%9A%E7%94%A8%E6%8A%80%E6%9C%AF/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E4%BF%AE%E8%A8%80/</url>
-      
-        <content type="html"><![CDATA[<h2 id="前端设计模式"><a href="#前端设计模式" class="headerlink" title="前端设计模式"></a>前端设计模式</h2><h3 id="解决的问题"><a href="#解决的问题" class="headerlink" title="解决的问题"></a>解决的问题</h3><p>程序员的核心竞争力 </p><ul><li>编码能力   健壮的代码解决具体问题</li><li>设计思维   抽象的思维应对复杂的系统</li><li>计算机基础 工程化思想规划更大规模的业务</li></ul><p>而设计模式可以帮助我们写出健壮的代码，这样看来我居然是第一阶段都还没到。</p><ul><li>基本围绕着 单一职责 开放封闭 2个原则</li><li>核心思想 封装变化</li></ul><h3 id="创建型-工厂模式"><a href="#创建型-工厂模式" class="headerlink" title="创建型-工厂模式"></a>创建型-工厂模式</h3><ul><li>构造器解决是多个对象实例的问题</li><li>简单工厂模式解决多个构造器的问题</li><li>抽象工厂 完美的践行开放封闭原则<ul><li>抽象工厂 申明共性</li><li>具体工厂 实现抽象工厂</li><li>抽象产品 抽象类，申明个性</li><li>具体产品 进行生产</li></ul></li></ul>]]></content>
-      
-      
-      <categories>
-          
-          <category> 技术 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 设计模式 </tag>
-            
-            <tag> 通用能力 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>3.跟着华为学管理-铁军养成</title>
       <link href="2022/04/06/%E7%AE%A1%E7%90%86/3.%E8%B7%9F%E7%9D%80%E5%8D%8E%E4%B8%BA%E5%AD%A6%E7%AE%A1%E7%90%86-%E9%93%81%E5%86%9B%E5%85%BB%E6%88%90/"/>
       <url>2022/04/06/%E7%AE%A1%E7%90%86/3.%E8%B7%9F%E7%9D%80%E5%8D%8E%E4%B8%BA%E5%AD%A6%E7%AE%A1%E7%90%86-%E9%93%81%E5%86%9B%E5%85%BB%E6%88%90/</url>
@@ -129,6 +102,33 @@
             <tag> 管理 </tag>
             
             <tag> 通用能力 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>前端设计模式</title>
+      <link href="2022/04/06/%E9%80%9A%E7%94%A8%E6%8A%80%E6%9C%AF/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E4%BF%AE%E8%A8%80/"/>
+      <url>2022/04/06/%E9%80%9A%E7%94%A8%E6%8A%80%E6%9C%AF/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E4%BF%AE%E8%A8%80/</url>
+      
+        <content type="html"><![CDATA[<h2 id="前端设计模式"><a href="#前端设计模式" class="headerlink" title="前端设计模式"></a>前端设计模式</h2><h3 id="解决的问题"><a href="#解决的问题" class="headerlink" title="解决的问题"></a>解决的问题</h3><p>程序员的核心竞争力 </p><ul><li>编码能力   健壮的代码解决具体问题</li><li>设计思维   抽象的思维应对复杂的系统</li><li>计算机基础 工程化思想规划更大规模的业务</li></ul><p>而设计模式可以帮助我们写出健壮的代码，这样看来我居然是第一阶段都还没到。</p><ul><li>基本围绕着 单一职责 开放封闭 2个原则</li><li>核心思想 封装变化</li></ul><h3 id="创建型-工厂模式"><a href="#创建型-工厂模式" class="headerlink" title="创建型-工厂模式"></a>创建型-工厂模式</h3><ul><li>构造器解决是多个对象实例的问题</li><li>简单工厂模式解决多个构造器的问题</li><li>抽象工厂 完美的践行开放封闭原则<ul><li>抽象工厂 申明共性</li><li>具体工厂 实现抽象工厂</li><li>抽象产品 抽象类，申明个性</li><li>具体产品 进行生产</li></ul></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> 技术 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 通用能力 </tag>
+            
+            <tag> 设计模式 </tag>
             
         </tags>
       
@@ -552,9 +552,9 @@
       
         <tags>
             
-            <tag> 人性 </tag>
-            
             <tag> 管理 </tag>
+            
+            <tag> 人性 </tag>
             
         </tags>
       
