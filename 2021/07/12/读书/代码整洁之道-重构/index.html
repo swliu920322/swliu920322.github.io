@@ -1,0 +1,1605 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+  <link rel="manifest" href="/images/manifest.json">
+
+
+
+
+  <meta name="keywords" content="修养,重构,代码," />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="代码整洁之道-重构这里本来是一个分享的ppt 先讲书里的东西 作者16章描述了他如何找了一断公共代码去重构的，每个人都会有写的不那么完美的时候。 重构第一步，保证能运行， 微调。找出相关问题。 重构第二步，保证他正确，调整结构，拆分，运用到标准，一小部分一小部分进行拆分   作者17章列出了代码的坏味道一览，在16章里也运用到了这些 本书对重构描述的不够充分，具体只讲了重构的细节。  重构前言（代">
+<meta property="og:type" content="article">
+<meta property="og:title" content="代码整洁之道-重构">
+<meta property="og:url" content="https://swliu920322.github.io/2021/07/12/%E8%AF%BB%E4%B9%A6/%E4%BB%A3%E7%A0%81%E6%95%B4%E6%B4%81%E4%B9%8B%E9%81%93-%E9%87%8D%E6%9E%84/index.html">
+<meta property="og:site_name" content="技术博客">
+<meta property="og:description" content="代码整洁之道-重构这里本来是一个分享的ppt 先讲书里的东西 作者16章描述了他如何找了一断公共代码去重构的，每个人都会有写的不那么完美的时候。 重构第一步，保证能运行， 微调。找出相关问题。 重构第二步，保证他正确，调整结构，拆分，运用到标准，一小部分一小部分进行拆分   作者17章列出了代码的坏味道一览，在16章里也运用到了这些 本书对重构描述的不够充分，具体只讲了重构的细节。  重构前言（代">
+<meta property="og:locale">
+<meta property="article:published_time" content="2021-07-12T13:30:47.000Z">
+<meta property="article:modified_time" content="2022-07-28T12:25:50.195Z">
+<meta property="article:author" content="刘圣伟">
+<meta property="article:tag" content="修养">
+<meta property="article:tag" content="重构">
+<meta property="article:tag" content="代码">
+<meta name="twitter:card" content="summary">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":true,"scrollpercent":true,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+
+
+
+
+  <title>代码整洁之道-重构 | 技术博客</title>
+  
+
+
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?91e3fae98446602c6fb71cc804c6ef9f";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">技术博客</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <h1 class="site-subtitle" itemprop="description">刘圣伟</h1>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-schedule">
+          <a href="/schedule/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-calendar"></i> <br />
+            
+            日程表
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-sitemap">
+          <a href="/baidusitemap.xml" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-sitemap"></i> <br />
+            
+            站点地图
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-commonweal">
+          <a href="/404" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br />
+            
+            公益404
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://swliu920322.github.io/2021/07/12/%E8%AF%BB%E4%B9%A6/%E4%BB%A3%E7%A0%81%E6%95%B4%E6%B4%81%E4%B9%8B%E9%81%93-%E9%87%8D%E6%9E%84/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/%5Bobject%20Object%5D">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="技术博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">代码整洁之道-重构</h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2021-07-12T21:30:47+08:00">
+                2021-07-12
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E4%BB%A3%E7%A0%81/" itemprop="url" rel="index">
+                    <span itemprop="name">代码</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2021/07/12/%E8%AF%BB%E4%B9%A6/%E4%BB%A3%E7%A0%81%E6%95%B4%E6%B4%81%E4%B9%8B%E9%81%93-%E9%87%8D%E6%9E%84/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2021/07/12/%E8%AF%BB%E4%B9%A6/%E4%BB%A3%E7%A0%81%E6%95%B4%E6%B4%81%E4%B9%8B%E9%81%93-%E9%87%8D%E6%9E%84/" itemprop="commentCount"></span> 条回复
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv"><i class="fa fa-file-o"></i>
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>次已读
+            </span>
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  2.8k words
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  9 min
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="代码整洁之道-重构"><a href="#代码整洁之道-重构" class="headerlink" title="代码整洁之道-重构"></a>代码整洁之道-重构</h2><p>这里本来是一个分享的ppt</p>
+<h3 id="先讲书里的东西"><a href="#先讲书里的东西" class="headerlink" title="先讲书里的东西"></a>先讲书里的东西</h3><ul>
+<li>作者16章描述了他如何找了一断公共代码去重构的，每个人都会有写的不那么完美的时候。<ol>
+<li>重构第一步，保证能运行， 微调。找出相关问题。</li>
+<li>重构第二步，保证他正确，调整结构，拆分，运用到标准，一小部分一小部分进行拆分</li>
+</ol>
+</li>
+<li>作者17章列出了代码的坏味道一览，在16章里也运用到了这些</li>
+<li>本书对重构描述的不够充分，具体只讲了重构的细节。</li>
+</ul>
+<h3 id="重构前言（代码大全2）"><a href="#重构前言（代码大全2）" class="headerlink" title="重构前言（代码大全2）"></a>重构前言（代码大全2）</h3><ul>
+<li>神话： 一个管理很好的项目，严格按照设计-开发-测试-上线的流程，中间没有任何变化，唯一修改代码的只会在维护阶段，只发生在交付之后<ul>
+<li>项目的成功鱼肉在于避免代码的变化</li>
+</ul>
+</li>
+<li>现实：初期开发就有各种变化，<ul>
+<li>典型的项目，在编码调试和单元测试的时间占项目的30-65%</li>
+<li>编码和单元测试一帆风顺，则占的时间不超过20~30%</li>
+<li>即使是管理完善的项目，每个月需求大约会变1/4，导致代码会变化</li>
+<li>导致以代码为中心，不断进行演化。</li>
+</ul>
+</li>
+<li>应该如何对待<ul>
+<li>要认识软件演化是无法避免且具有重要意义的，会有益于开发。</li>
+</ul>
+</li>
+<li>重构的理由太多了<ul>
+<li>代码的问题…</li>
+<li>超前设计问题</li>
+</ul>
+</li>
+<li>重构的分类<ul>
+<li>数据级的重构</li>
+<li>语句级的重构</li>
+<li>子程序级的重构</li>
+<li>类实现的重构</li>
+<li>类接口的重构</li>
+<li>系统级的重构</li>
+</ul>
+</li>
+<li>如何进行安全的重构<ul>
+<li>保留初始代码</li>
+<li>步伐小些</li>
+<li>同时只做一种重构</li>
+<li>要做的事情列出来</li>
+<li>设置一个停车场，将目前重构的进度保留去做别的事</li>
+<li>多用检查点 防止钻进死胡同</li>
+<li>利用编译器的警告信息，解决掉</li>
+<li>重新测试</li>
+<li>增加测试用例</li>
+<li>检查代码的修改</li>
+<li>根据重构风险级别调整重构方法</li>
+</ul>
+</li>
+<li>不宜重构的情况<ul>
+<li>不要把重构当做先写后改的代名词</li>
+<li>避免用重构代替重写</li>
+</ul>
+</li>
+<li>重构策略<ul>
+<li>增加子程序的时候重构</li>
+<li>添加类的时候进行重构</li>
+<li>在修补缺陷的时候进行重构</li>
+<li>关注高度复杂的模块</li>
+<li>维护的时候，顺便改善</li>
+<li>定义清除干净代码和拙劣代码的边界</li>
+</ul>
+</li>
+</ul>
+<h3 id="重构是什么"><a href="#重构是什么" class="headerlink" title="重构是什么"></a>重构是什么</h3><h4 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h4><ul>
+<li>(程序员修炼之道)<ul>
+<li>重构像园艺，而不像建筑，是一种有针对性，精准的方法。保持代码易于修改，而不是自由的，大规模的重写。</li>
+</ul>
+</li>
+<li>(重构：改善既有代码的设计)<ul>
+<li>重构是一个过程： <ul>
+<li>在不改变代码外在行为的前提下，对代码做出修改，以改进程序的内部结构。</li>
+<li>重构是一种经千锤百炼形成的有条不紊的程序整理方法，可以最大限度地减小整理过程中引入错误的概率。</li>
+<li>本质上说，重构就是在代码写好之后改进它的设计。</li>
+</ul>
+</li>
+<li>重构与性能优化类似<ul>
+<li>但重构是为了让代码更容易理解，更易于修改</li>
+<li>性能优化只关心如何运行的更快，代码可能更难于理解和维护</li>
+<li><h4 id="环境"><a href="#环境" class="headerlink" title="环境"></a>环境</h4></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>(重构：改善既有代码的设计)<ul>
+<li>早期的设计在不断的修改中，整体结构慢慢衰弱，代码质量慢慢沉沦。</li>
+</ul>
+</li>
+<li>(程序员修炼之道)<ul>
+<li>优秀设计的精髓 ETC easy to change</li>
+</ul>
+</li>
+</ul>
+<h3 id="为什么要重构"><a href="#为什么要重构" class="headerlink" title="为什么要重构"></a>为什么要重构</h3><ul>
+<li>(程序员修炼之道)<ul>
+<li>熵增是一种无序的行为，内部越来月趋于紊乱，当一个物质趋于平衡后，内部熵是最乱的，互相抵消了。</li>
+<li>软件的熵<ul>
+<li>乐观的叫技术债</li>
+<li>不要放任破窗行为，在经济学上也是一样的认识</li>
+<li>要及时解决这个问题。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>(重构：改善既有代码的设计)<ul>
+<li>重构之后，工作的平衡点变化，设计是在整个开发过程中逐渐浮现的</li>
+<li>可以学会如何不断地改进设计，持续保证良好的设计.</li>
+<li>目的<ul>
+<li>重构改进软件的设计：重要方向就是消除重复代码</li>
+<li>重构使软件更容易理解，帮助其他人更快理解</li>
+<li>重构帮助找到bug，深入理解代码，很容易看到bug（举例）</li>
+<li>重构提高编程速度（对于新功能而言，很多项目越往后越难做）<ul>
+<li>易于修改，</li>
+<li>易于调试</li>
+<li>易于理解</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>过去人们总是认为：良好的设计必须在开始编程之前完成，因为一旦开始编写代码，设计就只会逐渐腐败</li>
+<li>先做设计，不断改善</li>
+</ul>
+<h3 id="什么时候重构"><a href="#什么时候重构" class="headerlink" title="什么时候重构"></a>什么时候重构</h3><ul>
+<li>(程序员修炼之道)<ul>
+<li><p>当你学到一些东西，比之前更了解某件事情，就会重构</p>
+</li>
+<li><p>重复 dry</p>
+<ul>
+<li>不限于编码 所有涉及对知识和意图的复制都是DRY，代码和文档，数据库和数据结构…</li>
+<li>多个api相同的处理部分，开发人员的重复</li>
+</ul>
+</li>
+<li><p>非正交设计 </p>
+<ul>
+<li>什么是正交性（解耦）<ul>
+<li>定义 像XY轴一样，一个变化始终不影响另一个的变化</li>
+<li>优点<ul>
+<li>消除不相关事物之间的影响</li>
+<li>提升生产力</li>
+<li>减少风险</li>
+</ul>
+</li>
+<li>设计 <ul>
+<li>像架构图一样，每一层解决每一层的问题，</li>
+<li>开发的时候问自己，如果需求变了，我要改动多少个模块</li>
+</ul>
+</li>
+<li>编码<ul>
+<li>保持代码解耦</li>
+<li>避免全局数据</li>
+<li>避免相似函数</li>
+</ul>
+</li>
+<li>测试<ul>
+<li>更易于测试</li>
+<li>修复问题不用做太多回归测试</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>过时的知识</p>
+</li>
+<li><p>使用（使用后，功能的重心变了）</p>
+</li>
+<li><p>性能 (迁移代码)</p>
+</li>
+<li><p>测试后，去整理刚刚的代码</p>
+</li>
+</ul>
+</li>
+<li>(重构：改善既有代码的设计)<ul>
+<li><p>编码的每个小时，都要做重构</p>
+<ul>
+<li>见机行事的重构<ul>
+<li>预备性重构，让新功能更容易添加，修bug更容易(加图)</li>
+<li>帮助理解的重构：使代码更易懂。更容易理解业务（擦玻璃，擦干净看得清）</li>
+<li>捡垃圾式重构：解决做的不好的地方，每天清扫，时刻保持。</li>
+</ul>
+</li>
+<li>有计划的重构。</li>
+<li>长期重构，慢慢演进。不专门找人做，每个人慢慢小改动。<ul>
+<li>要替换一个正在使用的库</li>
+<li>将整块代码抽取到一个组件中并共享给另一支团队使用</li>
+<li>再或者要处理一大堆混乱的依赖关系</li>
+</ul>
+</li>
+<li>复审代码时重构<ul>
+<li>帮助代码复审工作得到更具体的结果</li>
+<li>许多建议能够立刻实现</li>
+</ul>
+</li>
+<li>怎么对经理说<ul>
+<li>懂技术，理解设计耐久性假说会鼓励日常的重构，并主动寻找团队日常重构做得不够的征兆</li>
+<li>不具备不理解代码库的健康对生产率的影响，不要告诉经理！<ul>
+<li>对于快速创造软件，重构可带来巨大帮助。</li>
+<li>如果需要添加新功能，而原本设计却又使我无法方便地修改，先重构再添加新功能会更快些。</li>
+<li>要修补错误，就得先理解软件的工作方式，重构是理解软件的最快方式</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>原则</p>
+<ul>
+<li>肮脏的代码必须重构，但漂亮的代码也需要很多重构</li>
+<li>添加新功能最快的方法往往是先修改现有的代码，使新功能容易被加入。</li>
+<li>重构常常与新添功能紧密交织，不值得花工夫把它们分开。并且这样做也使重构脱离了上下文，使人看不出这些“重构提交”的价值。</li>
+</ul>
+</li>
+<li><p>何时不应该重构</p>
+<ul>
+<li>丑陋的代码被封装了，并且不需要修改，只有我理解了，重构才有价值</li>
+<li>重写比重构还容易</li>
+</ul>
+<h3 id="怎么重构"><a href="#怎么重构" class="headerlink" title="怎么重构"></a>怎么重构</h3></li>
+</ul>
+</li>
+<li>(程序员修炼之道)<ul>
+<li>重构核心是重新设计，是一个慢慢，有意，仔细的活动。<ul>
+<li>不要让新功能和重构同时进行</li>
+<li>重构之前，确保有良好的测试。</li>
+<li>采用简短而慎重的步骤：一点点改。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>(重构：改善既有代码的设计)<ul>
+<li>两顶帽子(添加新功能和重构)    一次只做一件事</li>
+</ul>
+</li>
+</ul>
+<h3 id="重构的挑战"><a href="#重构的挑战" class="headerlink" title="重构的挑战"></a>重构的挑战</h3><ul>
+<li>(程序员修炼之道)<ul>
+<li>找队友和客户说，这代码可以用，但我需要一周来重构</li>
+<li>时间压力通常是不重构的接口，如果现在不做，以后就要花更多的时间去做</li>
+<li>需要处理更多的依赖关系，到时候会有更多的时间么，将重构看成，切出早期的癌细胞</li>
+<li>尽早重构，经常重构。</li>
+</ul>
+</li>
+<li>(重构：改善既有代码的设计)<ul>
+<li>延缓新功能开发<ul>
+<li>重构会拖慢进度”这种看法仍然很普遍<ul>
+<li>重构的唯一目的就是让我们开发更快，用更少的工作量创造更大的价值。</li>
+<li>如果大规模的重构和小规模的新功能，可以做完后重构</li>
+<li>之所以重构，是因为它能让我们更快——添加功能更快，修复bug更快</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>代码所有权 调用方代码可能由另一支团队拥有</li>
+<li>分支<ul>
+<li>在其他分支开发完在合并主分支</li>
+<li>缺点：<ul>
+<li>在隔离的分支上工作得越久，将完成的工作集成回主线就会越困难</li>
+<li>大多数人的办法是频繁地从主线合并或者变基到分支</li>
+<li>如果有几个人同时在各自的特性分支上工作，因为合并与集成是两回事<ul>
+<li>合并是一个单向的代码移动</li>
+<li>集成是一个双向的过程，如果经常重构，集成的代码会被破坏</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>持续集成，每天至少和主分支集成一次</li>
+</ul>
+</li>
+<li>测试（引入了bug）<ul>
+<li>如果想要重构，我得先有可以自测试的代码，自动化重构的工具包也很好。</li>
+</ul>
+</li>
+<li>遗留代码<ul>
+<li>重构可以很好地帮助我们理解遗留系统</li>
+<li>如果你面对一个庞大而又缺乏测试的遗留系统，很难安全地重构清理它。</li>
+<li>就算有测试，也不建议一鼓作气重构完，随时重构相关的部分</li>
+</ul>
+</li>
+<li>数据库<ul>
+<li>借助数据迁移脚本，将数据库结构的修改与代码相结合，使大规模的、涉及数据库的修改可以比较容易地开展。</li>
+<li>数据库重构最好是分散到多次生产发布来完成，这样即便某次修改在生产数据库上造成了问题</li>
+<li>并行修改（扩展协议）<ul>
+<li>要改名一个字段，我的第一次提交会新添一个字段，但暂时不使用它。</li>
+<li>然后我会修改数据写入的逻辑，使其同时写入新旧两个字段。</li>
+<li>随后我就可以修改读取数据的地方，将它们逐个改为使用新字段。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者：</strong>
+    刘圣伟
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://swliu920322.github.io/2021/07/12/%E8%AF%BB%E4%B9%A6/%E4%BB%A3%E7%A0%81%E6%95%B4%E6%B4%81%E4%B9%8B%E9%81%93-%E9%87%8D%E6%9E%84/" title="代码整洁之道-重构">https://swliu920322.github.io/2021/07/12/%E8%AF%BB%E4%B9%A6/%E4%BB%A3%E7%A0%81%E6%95%B4%E6%B4%81%E4%B9%8B%E9%81%93-%E9%87%8D%E6%9E%84/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>
+    本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/%E4%BF%AE%E5%85%BB/" rel="tag"># 修养</a>
+          
+            <a href="/tags/%E9%87%8D%E6%9E%84/" rel="tag"># 重构</a>
+          
+            <a href="/tags/%E4%BB%A3%E7%A0%81/" rel="tag"># 代码</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2021/07/01/%E8%AF%BB%E4%B9%A6/%E7%A8%8B%E5%BA%8F%E5%91%98%E5%BF%85%E8%AF%BB%E7%9A%84%E8%81%8C%E4%B8%9A%E8%A7%84%E5%88%92%E4%B9%A6/" rel="next" title="程序员必读的事业规划书">
+                <i class="fa fa-chevron-left"></i> 程序员必读的事业规划书
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2021/07/14/%E7%AE%97%E6%B3%95/leetcode/124.%E4%BA%8C%E5%8F%89%E6%A0%91%E4%B8%AD%E7%9A%84%E6%9C%80%E5%A4%A7%E8%B7%AF%E5%BE%84%E5%92%8C/" rel="prev" title="124.二叉树中的最大路径和">
+                124.二叉树中的最大路径和 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+    </div>
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/%5Bobject%20Object%5D"
+                alt="" />
+            
+              <p class="site-author-name" itemprop="name"></p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/%7C%7C%20archive">
+              
+                  <span class="site-state-item-count">34</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">12</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">42</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/swliu920322" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:1064084779@@qq.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81%E6%95%B4%E6%B4%81%E4%B9%8B%E9%81%93-%E9%87%8D%E6%9E%84"><span class="nav-number">1.</span> <span class="nav-text">代码整洁之道-重构</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%88%E8%AE%B2%E4%B9%A6%E9%87%8C%E7%9A%84%E4%B8%9C%E8%A5%BF"><span class="nav-number">1.1.</span> <span class="nav-text">先讲书里的东西</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%87%8D%E6%9E%84%E5%89%8D%E8%A8%80%EF%BC%88%E4%BB%A3%E7%A0%81%E5%A4%A7%E5%85%A82%EF%BC%89"><span class="nav-number">1.2.</span> <span class="nav-text">重构前言（代码大全2）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%87%8D%E6%9E%84%E6%98%AF%E4%BB%80%E4%B9%88"><span class="nav-number">1.3.</span> <span class="nav-text">重构是什么</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AE%9A%E4%B9%89"><span class="nav-number">1.3.1.</span> <span class="nav-text">定义</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%8E%AF%E5%A2%83"><span class="nav-number">1.3.2.</span> <span class="nav-text">环境</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E9%87%8D%E6%9E%84"><span class="nav-number">1.4.</span> <span class="nav-text">为什么要重构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BB%80%E4%B9%88%E6%97%B6%E5%80%99%E9%87%8D%E6%9E%84"><span class="nav-number">1.5.</span> <span class="nav-text">什么时候重构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%80%8E%E4%B9%88%E9%87%8D%E6%9E%84"><span class="nav-number">1.6.</span> <span class="nav-text">怎么重构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%87%8D%E6%9E%84%E7%9A%84%E6%8C%91%E6%88%98"><span class="nav-number">1.7.</span> <span class="nav-text">重构的挑战</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+        <div class="back-to-top">
+          <i class="fa fa-arrow-up"></i>
+          
+            <span id="scrollpercent"><span>0</span>%</span>
+          
+        </div>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2021 &mdash; <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">刘圣伟</span>
+
+  
+</div>
+
+
+
+
+
+
+
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv">
+      <i class="fa fa-user"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+      
+    </span>
+  
+
+  
+    <span class="site-pv">
+      <i class="fa fa-eye"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+      
+    </span>
+  
+</div>
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/three/three.min.js"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/three/three-waves.min.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item=>{
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: 'EBpGzq6eYoqhgaJQGIykcFED-gzGzoHsz',
+        appKey: 'drIOSv99SkzYrgQuRx3CCyxH',
+        placeholder: '客官，说点什么吧',
+        avatar:'mm',
+        guest_info:guest,
+        pageSize:'10' || 10,
+    });
+  </script>
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+  <script type="text/javascript" src="/js/src/js.cookie.js?v=5.1.4"></script>
+  <script type="text/javascript" src="/js/src/scroll-cookie.js?v=5.1.4"></script>
+
+
+  
+
+</body>
+</html>
