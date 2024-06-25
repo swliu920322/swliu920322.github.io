@@ -1,29 +1,42 @@
 name: Deploy
-on: [push]
+on:
+  push:
+    branches: master
+  pull_request:
+    branches: master
 
 jobs:
   deploy:
     name: Deploy
     runs-on: ubuntu-latest
+
     permissions:
-      id-token: write # 用于 Deno Deploy 身份认证
-      contents: read # 用于克隆仓库
+      id-token: write # Needed for auth with Deno Deploy
+      contents: read # Needed to clone the repository
 
     steps:
       - name: Clone repository
         uses: actions/checkout@v4
 
-      # 没有使用 npm？请将 `npm ci` 修改为 `yarn install` 或 `pnpm i`
-      - name: Install dependencies
-        run: pnpm i
+      - name: Install Deno
+        uses: denoland/setup-deno@v1
+        with:
+          deno-version: v1.x
 
-      # 没有使用 npm？请将 `npm run build` 修改为 `yarn build` 或 `pnpm run build`
-      - name: Build Astro
-        run: pnpm run build
+      - name: Install Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: lts/*
+
+      - name: Install step
+        run: "npm i --legacy-peer-deps"
+
+      - name: Build step
+        run: "npm run build"
 
       - name: Upload to Deno Deploy
         uses: denoland/deployctl@v1
         with:
-          project: my-deno-deploy # TODO: 替换为 Deno Deploy 项目的名称
-          entrypoint: server/entry.mjs
-          root: dist
+          project: "max-record"
+          entrypoint: "server/entry.mjs"
+          root: "dist"
