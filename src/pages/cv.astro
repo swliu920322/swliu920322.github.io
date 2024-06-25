@@ -2,61 +2,40 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import TimeLineElement from "../components/cv/TimeLine.astro";
 ---
-
 <BaseLayout title="Resume" sideBarActiveItemID="cv">
     <div class="mb-5">
-        <div class="text-3xl w-full font-bold">Profile</div>
+        <div class="text-3xl w-full font-bold">Profile/个人</div>
     </div>
 
     <div class="mb-10 text-justify">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-        aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
-        aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-        cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        我叫刘圣伟，前端工程师。
     </div>
 
     <div class="mb-5">
-        <div class="text-3xl w-full font-bold">Education</div>
+        <div class="text-3xl w-full font-bold">Education/教育</div>
     </div>
 
     <div class="time-line-container grid gap-4 mb-10">
-        <TimeLineElement
-                title="Title Name"
-                subtitle="[start year] to [end year] at [Study Center Name], [City], [Country]"
-        />
-        <TimeLineElement
-                title="Title Name"
-                subtitle="[start year] to [end year] at [Study Center Name], [City], [Country]"
-        />
+        <TimeLineElement title="太原理工大学" subtitle="2010～2014 机械设计制作及其自动化 山西太原"/>
     </div>
 
     <div class="mb-5">
-        <div class="text-3xl w-full font-bold">Experience</div>
+        <div class="text-3xl w-full font-bold">Experience/经历</div>
     </div>
 
     <div class="time-line-container mb-10">
-        <TimeLineElement
-                title="Job Title at Project or Company Name"
-                subtitle="From [Start Date] to [End Date] at [Company], [City], [Country]"
-        >
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.
+        <TimeLineElement title="前端开发" subtitle="2022.7~2023.1 SCANIA 江苏南通如皋">
+
         </TimeLineElement>
-        <TimeLineElement
-                title="Job Title at Project or Company Name"
-                subtitle="From [Start Date] to [End Date] at [Company], [City], [Country]"
-        >
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.
+        <TimeLineElement title="前端开发经理助理/AM" subtitle="2021.7~2022.3 Accenture 辽宁大连">
+
         </TimeLineElement>
-        <TimeLineElement
-                title="Job Title at Project or Company Name"
-                subtitle="From [Start Date] to [End Date] at [Company], [City], [Country]"
-        >
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.
+        <TimeLineElement title="前端架构师" subtitle="2020.5~2022.7">
         </TimeLineElement>
     </div>
 
     <div class="mb-5">
-        <div class="text-3xl w-full font-bold">Certifications</div>
+        <div class="text-3xl w-full font-bold">Certifications/认证</div>
     </div>
 
     <ul class="list-disc mx-6 mb-10 grid gap-2">
@@ -72,21 +51,11 @@ import TimeLineElement from "../components/cv/TimeLine.astro";
         <div class="text-3xl w-full font-bold">Skills</div>
     </div>
 
-    <ul class="list-disc md:columns-5 columns-2 mx-6">
-        <li>Skill Name</li>
-        <li>Skill Name</li>
-        <li>Skill Name</li>
-        <li>Skill Name</li>
-        <li>Skill Name</li>
-        <li>Skill Name</li>
-        <li>Skill Name</li>
-        <li>Skill Name</li>
-        <li>Skill Name</li>
-        <li>Skill Name</li>
-        <li>Skill Name</li>
-        <li>Skill Name</li>
-        <li>Skill Name</li>
-        <li>Skill Name</li>
-        <li>Skill Name</li>
+    <ul class="list-disc md:columns-4 columns-2 mx-6">
+        <li>Vue</li>
+        <li>React</li>
+        <li>Angular</li>
+        <li>Astro</li>
+        <li>Uniapp</li>
     </ul>
 </BaseLayout>
