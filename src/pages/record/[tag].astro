@@ -5,16 +5,20 @@ import { myTypeArr, myType, typeReverse } from '../../config';
 import HorizontalCard from '../../components/HorizontalCard.astro';
 
 
+
 const { params, props } = Astro;
 const allPosts = await getCollection('blog');
 const tags = allPosts.flatMap(i => i.data.tags);
-const filter = allPosts.filter(i => i.data.tags?.includes(myType[params.tag]));
+let filter = allPosts;
+if (params.tag !== 'home') {
+  filter = filter.filter(i => i.data.tags?.includes(myType[params.tag]));
+}
+
 export async function getStaticPaths() {
-  return myTypeArr.map(i => {
-    return {
-      params: { tag: i[0] },
-    };
-  });
+  return [
+    ...myTypeArr.map(i => ({ params: { tag: i[0] } })),
+    { params: { tag: 'home' } },
+  ];
 }
 ---
 <BaseLayout sideBarActiveItemID="record">
@@ -30,7 +34,7 @@ export async function getStaticPaths() {
   {
     filter.map((post) => {
         const { data, id } = post;
-        const { title, description, } = data;
+        const { title, description } = data;
         return (
           <HorizontalCard badge="NEW" img="/post_img.webp" url={`/record/${id}`} title={title}
                           desc={description}
