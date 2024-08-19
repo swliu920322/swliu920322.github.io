@@ -5,26 +5,26 @@ import HorizontalCard from "../../components/HorizontalCard.astro";
 import {typeReverse} from "../../config";
 const allPosts = await getCollection("blog");
 const tags = allPosts.flatMap(i => i.data.tags);
-console.log(typeReverse)
+console.log(allPosts);
 ---
 <BaseLayout sideBarActiveItemID="record">
     <div class="card-actions mb-5">
-        {
-            Array.from(new Set(tags)).map((tag) => (
-                tag && <a href={`/record/${typeReverse[tag]}`} class="badge badge-outline">
-                    {tag}
-                </a>
-            ))
-        }
+      {
+        Array.from(new Set(tags)).map((tag) => (
+          tag && <a href={`/record/${typeReverse[tag]}`} class="badge badge-outline">
+            {tag}
+          </a>
+        ))
+      }
     </div>
-    {
-        allPosts.map((post) => {
-                const {url, data} = post;
-                const {title, description} = data;
-                return (
-                        <HorizontalCard badge="NEW" img="/post_img.webp" url={url} title={title} desc={description}/>
-                )
-            }
+  {
+    allPosts.map((post) => {
+        const {id, data} = post;
+        const {title, description} = data;
+        return (
+                <HorizontalCard badge="NEW" img="/post_img.webp" url={`/record/${id}`} title={title} desc={description}/>
         )
-    }
+      }
+    )
+  }
 </BaseLayout>
