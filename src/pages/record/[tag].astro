@@ -4,8 +4,6 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import { myTypeArr, myType, typeReverse } from '../../config';
 import HorizontalCard from '../../components/HorizontalCard.astro';
 
-
-
 const { params, props } = Astro;
 const allPosts = await getCollection('blog');
 const tags = allPosts.flatMap(i => i.data.tags);
@@ -20,15 +18,21 @@ export async function getStaticPaths() {
     { params: { tag: 'home' } },
   ];
 }
+console.log(params.tag);
 ---
 <BaseLayout sideBarActiveItemID="record">
   <div class="card-actions mb-5">
     {
-      Array.from(new Set(tags)).map((tag) => (
-        tag && <a href={`/record/${typeReverse[tag]}`} class="badge badge-outline">
-          {tag}
-        </a>
-      ))
+      Array.from(new Set(tags)).map((tag) => {
+        if (tag) {
+          return (
+            <a href={`/record/${typeReverse[tag]}`}
+               class=`badge badge-outline ${params.tag === typeReverse[tag] ? 'link-active' : ''}`>
+              {tag}
+            </a>
+          );
+        }
+      })
     }
   </div>
   {
@@ -44,3 +48,10 @@ export async function getStaticPaths() {
     )
   }
 </BaseLayout>
+
+<style>
+    .link-active, .badge-outline:hover {
+        background: #00b3f0;
+        color: black;
+    }
+</style>

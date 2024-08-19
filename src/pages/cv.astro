@@ -1,61 +1,66 @@
 ---
-import BaseLayout from "../layouts/BaseLayout.astro";
-import TimeLineElement from "../components/cv/TimeLine.astro";
+import BaseLayout from '../layouts/BaseLayout.astro';
+import TimeLineElement from '../components/cv/TimeLine.astro';
 ---
 <BaseLayout title="Resume" sideBarActiveItemID="cv">
+  <div class="flex flex-col items-center" id="my-cv">
     <div class="mb-5">
-        <div class="text-3xl w-full font-bold">Profile/个人</div>
+      <div class="text-3xl w-full font-bold">Profile/个人</div>
     </div>
 
     <div class="mb-10 text-justify">
-        我叫刘圣伟，前端工程师。
+      我叫刘圣伟，前端工程师。
     </div>
 
     <div class="mb-5">
-        <div class="text-3xl w-full font-bold">Education/教育</div>
+      <div class="text-3xl w-full font-bold">Education/教育</div>
     </div>
 
     <div class="time-line-container grid gap-4 mb-10">
-        <TimeLineElement title="太原理工大学(毕业无学位)" subtitle="2010～2014 机械设计制作及其自动化 山西太原"/>
+      <TimeLineElement title="太原理工大学(毕业无学位)" subtitle="2010～2014 机械设计制作及其自动化 山西太原" />
     </div>
 
     <div class="mb-5">
-        <div class="text-3xl w-full font-bold">Experience/经历</div>
+      <div class="text-3xl w-full font-bold">Experience/经历</div>
     </div>
 
     <div class="time-line-container mb-10">
-        <TimeLineElement title="前端开发" subtitle="2022.7~2023.1 SCANIA 江苏南通如皋">
-
-        </TimeLineElement>
-        <TimeLineElement title="前端开发经理助理/AM" subtitle="2021.7~2022.3 Accenture 辽宁大连">
-
-        </TimeLineElement>
-        <TimeLineElement title="前端架构师" subtitle="2020.5~2022.7">
-        </TimeLineElement>
+      <TimeLineElement title="前端开发（SCANIA 江苏南通如皋）2022.7 ~ 2023.1">
+        去瑞典工厂培训 MES 业务，整理集团软件采购安全流程(ISEC)，负责软件采购方案调研。
+      </TimeLineElement>
+      <TimeLineElement title="前端AM（埃森哲启云 辽宁大连）2021.7 ~ 2022.3">
+        主导某 500 强企业数字化项目，负责移动App和微信同构、钉钉端架构升级。
+        <p class="mb-2">技术栈 Vuejs、React、Uniapp、Ding</p>
+      </TimeLineElement>
+      <TimeLineElement title="前端架构师(上海翱盛 辽宁大连）2020.5 ~ 2022.7">
+        多个企业管理系统研发负责人，开发配置式组件，提升交付速度。
+        <p>核心技术栈 Vue3、TS、Echarts、Flutter</p>
+      </TimeLineElement>
     </div>
 
-    <div class="mb-5">
-        <div class="text-3xl w-full font-bold">Certifications/认证</div>
-    </div>
+    <!--<div class="mb-5">-->
+    <!--  <div class="text-3xl w-full font-bold">Certifications/认证</div>-->
+    <!--</div>-->
 
-    <ul class="list-disc mx-6 mb-10 grid gap-2">
-        <li>
-            <a href="#" target="_blank"> Certification Name (with link)</a>
-        </li>
-        <li>
-            <a href="#" target="_blank"> Certification Name (with link)</a>
-        </li>
-    </ul>
+    <!--<ul class="list-disc mx-6 mb-10 grid gap-2">-->
+    <!--  <li>-->
+    <!--    <a href="#" target="_blank"> Certification Name (with link)</a>-->
+    <!--  </li>-->
+    <!--  <li>-->
+    <!--    <a href="#" target="_blank"> Certification Name (with link)</a>-->
+    <!--  </li>-->
+    <!--</ul>-->
 
     <div class="mb-5">
-        <div class="text-3xl w-full font-bold">Skills</div>
+      <div class="text-3xl w-full font-bold">Skills</div>
     </div>
 
     <ul class="list-disc md:columns-4 columns-2 mx-6">
-        <li>Vue</li>
-        <li>React</li>
-        <li>Angular</li>
-        <li>Astro</li>
-        <li>Uniapp</li>
+      <li>Vue</li>
+      <li>React</li>
+      <li>Angular</li>
+      <li>Astro</li>
+      <li>Uniapp</li>
     </ul>
+  </div>
 </BaseLayout>
