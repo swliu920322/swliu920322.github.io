@@ -20,8 +20,10 @@ jobs:
     steps:
       - name: Checkout your repository using git
         uses: actions/checkout@v4
-      - name: Install pnpm
-        uses: pnpm/action-setup@v2
+#      - name: Install pnpm
+#        uses: pnpm/action-setup@v2
+#        with:
+#          version: 9
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
       - name: Install, build, and upload your site
