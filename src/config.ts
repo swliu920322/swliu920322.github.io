@@ -7,15 +7,16 @@ export const GENERATE_SLUG_FROM_TITLE = true
 export const TRANSITION_API = true
 
 export const myType = {
-    medical: '中医',
-    civilization: '国学',
-    frontend: '前端',
-    science: '科学'
+  medical: '中医',
+  civilization: '国学',
+  frontend: '前端',
+  science: '科学'
 }
-export const typeReverse = Object.entries(myType).reduce((r, c) => {
-    const [key, val] = c;
-    return {
-        ...r,
-        [val]: key
-    }
+export const myTypeArr = Object.entries(myType)
+export const typeReverse = myTypeArr.reduce((r, c) => {
+  const [key, val] = c;
+  return {
+    ...r,
+    [val]: key
+  }
 }, {})

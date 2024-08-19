@@ -4,7 +4,7 @@ title: "Demo Post 1"
 description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
 pubDate: "2024-10-12"
 heroImage: "/post_img.webp"
-tags: ["tokio"]
+tags: ["科学"]
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor

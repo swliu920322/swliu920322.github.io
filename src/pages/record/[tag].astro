@@ -1,7 +1,7 @@
 ---
 import {getCollection} from "astro:content";
 import BaseLayout from "../../layouts/BaseLayout.astro";
-import {myType, typeReverse} from "../../config";
+import {myTypeArr, myType, typeReverse} from "../../config";
 import HorizontalCard from "../../components/HorizontalCard.astro";
 
 
@@ -9,25 +9,32 @@ const {params, props} = Astro;
 const allPosts = await getCollection('blog');
 const tags = allPosts.flatMap(i => i.data.tags);
 const filter = allPosts.filter(i => i.data.tags?.includes(myType[params.tag]))
+export async function getStaticPaths() {
+  return myTypeArr.map(i => {
+    return {
+      params: {tag: i[0]}
+    }
+  });
+}
 ---
 <BaseLayout sideBarActiveItemID="record">
     <div class="card-actions mb-5">
-        {
-            Array.from(new Set(tags)).map((tag) => (
-                tag && <a href={`/record/${typeReverse[tag]}`} class="badge badge-outline">
-                    {tag}
-                </a>
-            ))
-        }
+      {
+        Array.from(new Set(tags)).map((tag) => (
+          tag && <a href={`/record/${typeReverse[tag]}`} class="badge badge-outline">
+            {tag}
+          </a>
+        ))
+      }
     </div>
-    {
-        filter.map((post) => {
-                const {url, data} = post;
-                const {title, description} = data;
-                return (
-                        <HorizontalCard badge="NEW" img="/post_img.webp" url={url} title={title} desc={description}/>
-                )
-            }
+  {
+    filter.map((post) => {
+        const {url, data} = post;
+        const {title, description} = data;
+        return (
+                <HorizontalCard badge="NEW" img="/post_img.webp" url={url} title={title} desc={description}/>
         )
-    }
+      }
+    )
+  }
 </BaseLayout>
