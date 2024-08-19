@@ -1,13 +1,7 @@
-import {defineConfig} from 'astro/config';
-// import deno from '@astrojs/deno';
-import tailwind from "@astrojs/tailwind";
+import { defineConfig } from 'astro/config';
+import tailwind from '@astrojs/tailwind';
 
 export default defineConfig({
-    integrations: [tailwind()],
-    // output: 'server',
-    // adapter: deno(),
-    // i18n: {
-    //     defaultLocale: "zh",
-    //     locales: ["es", "zh"],
-    // }
+  integrations: [tailwind()],
+  site: 'https://swliu920322.github.io',
 });
