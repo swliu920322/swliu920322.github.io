@@ -3,7 +3,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import TimeLineElement from '../components/cv/TimeLine.astro';
 ---
 <BaseLayout title="Resume" sideBarActiveItemID="cv">
-  <div class="flex flex-col items-center" id="my-cv">
+  <div class="" id="my-cv">
     <div class="mb-5">
       <div class="text-3xl w-full font-bold">Profile/个人</div>
     </div>
@@ -30,11 +30,23 @@ import TimeLineElement from '../components/cv/TimeLine.astro';
       </TimeLineElement>
       <TimeLineElement title="前端AM（埃森哲启云 辽宁大连）2021.7 ~ 2022.3">
         主导某 500 强企业数字化项目，负责移动App和微信同构、钉钉端架构升级。
-        <p class="mb-2">技术栈 Vuejs、React、Uniapp、Ding</p>
+        <p class="mb-2">技术栈 Vuejs、React、Uniapp、Ding。</p>
       </TimeLineElement>
       <TimeLineElement title="前端架构师(上海翱盛 辽宁大连）2020.5 ~ 2022.7">
         多个企业管理系统研发负责人，开发配置式组件，提升交付速度。
-        <p>核心技术栈 Vue3、TS、Echarts、Flutter</p>
+        <p class="mb-2">核心技术栈 Vue3、TS、Echarts、Flutter。</p>
+      </TimeLineElement>
+      <TimeLineElement title="高级前端开发(深圳汇思诺 辽宁大连）2019.5 ~ 2020.2">
+        主导企业 SASS 平台和小程序架构。
+        <p class="mb-2">技术栈 Angular10+、Vuejs、Uniapp。</p>
+      </TimeLineElement>
+      <TimeLineElement title="跨平台开发(江苏⻛云科技 江苏苏州）2017.5 ~ 2019.2">
+        负责 devops 平台模块、某国企可视化项⺫和移动管理端，开发 Form、Table、Tree 组件。
+        <p>技术栈 Angular 8、Vuejs、D3.js、Echarts、Cordova。</p>
+      </TimeLineElement>
+      <TimeLineElement title="初级软件工程师(上海安硕 江苏苏州）2017.5 ~ 2019.2">
+        参与银行 web 开发，主导移动端 RN 开发、负责 Redux 替换 Flux、推行 ES6 规范与代码审核。
+        <p>技术栈 Angular.js、RN。</p>
       </TimeLineElement>
     </div>
 
@@ -55,9 +67,18 @@ import TimeLineElement from '../components/cv/TimeLine.astro';
       <div class="text-3xl w-full font-bold">Skills</div>
     </div>
 
-    <ul class="list-disc md:columns-4 columns-2 mx-6">
-      <li>Vue</li>
-      <li>React</li>
+    <ul class="flex flex-col mx-6">
+      <li>
+        Vue
+      </li>
+      <li class="flex ">
+        <span>React</span>
+        <ul>
+          <li class="ml-2">
+            <a class="underline font-black" target="_blank" href="https://github.com/swliu920322/next-github">github mock</a>
+          </li>
+        </ul>
+      </li>
       <li>Angular</li>
       <li>Astro</li>
       <li>Uniapp</li>
