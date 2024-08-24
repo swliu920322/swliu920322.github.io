@@ -14,13 +14,13 @@ tags: [ "前端" ]
 - redis通过库来配合session自动处理，只存用户信息和授权数据
   因为视频内容是5年前的，nextjs变化很大，新的架构性能很很快。
 
-### 介绍
+## 介绍
 
 Nextjs是React的一个SSR框架，新升级了App router模式通过RSC进一步做了js加载的优化。
 主要就是将RSC组件拆出js bundle，然后传输html，js，css，先将html，css传输给浏览器渲染，等待js传输后，注水使页面可交互。
 极大的减少了js传递体积，从而优化了性能。
 
-### App router的不同
+## App router的不同
 
 特定文件名
 
@@ -35,7 +35,7 @@ Nextjs是React的一个SSR框架，新升级了App router模式通过RSC进一�
 - default.tsx 对于平行页面找不到的时候默认的fallback 页面
   所有其他的文件会自动被路由过滤掉，意味着你可以将相关的代码组织起来，便于迁移。
 
-### 开发遇到的坑
+## 开发遇到的坑
 
 由于nextjs 区分 server component 和 client component,很多方法服务端可以用，客户端不能用
 传统的开发方式就是统一的思路，hooks全部解决，
@@ -44,9 +44,14 @@ Nextjs是React的一个SSR框架，新升级了App router模式通过RSC进一�
 
 对原来纯use client的改造时发现大量报错，核心是需要考虑如何匹配App router。
 
-#### 服务端
-
-服务端核心就是做静态渲染，将客户端功能拆出来。
+### 服务端
+服务端组件分为两种，一种是layout，一种是page
+#### Layout
+layout本身是共享页面，所以不接受任何可变化的内容，通常做为静态页面渲染。
+- 不接受 searchParams pathname，所以也不能传给子组件。
+  - 通常有共享交互组件如Search，需要标记为client组件来进行处理。
+#### Page(RSC)
+服务端组件核心就是做静态渲染，将客户端功能拆出来。
 
 - 可以用 动态方法会导入进入动态渲染
     - cookies
@@ -57,15 +62,21 @@ Nextjs是React的一个SSR框架，新升级了App router模式通过RSC进一�
     - 做一些静态数据来渲染页面
     - fetch API
     - orm 或 database
-    - route Handle
+    - Route Handle
     - 其他的网络请求库
     - Suspense来做顺序渲染
     - preload 预先触发方法，就是提前调用服务端的加载方法，再在return 时渲染出来
 - 不能用
     - useState
     - useEffect
-    - 传递方法给客户端
+    - 传递方法给客户端(可以传递Server Action)
 
+#### RCC client Component
+就是正常的React 文件，常用的都可以
+- 不能用
+  - 访问cookie header什么
+- 可以用
+  - 可以从RSC 组件接受Server Action来优化请求
 ### 参考文档
 
 - nextjs官网 https://nextjs.org/ react ssr库
