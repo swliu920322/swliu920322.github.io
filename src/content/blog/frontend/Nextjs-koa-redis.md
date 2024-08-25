@@ -77,6 +77,26 @@ layout本身是共享页面，所以不接受任何可变化的内容，通常�
   - 访问cookie header什么
 - 可以用
   - 可以从RSC 组件接受Server Action来优化请求
+
+### 开发心得
+- 开发总览
+  - RSC的fetch目前是不走middleware的，需要保持和middleware类似的封装
+  - 尽可能减少client 组件，影响js包的大小
+  - 尽可能使用服务端的Server Action来发起网络请求
+
+- Layout(RSC)
+  -纯静态开发，可以从cookie来取值
+- Page(RSC)
+  - 纯静态开发，可以从cookie,searchParams取值
+  - 可以使用Suspend与fetch请求结合取值
+  - 可以传递Server Action给 RCC
+- Component(RCC)
+  - 对于存在交互内容的组件，使用client组件来解决
+  - 客户端组件，使用React特性开发，尽量小
+  - 取值有两种
+    - 从Page传递Server Action，在本页面用SWR(推荐)
+    - 直接使用自己的请求
+
 ### 参考文档
 
 - nextjs官网 https://nextjs.org/ react ssr库
