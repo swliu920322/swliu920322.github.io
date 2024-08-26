@@ -2,7 +2,7 @@
 title: "Astro 博客"
 description: "Astro blog"
 pubDate: "2024-8-19"
-heroImage: "/post_img.webp"
+postImage: "/post_img.webp"
 tags: [ "前端" ]
 ---
 

@@ -38,10 +38,15 @@ console.log(params.tag);
   {
     filter.map((post) => {
         const { data, id } = post;
-        const { title, description } = data;
+        const { title, description, postImage, pubDate, tags } = data;
         return (
-          <HorizontalCard badge="NEW" img="/post_img.webp" url={`/record/${id}`} title={title}
-                          desc={description}
+          <HorizontalCard
+            tags={tags}
+            pubDate={pubDate}
+            img={postImage || '/post_img.webp'}
+            url={`/record/${id}`}
+            title={title}
+            desc={description}
           />
         );
       },

@@ -2,7 +2,7 @@
 title: "Nextjs(App Router) + tailwind"
 description: "nextjs项目学习"
 pubDate: "2024-8-26"
-heroImage: "/post_img.webp"
+postImage: "/nextjs.png"
 tags: [ "前端" ]
 ---
 
@@ -14,7 +14,7 @@ tags: [ "前端" ]
 - redis通过库来配合session自动处理，只存用户信息和授权数据，现在使用服务端cookie。
   因为视频内容是5年前的，nextjs变化很大，新的架构性能很很快。
 
-## 项目部署地址 https://next-github-pied.vercel.app/
+## 项目部署地址 https://next-github-pied.vercel.app/  
 
 ## 介绍
 
