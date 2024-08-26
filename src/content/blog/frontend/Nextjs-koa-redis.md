@@ -98,7 +98,10 @@ layout本身是共享页面，所以不接受任何可变化的内容，通常�
 
 ## 总结
 做几个页面后很快适应了，最后lighthouse测下来性能也不错，做不同架构的项目，心态一定要转变。
-
+<img src="https://raw.githubusercontent.com/swliu920322/next-github/master/docs/img/index.png">
+<img src="https://raw.githubusercontent.com/swliu920322/next-github/master/docs/img/query.png">
+<img src="https://raw.githubusercontent.com/swliu920322/next-github/master/docs/img/detail.png">
+<img src="https://raw.githubusercontent.com/swliu920322/next-github/master/docs/img/issue.png">
 
 ### 参考文档
 - nextjs官网 https://nextjs.org/ react ssr库
