@@ -97,6 +97,12 @@ layout本身是共享页面，所以不接受任何可变化的内容，通常�
     - 从Page传递Server Action，在本页面用SWR(推荐)
     - 直接使用自己的请求
 
+- Image 代替img渲染，会有更好的性能，可以设置渲染优先级
+- Error
+  - useSearchParams的client 组件必须包含在Suspense里，不然会导致整个页面变为客户端渲染
+
+### 部署
+在 https://vercel.com/ 上可以直接部署
 ### 参考文档
 
 - nextjs官网 https://nextjs.org/ react ssr库

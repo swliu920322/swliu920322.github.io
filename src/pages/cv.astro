@@ -12,13 +12,6 @@ import TimeLineElement from '../components/cv/TimeLine.astro';
       我叫刘圣伟，前端工程师。
     </div>
 
-    <div class="mb-5">
-      <div class="text-3xl w-full font-bold">Education/教育</div>
-    </div>
-
-    <div class="time-line-container grid gap-4 mb-10">
-      <TimeLineElement title="太原理工大学(毕业无学位)" subtitle="2010～2014 机械设计制作及其自动化 山西太原" />
-    </div>
 
     <div class="mb-5">
       <div class="text-3xl w-full font-bold">Experience/经历</div>
@@ -42,12 +35,24 @@ import TimeLineElement from '../components/cv/TimeLine.astro';
       </TimeLineElement>
       <TimeLineElement title="跨平台开发(江苏⻛云科技 江苏苏州）2017.5 ~ 2019.2">
         负责 devops 平台模块、某国企可视化项⺫和移动管理端，开发 Form、Table、Tree 组件。
-        <p>技术栈 Angular 8、Vuejs、D3.js、Echarts、Cordova。</p>
+        <p class="mb-2">技术栈 Angular 8、Vuejs、D3.js、Echarts、Cordova。</p>
       </TimeLineElement>
-      <TimeLineElement title="初级软件工程师(上海安硕 江苏苏州）2017.5 ~ 2019.2">
+      <TimeLineElement title="初级软件工程师(上海安硕 江苏苏州）2015.5 ~ 2017.3">
         参与银行 web 开发，主导移动端 RN 开发、负责 Redux 替换 Flux、推行 ES6 规范与代码审核。
-        <p>技术栈 Angular.js、RN。</p>
+        <p class="mb-2">技术栈 Angular.js、RN。</p>
       </TimeLineElement>
+      <TimeLineElement title="JAVA工程师(浪潮通软 上海）2014.9 ~ 2015.3">
+        参与浦发银行财资系统开发。
+        <p >技术栈JAVA mybatis servlet。</p>
+      </TimeLineElement>
+    </div>
+
+    <div class="mb-5">
+      <div class="text-3xl w-full font-bold">Education/教育</div>
+    </div>
+
+    <div class="time-line-container grid gap-4 mb-10">
+      <TimeLineElement title="太原理工大学(毕业无学位)" subtitle="2010.9～2014.9 机械设计制作及其自动化 山西太原" />
     </div>
 
     <!--<div class="mb-5">-->
@@ -71,13 +76,14 @@ import TimeLineElement from '../components/cv/TimeLine.astro';
       <li>
         Vue
       </li>
-      <li class="flex ">
+      <li class="flex flex-col">
         <span>React</span>
-        <ul>
-          <li class="ml-2">
-            <a class="underline font-black" target="_blank" href="https://github.com/swliu920322/next-github">github mock</a>
+        <ol>
+          <li class="ml-4">
+            <a class="underline font-black" target="_blank" href="https://next-github-pied.vercel.app/">基于nextjs App
+              架构的github mock(已部署)</a>
           </li>
-        </ul>
+        </ol>
       </li>
       <li>Angular</li>
       <li>Astro</li>
