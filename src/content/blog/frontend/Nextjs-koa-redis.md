@@ -31,6 +31,8 @@ Nextjs是React的一个SSR框架，新升级了App router模式通过RSC进一�
 
 传统的开发方式思路比较同意，用hooks解决。但是新架构提倡的是尽可能减少js，来加速渲染
 
+顺便将router部分翻译了一遍。
+
 ### 报错
 对原来纯use client的改造时发现大量报错，核心是需要考虑如何匹配App router。
 
