@@ -2,7 +2,7 @@
 title: "皇帝内经学习"
 description: "阴阳"
 pubDate: "2024-8-27"
-postImage: "/nextjs.png"
+postImage: "/huangdi.png"
 tags: [ "中医" ]
 ---
 ## 阴阳
