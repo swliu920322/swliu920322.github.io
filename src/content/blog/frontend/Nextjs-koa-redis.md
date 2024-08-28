@@ -17,6 +17,12 @@ tags: [ "前端" ]
 ## 项目部署地址 https://next-github-pied.vercel.app/  
 
 ## 介绍
+这个是一个登录github授权，然后获得自己repositories并且可以搜索和查看具体的项目详情页的一个项目
+- 通过github oauth授权
+- 查看自己的repositories
+- 根据关键词查询repositories
+- 查看某个repository的detail的readme和issues
+- 登录、登出
 
 Nextjs是React的一个SSR框架，新升级了App router模式通过RSC进一步做了js加载的优化。
 
