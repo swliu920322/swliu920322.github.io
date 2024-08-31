@@ -105,6 +105,7 @@ layout本身是共享页面，所以不接受任何可变化的内容，通常�
 
 在 https://vercel.com/ 上可以直接部署
 
+
 ## 总结
 做几个页面后很快适应了，最后lighthouse测下来性能也不错，做不同架构的项目，心态一定要转变。
 <img src="https://raw.githubusercontent.com/swliu920322/next-github/master/docs/img/index.png">
@@ -120,3 +121,4 @@ layout本身是共享页面，所以不接受任何可变化的内容，通常�
 - prettier官网 https://prettier.io/ 代码美化
 - redux官网 https://redux.js.org/ 状态管理，在nextjs提倡模块管理，而不是集中
 - swr官网 https://swr.vercel.app/zh-CN 一个react请求渲染库
+- Discard社区常遇到的提问 https://nextjs-faq.com/fetch-api-in-getserversideprops
