@@ -46,7 +46,8 @@ export const myType = {
   civilization: '国学',
   frontend: '前端',
   science: '科学',
-  books: '读书'
+  books: '读书',
+  work: '工作',
 };
 export const myTypeArr = Object.entries(myType);
 export const typeReverse = myTypeArr.reduce((r, c) => {

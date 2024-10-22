@@ -1,7 +1,7 @@
 ---
 title: "程序员思维课-开发认知潜能"
 description: "如何开发思维，新手变成专家的五个步骤"
-pubDate: "2024-9-1"
+pubDate: "2024-9-3"
 postImage: ""
 tags: [ "读书" ]
 ---
