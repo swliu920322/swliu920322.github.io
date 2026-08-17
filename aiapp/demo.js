@@ -7515,13 +7515,13 @@
     return (0, import_jsx_runtime.jsxs)("p", { children: [(0, import_jsx_runtime.jsx)("span", { className: cls.body + " " + cls.leading, children: t.en }), (0, import_jsx_runtime.jsx)("span", { className: "block mt-1 text-[0.85em] opacity-60 " + cls.body, children: t.zh })] });
   }
   function FormulaInline({ value }) {
-    return (0, import_jsx_runtime.jsx)("span", { className: "font-mono whitespace-nowrap", children: value });
+    return (0, import_jsx_runtime.jsx)("span", { className: "font-mono break-words whitespace-normal", children: value });
   }
   function FormulaCard({ value, label, cls }) {
-    return (0, import_jsx_runtime.jsxs)("div", { className: `rounded-2xl border px-8 py-6 ${cls.accent}`, children: [label && (0, import_jsx_runtime.jsx)("p", { className: "text-xs uppercase tracking-widest opacity-70 text-center mb-3", children: label.en }), (0, import_jsx_runtime.jsx)("p", { className: "text-center font-medium text-xl whitespace-nowrap", children: value })] });
+    return (0, import_jsx_runtime.jsxs)("div", { className: `rounded-2xl border px-8 py-6 ${cls.accent}`, children: [label && (0, import_jsx_runtime.jsx)("p", { className: "text-xs uppercase tracking-widest opacity-70 text-center mb-3", children: label.en }), (0, import_jsx_runtime.jsx)("p", { className: "text-center font-medium text-xl break-words whitespace-normal leading-snug", children: value })] });
   }
   function FormulaFraction({ value, label, cls }) {
-    return (0, import_jsx_runtime.jsxs)("div", { className: `rounded-lg border p-6 text-center overflow-x-auto ${cls.accent}`, children: [label && (0, import_jsx_runtime.jsx)("p", { className: "text-[10px] uppercase opacity-60 mb-3", children: label.en }), (0, import_jsx_runtime.jsx)("p", { className: "font-mono text-base whitespace-nowrap", children: value })] });
+    return (0, import_jsx_runtime.jsxs)("div", { className: `rounded-lg border p-6 text-center overflow-x-auto ${cls.accent}`, children: [label && (0, import_jsx_runtime.jsx)("p", { className: "text-[10px] uppercase opacity-60 mb-3", children: label.en }), (0, import_jsx_runtime.jsx)("p", { className: "font-mono text-base break-words whitespace-normal leading-snug", children: value })] });
   }
   function Collapsible({ title, spec, cls, defaultOpen, children }) {
     const [open, setOpen] = (0, import_react.useState)(defaultOpen);
