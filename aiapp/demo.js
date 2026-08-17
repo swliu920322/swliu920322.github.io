@@ -5,7 +5,13 @@
   var __getOwnPropNames = Object.getOwnPropertyNames;
   var __getProtoOf = Object.getPrototypeOf;
   var __hasOwnProp = Object.prototype.hasOwnProperty;
-  var __commonJS = (cb, mod) => function __require() {
+  var __require = /* @__PURE__ */ ((x) => typeof require !== "undefined" ? require : typeof Proxy !== "undefined" ? new Proxy(x, {
+    get: (a, b) => (typeof require !== "undefined" ? require : a)[b]
+  }) : x)(function(x) {
+    if (typeof require !== "undefined") return require.apply(this, arguments);
+    throw Error('Dynamic require of "' + x + '" is not supported');
+  });
+  var __commonJS = (cb, mod) => function __require2() {
     try {
       return mod || (0, cb[__getOwnPropNames(cb)[0]])((mod = { exports: {} }).exports, mod), mod.exports;
     } catch (e) {
@@ -7715,8 +7721,140 @@
     return parts.join(" \xB7 ");
   }
 
+  // src/local-gpu-bench.ts
+  var LOCAL_MODEL = "Qwen2.5-0.5B-Instruct-q4f16_1-MLC";
+  var PRESET_GRAMMAR = String.raw`
+root ::= "{" ws "\"preset\"" ws ":" ws "\"" preset "\"" ws "}"
+preset ::= "academic" | "playbook" | "narrative"
+ws ::= [ \n\t]*
+`;
+  var SYSTEM_PROMPT = `You are the display parameter router for a document interpreter.
+Given the user's intent about their audience, pick the single most fitting document form.
+Respond with exactly the requested JSON: {"preset":"academic"} or {"preset":"playbook"} or {"preset":"narrative"}.
+Operations staff / runbook / procedures -> playbook.
+Executive / narrative / story / presentation -> narrative.
+Review / academic / bilingual formal doc -> academic.
+Output ONLY the JSON, nothing else.`;
+  var cached = null;
+  var initPromise = null;
+  function benchLog(tag, ms, extra = "") {
+    const line = `[Bench] ${tag}: ${ms.toFixed(1)}ms${extra ? "  \xB7  " + extra : ""}`;
+    console.log(line);
+    return line;
+  }
+  function formatBytes(n) {
+    if (n <= 0) return "0 B";
+    const units = ["B", "KB", "MB", "GB"];
+    const i = Math.min(units.length - 1, Math.floor(Math.log(n) / Math.log(1024)));
+    return `${(n / Math.pow(1024, i)).toFixed(1)} ${units[i]}`;
+  }
+  async function bootLocalEngine(onProgress) {
+    if (typeof window === "undefined" || !("gpu" in navigator)) {
+      console.warn("[Bench] WebGPU not available in this browser.");
+      return null;
+    }
+    if (cached) return cached;
+    if (!initPromise) {
+      initPromise = (async () => {
+        const t0 = performance.now();
+        const progressLog = [];
+        let loadedBytes = 0;
+        const webLLM = await import("@mlc-ai/web-llm");
+        const initT0 = performance.now();
+        const engine = await webLLM.CreateMLCEngine(LOCAL_MODEL, {
+          initProgressCallback: (report) => {
+            loadedBytes = report.loadedBytes ?? loadedBytes;
+            const text = report.text ?? "";
+            const pct = Math.round((report.progress ?? 0) * 100);
+            const el = (report.timeElapsed ?? 0).toFixed(1);
+            const line = `${text} [${pct}%] ${formatBytes(loadedBytes)} elapsed ${el}s`;
+            progressLog.push(line);
+            console.log(`[Bench][cold-start] ${line}`);
+            onProgress?.(pct, line);
+          }
+        });
+        const initMs = performance.now() - initT0;
+        const handle = {
+          engine,
+          initMs,
+          loadedBytes,
+          progressLog,
+          params: await collectModelParams(engine)
+        };
+        benchLog(
+          "cold-start \xB7 model init",
+          initMs,
+          `model=${LOCAL_MODEL} bytes=${formatBytes(loadedBytes)}`
+        );
+        console.log(`[Bench] cold-start total (download+compile): ${((performance.now() - t0) / 1e3).toFixed(1)}s`);
+        cached = handle;
+        return handle;
+      })();
+    }
+    return initPromise;
+  }
+  async function collectModelParams(engine) {
+    const params = { model: LOCAL_MODEL };
+    try {
+      const cfg = engine?.getConfig?.() ?? engine?.config;
+      if (cfg?.model?.model_id) params["model_id"] = cfg.model.model_id;
+      if (cfg?.model?.quantization) params["quant"] = cfg.model.quantization;
+      if (cfg?.model?.params) params["params"] = String(cfg.model.params);
+      if (cfg?.model?.local_id) params["local_id"] = cfg.model.local_id;
+      if (cfg?.model?.model_lib) params["lib"] = String(cfg.model.model_lib);
+    } catch {
+    }
+    try {
+      const info = await engine?.getModelInfo?.();
+      if (info?.model_name) params["model_name"] = info.model_name;
+    } catch {
+    }
+    return params;
+  }
+  async function localPresetDecision(intent, handle) {
+    if (!handle) return null;
+    const t0 = performance.now();
+    try {
+      const reply = await handle.engine.chatCompletion({
+        messages: [
+          { role: "system", content: SYSTEM_PROMPT },
+          { role: "user", content: intent }
+        ],
+        temperature: 0,
+        max_tokens: 48,
+        response_format: { type: "grammar", grammar: PRESET_GRAMMAR }
+      });
+      const text = reply?.choices?.[0]?.message?.content ?? "";
+      const m = text.match(/"preset"\s*:\s*"(academic|playbook|narrative)"/);
+      const ms = performance.now() - t0;
+      benchLog("intent \xB7 local model", ms, `preset=${m?.[1] ?? "none"}`);
+      return m ? m[1] : null;
+    } catch (err) {
+      const ms = performance.now() - t0;
+      benchLog("intent \xB7 local model FAILED", ms, String(err?.message ?? err).slice(0, 80));
+      return null;
+    }
+  }
+
   // src/demo.tsx
   var import_jsx_runtime2 = __toESM(require_jsx_runtime());
+  var LOG_COLORS = {
+    info: "text-slate-400",
+    progress: "text-cyan-400",
+    switch: "text-emerald-400",
+    rule: "text-amber-300",
+    model: "text-violet-400",
+    warn: "text-orange-400",
+    ok: "text-emerald-300",
+    error: "text-red-400"
+  };
+  function LogPanel({ entries, empty }) {
+    return /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("div", { className: "max-h-[60vh] overflow-y-auto rounded-lg bg-slate-900/80 p-2 font-mono text-[9px] leading-relaxed", children: entries.length === 0 ? /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("span", { className: "text-slate-600", children: empty }) : entries.map((l) => /* @__PURE__ */ (0, import_jsx_runtime2.jsxs)("div", { className: "whitespace-pre-wrap break-all", children: [
+      /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("span", { className: "text-slate-600", children: l.ts }),
+      " ",
+      /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("span", { className: LOG_COLORS[l.type], children: l.text })
+    ] }, l.id)) });
+  }
   var DOC_LABELS = {
     adr025: "ADR-025 \xB7 Kinematic Token",
     bp04: "BP-04 \xB7 Observability Platform"
@@ -7782,31 +7920,137 @@
     const [intent, setIntent] = (0, import_react2.useState)("");
     const [pending, setPending] = (0, import_react2.useState)(false);
     const [intentMeta, setIntentMeta] = (0, import_react2.useState)(null);
+    const [bootState, setBootState] = (0, import_react2.useState)("idle");
+    const [bootPct, setBootPct] = (0, import_react2.useState)(0);
+    const [bootLog, setBootLog] = (0, import_react2.useState)([]);
+    const [engineHandle, setEngineHandle] = (0, import_react2.useState)(null);
+    const [modelParams, setModelParams] = (0, import_react2.useState)(null);
+    const [switchMs, setSwitchMs] = (0, import_react2.useState)([]);
+    const bootT0 = (0, import_react2.useRef)(0);
+    const logSeq = (0, import_react2.useRef)(0);
     const revealKey = (0, import_react2.useMemo)(() => Date.now(), [docKey, spec]);
     const doc = (0, import_react2.useMemo)(() => lexDoc(docKey), [docKey]);
     const form = nearestPreset(spec);
-    function submitIntent() {
+    function ts() {
+      const d = /* @__PURE__ */ new Date();
+      return `${String(d.getHours()).padStart(2, "0")}:${String(d.getMinutes()).padStart(2, "0")}:${String(d.getSeconds()).padStart(2, "0")}.${String(d.getMilliseconds()).padStart(3, "0")}`;
+    }
+    function pushLog(type, text) {
+      const entry = { id: logSeq.current++, type, ts: ts(), text };
+      setBootLog((prev) => [entry, ...prev].slice(0, 150));
+    }
+    (0, import_react2.useEffect)(() => {
+      coldStart();
+    }, []);
+    async function coldStart() {
+      if (bootState === "loading" || engineHandle && bootState === "ready") return;
+      setBootState("loading");
+      setBootPct(0);
+      bootT0.current = performance.now();
+      pushLog("info", "Booting local 0.5B model (WebGPU)...");
+      const h = await bootLocalEngine((p, text) => {
+        setBootPct(p);
+        pushLog("progress", text);
+      });
+      if (h) {
+        setBootPct(100);
+        setEngineHandle(h);
+        setModelParams(h.params);
+        pushLog("ok", benchLog(
+          "cold-start \xB7 total",
+          performance.now() - bootT0.current,
+          `bytes=${h.loadedBytes} params=${JSON.stringify(h.params)}`
+        ));
+        pushLog("ok", `Model ready \xB7 ${h.initMs.toFixed(0)}ms init`);
+        setBootState("ready");
+      } else {
+        setBootState("failed");
+        pushLog("error", "WebGPU unavailable or load failed \u2014 falling back to rules engine");
+      }
+    }
+    function measureSwitch(label, fn) {
+      const t0 = performance.now();
+      fn();
+      requestAnimationFrame(() => requestAnimationFrame(() => {
+        const ms = performance.now() - t0;
+        const line = benchLog(`switch-form \xB7 ${label}`, ms);
+        setSwitchMs((prev) => [{ tag: label, ms }, ...prev].slice(0, 8));
+        pushLog("switch", line);
+      }));
+    }
+    async function submitIntent() {
       const text = intent.trim();
       if (!text || pending) return;
       setPending(true);
-      setTimeout(() => {
-        const r = ruleFallback(text);
-        setSpec(r.spec);
-        setIntentMeta({ matched: r.matched, description: describeSpecEn(r.spec) });
+      const t0 = performance.now();
+      try {
+        const rules = ruleFallback(text);
+        if (ruleHasConfidence(text)) {
+          const ms2 = performance.now() - t0;
+          pushLog("rule", benchLog("intent \xB7 rule hit", ms2, `preset=${rules.matched}`));
+          setSpec(rules.spec);
+          setIntentMeta({ matched: rules.matched, description: describeSpecEn(rules.spec) });
+          return;
+        }
+        if (engineHandle) {
+          const preset = await localPresetDecision(text, engineHandle);
+          if (preset) {
+            const spec2 = getPreset(preset);
+            const ms2 = performance.now() - t0;
+            pushLog("model", benchLog("intent \xB7 local model", ms2, `preset=${preset}`));
+            setSpec(spec2);
+            setIntentMeta({ matched: `local model \xB7 ${preset}`, description: describeSpecEn(spec2) });
+            return;
+          }
+          pushLog("warn", "[Bench] local model produced nothing \u2014 fallback to rules");
+        }
+        const ms = performance.now() - t0;
+        pushLog("rule", benchLog("intent \xB7 rule fallback", ms, `preset=${rules.matched}`));
+        setSpec(rules.spec);
+        setIntentMeta({ matched: rules.matched, description: describeSpecEn(rules.spec) });
+      } finally {
         setPending(false);
-      }, 250);
+      }
     }
-    return /* @__PURE__ */ (0, import_jsx_runtime2.jsxs)("div", { className: "min-h-full bg-slate-900 flex flex-col items-center gap-6 p-8", children: [
-      /* @__PURE__ */ (0, import_jsx_runtime2.jsxs)("div", { className: "max-w-3xl w-full flex flex-col items-stretch gap-3", children: [
+    return /* @__PURE__ */ (0, import_jsx_runtime2.jsxs)("div", { className: "min-h-full bg-slate-900 flex gap-6 p-6", children: [
+      /* @__PURE__ */ (0, import_jsx_runtime2.jsxs)("aside", { className: "w-72 shrink-0 rounded-2xl border border-slate-700 bg-slate-950/60 p-4 shadow-xl flex flex-col gap-3 h-fit sticky top-6", children: [
+        /* @__PURE__ */ (0, import_jsx_runtime2.jsxs)("div", { className: "flex items-center justify-between gap-2", children: [
+          /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("div", { className: "text-[10px] uppercase tracking-widest text-slate-400", children: "Local GPU \xB7 0.5B bench" }),
+          /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("span", { className: `rounded-full px-2 py-0.5 text-[10px] font-bold ${bootState === "ready" ? "bg-emerald-500/20 text-emerald-300" : bootState === "loading" ? "bg-amber-500/20 text-amber-300" : bootState === "failed" ? "bg-red-500/20 text-red-300" : "bg-slate-700 text-slate-300"}`, children: bootState === "ready" ? `READY ${engineHandle?.initMs?.toFixed(0)}ms` : bootState === "loading" ? `${bootPct}%` : bootState === "failed" ? "FAILED" : "IDLE" })
+        ] }),
+        bootState === "loading" && /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("div", { className: "h-1.5 w-full overflow-hidden rounded-full bg-slate-800", children: /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("div", { className: "h-full bg-amber-500 transition-all duration-200", style: { width: `${bootPct}%` } }) }),
+        modelParams && /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("div", { className: "flex flex-wrap gap-1.5", children: Object.entries(modelParams).map(([k, v]) => /* @__PURE__ */ (0, import_jsx_runtime2.jsxs)("span", { className: "rounded bg-slate-800 px-1.5 py-0.5 font-mono text-[9px] text-slate-400", children: [
+          k,
+          "=",
+          v
+        ] }, k)) }),
+        switchMs.length > 0 && /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("div", { className: "flex flex-wrap gap-1.5", children: switchMs.map((s, i) => /* @__PURE__ */ (0, import_jsx_runtime2.jsxs)("span", { className: "rounded bg-slate-800 px-1.5 py-0.5 font-mono text-[9px] text-slate-500", children: [
+          "switch ",
+          s.tag,
+          " \xB7 ",
+          s.ms.toFixed(1),
+          "ms"
+        ] }, i)) }),
+        /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("div", { className: "text-[10px] uppercase tracking-widest text-slate-400 mt-2", children: "Log" }),
+        /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(LogPanel, { entries: bootLog, empty: "// benchmarks also logged to console with [Bench] prefix" })
+      ] }),
+      /* @__PURE__ */ (0, import_jsx_runtime2.jsxs)("div", { className: "max-w-3xl w-full mx-auto flex flex-col items-stretch gap-3", children: [
         /* @__PURE__ */ (0, import_jsx_runtime2.jsxs)("div", { className: "flex items-end justify-between gap-4", children: [
           /* @__PURE__ */ (0, import_jsx_runtime2.jsxs)("div", { children: [
             /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("p", { className: "text-xs uppercase tracking-widest text-slate-400 mb-1", children: "Content Interpreter \xB7 AI + App" }),
             /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("h1", { className: "text-2xl font-bold text-white", children: "Say intent. Model decides. Code renders." })
           ] }),
-          /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(Switcher, { current: form, options: FORM_LABELS, onSwitch: (k) => {
-            setSpec(getPreset(k));
-            setIntentMeta(null);
-          } })
+          /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(
+            Switcher,
+            {
+              current: form,
+              options: FORM_LABELS,
+              onSwitch: (k) => measureSwitch(k, () => {
+                setSpec(getPreset(k));
+                setIntentMeta(null);
+              })
+            }
+          )
         ] }),
         /* @__PURE__ */ (0, import_jsx_runtime2.jsxs)("div", { className: "rounded-2xl border border-slate-700 bg-slate-800/80 p-4 shadow-xl", children: [
           /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("label", { htmlFor: "intent", className: "mb-2 block text-xs uppercase tracking-widest text-slate-400", children: "Say what you want \u2014 the interpreter decides the form" }),
@@ -7849,9 +8093,9 @@
           /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("span", { className: "mr-2 font-bold text-amber-300", children: intentMeta.matched }),
           /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("span", { className: "text-amber-200/80", children: intentMeta.description })
         ] }),
-        /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(Switcher, { current: docKey, options: DOC_LABELS, onSwitch: setDocKey })
-      ] }),
-      /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(Interpret, { doc, spec }, revealKey)
+        /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(Switcher, { current: docKey, options: DOC_LABELS, onSwitch: setDocKey }),
+        /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(Interpret, { doc, spec }, revealKey)
+      ] })
     ] });
   }
   var rootEl = document.getElementById("root");
