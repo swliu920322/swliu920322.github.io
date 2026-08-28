@@ -1,0 +1,784 @@
+{
+    "user_id": "1940360837547565056",
+    "range_days": 30,
+    "last_updated": "2026-08-28 22:47:39",
+    "hot_topics": [
+        {
+            "topic": "光模块/CPO/激光器",
+            "count": 41,
+            "percentage": 36.6
+        },
+        {
+            "topic": "AI算力/云基础设施",
+            "count": 22,
+            "percentage": 19.6
+        },
+        {
+            "topic": "存储/内存 (DRAM/NAND/HBM)",
+            "count": 14,
+            "percentage": 12.5
+        },
+        {
+            "topic": "机器人/人形机器人",
+            "count": 9,
+            "percentage": 8.0
+        },
+        {
+            "topic": "地缘政治/贸易摩擦",
+            "count": 9,
+            "percentage": 8.0
+        }
+    ],
+    "industries": [
+        {
+            "name": "光学/光模块",
+            "value": 35
+        },
+        {
+            "name": "半导体/芯片",
+            "value": 25
+        },
+        {
+            "name": "硬件/DC服务器",
+            "value": 20
+        },
+        {
+            "name": "汽车/机器人",
+            "value": 10
+        },
+        {
+            "name": "软件/AI模型",
+            "value": 10
+        }
+    ],
+    "conviction_watchlist": [
+        {
+            "ticker": "$SIVE",
+            "conviction_level": "核心重仓 (Core Long)",
+            "mention_count": 16,
+            "investment_thesis": "CW DFB激光器/CPO核心供应商；收入机会管道达1.2B美元、环比增长268%，被Jabil等多家pluggable客户采用，并获POET/Aeva等合作，Nasdaq上市在即。"
+        },
+        {
+            "ticker": "$AAOI",
+            "conviction_level": "核心重仓 (Core Long)",
+            "mention_count": 16,
+            "investment_thesis": "800G/1.6T光模块供需缺口达20-40%，美国本土产能享有溢价；CPO ELSFP 2028年月产能规划40万只，但需警惕ATM持续稀释股东价值。"
+        },
+        {
+            "ticker": "$MU",
+            "conviction_level": "核心重仓 (Core Long)",
+            "mention_count": 8,
+            "investment_thesis": "DRAM/HBM/NAND结构性短缺至2027-2030，2027年产能已售罄；AI数据中心内存需求刚性，涨价周期驱动盈利与自由现金流大幅上行。"
+        },
+        {
+            "ticker": "$AXTI",
+            "conviction_level": "核心重仓 (Core Long)",
+            "mention_count": 5,
+            "investment_thesis": "磷化铟(InP)衬底严重短缺、涨价幅度历史最大，公司处于光通信/CPO上游关键卡位，作者明确表示仍持有。"
+        },
+        {
+            "ticker": "$LITE",
+            "conviction_level": "中性观察 (Neutral)",
+            "mention_count": 9,
+            "investment_thesis": "UHP CW激光器需求超预期、CPO H2 2027放量，但未透露仓位；激光器芯片供不应求提升ASP，公司业绩与指引强劲。"
+        },
+        {
+            "ticker": "$SNDK",
+            "conviction_level": "首仓买入 (Starter Long)",
+            "mention_count": 7,
+            "investment_thesis": "NAND结构性需求旺至2030，80%非GAAP毛利率指引；LTAs已覆盖2028年2/3产出，最低合约收入930亿美元。"
+        },
+        {
+            "ticker": "$SKHY",
+            "conviction_level": "中性观察 (Neutral)",
+            "mention_count": 5,
+            "investment_thesis": "HBM/DRAM产能售罄至2027，利润高企并回购；CPO路线图可能评估Celestial/Ayar等新供应商，但未明确个人建仓。"
+        },
+        {
+            "ticker": "$POET",
+            "conviction_level": "首仓买入 (Starter Long)",
+            "mention_count": 4,
+            "investment_thesis": "光学Interposer搭配Sivers激光器，2026年底从'ready'升级为'production'；作者已建小仓位，但认为其过度稀释是风险。"
+        },
+        {
+            "ticker": "$CCXI",
+            "conviction_level": "核心重仓 (Core Long)",
+            "mention_count": 3,
+            "investment_thesis": "人形机器人Agility Robotics上市载体，获NVDA/AMZN/Softbank支持；Unitree IPO超高认购有望带动板块估值，作者明确参与。"
+        }
+    ],
+    "supply_chain_bottlenecks": [
+        {
+            "category": "存储/内存 (DRAM/NAND/HBM)",
+            "status": "短缺持续至2027-2030；SK海力士/Samsung/Micron 2027 DRAM/HBM产能售罄，NAND产能亦售罄，客户仅能分配到60-70%订单量。",
+            "affected_tickers": [
+                "$MU",
+                "$SNDK",
+                "$SKHY"
+            ]
+        },
+        {
+            "category": "磷化铟 (InP) 衬底",
+            "status": "严重短缺，引发史上最大涨价；供应商称'有钱也可能拿不到货'。",
+            "affected_tickers": [
+                "$AXTI",
+                "$IQE",
+                "$LITE"
+            ]
+        },
+        {
+            "category": "CW DFB激光器",
+            "status": "供不应求，客户以'urgency'下单；Lumentum五座InP fab出货仍低于需求30%+。",
+            "affected_tickers": [
+                "$SIVE",
+                "$LITE",
+                "$MTSI",
+                "$COHR"
+            ]
+        },
+        {
+            "category": "CPO光互连 (FAU/ELSFP)",
+            "status": "CPO放量H2 2027起步；FAU、激光器成为卡点，AAOI第一代CPO无法参与，但2028年ELSFP月产能规划40万只。",
+            "affected_tickers": [
+                "$AAOI",
+                "$SIVE",
+                "$POET",
+                "$AEVA"
+            ]
+        },
+        {
+            "category": "MLCC (高容值服务器)",
+            "status": "缺货级别'severe'，三星高容值MLCC交期达40周，AI服务器需求挤压消费级供给。",
+            "affected_tickers": [
+                "Taiyo Yuden (6976)",
+                "Samsung Electro-Mechanics"
+            ]
+        },
+        {
+            "category": "DSP/TIA (光模块电芯片)",
+            "status": "AAOI财报提示DSP和TIA供应紧张，利好相关供应商。",
+            "affected_tickers": [
+                "$MXL",
+                "$SMTC",
+                "$MTSI"
+            ]
+        }
+    ],
+    "value_chain_mapping": [
+        {
+            "upstream": "$AXTI / $IQE (InP衬底/外延片)",
+            "midstream": "$SIVE / $LITE / $JBL (CW DFB激光器/Jabil代工)",
+            "downstream": "$AAOI / $SMTC / $LITE (光模块/CPO) -> Hyperscalers"
+        },
+        {
+            "upstream": "$MU / $SKHY / $SNDK / Samsung (HBM/NAND/DRAM)",
+            "midstream": "$NVDA / $SMCI / $RIOT (GPU平台/AI服务器/算力租赁)",
+            "downstream": "$GOOGL / $AMZN / $META / $MSFT (Hyperscaler/AI Cloud)"
+        },
+        {
+            "upstream": "$SIVE (CW DFB激光器)",
+            "midstream": "$AEVA / $POET (CPO/NPO光引擎/Interposer)",
+            "downstream": "$NVDA / $TSM / OCP (CPO roadmap) -> Hyperscalers"
+        },
+        {
+            "upstream": "Taiyo Yuden / Samsung Electro-Mechanics (MLCC)",
+            "midstream": "服务器ODM/代工厂 (Jabil/SMCI等)",
+            "downstream": "AI服务器 -> Hyperscalers"
+        }
+    ],
+    "data": [
+        {
+            "date": "2026-08-28",
+            "tweets": [
+                {
+                    "original": "只是因为这张图浏览量太高了…\n\n白毛牛来 https://t.co/WiHhXVqtK5",
+                    "translation": "只是因为这张图片的浏览量太高了……\n\n白毛牛来了 https://t.co/WiHhXVqtK5"
+                },
+                {
+                    "original": "Are Frontier lab relative valuations are too absurd nowadays?\n\nIf Anthropic IPOs at $2T… 10% of that can buy up almost every major established consumer brand:\n\nFrom: \n\nTaco Bell/Pizza Hut/KFC, GAP, American eagle, Levi’s, Victoria’s Secret, Cheesecake Factory, Krispy Kreme…",
+                    "translation": "前沿实验室（Frontier Lab）的相对估值如今是否过于离谱？\n\n如果Anthropic以2万亿美元估值IPO……其10%的资金几乎可以买下所有主要的老牌消费品牌：\n\n例如：\n\nTaco Bell/Pizza Hut/KFC、GAP、American Eagle、Levi’s、Victoria’s Secret、Cheesecake Factory、Krispy Kreme……"
+                },
+                {
+                    "original": "所以… 回到存储这边我们现在有：\n\n$SKHY CEO 表示: “我们预计[存储]短缺将持续到 2030 年底”\n\n$SNDK 表示: “我们看到直到 2030 年，NAND 都存在结构性的巨大需求”非 GAAP 毛利率将维持在约 80%.\n\n$NVDA 表示 供应承诺从 1,190 亿美元增加到 2,790 亿美元，主要由存储采购推动…与此同时, https://t.co/qhdn4Ix3q0",
+                    "translation": "所以……回到存储板块，目前我们看到的是：\n\n$SKHY CEO表示：“我们预计[存储]短缺将持续到2030年底”\n\n$SNDK表示：“我们看到直到2030年NAND都存在结构性的巨大需求”，非GAAP毛利率将维持在约80%。\n\n$NVDA表示，供应承诺从1190亿美元增加到2790亿美元，主要由存储采购推动……与此同时，https://t.co/qhdn4Ix3q0"
+                }
+            ]
+        },
+        {
+            "date": "2026-08-27",
+            "tweets": [
+                {
+                    "original": "Nah, $SIVE is the most unusual $1B photonics company I've ever seen. \n\nJust for AI DCs alone:\n\n- Reference laser for $GFS SCALE (CPO/NPO/pluggable)\n- 7 pluggable engagements disclosed, with $JBL as primary ramp (with H1 2027 timeline)\n- ELS path with O-Net\n- ELS path with $POET",
+                    "translation": "不，$SIVE是我见过的最不寻常的10亿美元级光子学公司。\n\n仅就AI数据中心而言：\n\n- 为$GFS SCALE提供参考激光器（CPO/NPO/可插拔）\n- 已披露7项可插拔合作，$JBL为主要量产客户（时间线为2027年上半年）\n- 与O-Net的ELS（外置激光源）合作路径\n- 与$POET的ELS（外置激光源）合作路径"
+                },
+                {
+                    "original": "$SIVE ER transcript just dropped, TLDR:\n\n- 6 NEW pluggable players working with Sivers now.\n\nProbably the biggest news of the entire ER next to new foundry allocations. \n\n\"3 are in alpha sample evaluation stage\" and another 3 in technical engagement / supply assessment stage.\" https://t.co/xBCR8tWi4Y",
+                    "translation": "$SIVE财报电话会议记录刚刚发布，概要如下：\n\n- 目前有6家新的可插拔厂商与Sivers合作。\n\n这可能是整个财报中除新代工厂产能分配外最大的新闻。\n\n“其中3家处于alpha样品评估阶段”，另外3家处于技术接触/供应评估阶段。https://t.co/xBCR8tWi4Y"
+                },
+                {
+                    "original": "$SIVE earnings just got released:\n\n$1.2 billion revenue opportunity pipeline growth up 268% from December (incredible growth). \n\nLast ER: $799M (this was a surprise, likely linked to Jabil)\n\nJuly 2026: ~$1.2B (hinting more either more customer engagements than what's announced or https://t.co/0mda5OIYyq",
+                    "translation": "$SIVE财报刚刚发布：\n\n12亿美元营收机会管道较12月增长268%（惊人的增长）。\n\n上一份财报：7.99亿美元（这一数字出人意料，很可能与Jabil相关）\n\n2026年7月：约12亿美元（暗示可能还有比已公布的更多的客户合作，或者 https://t.co/0mda5OIYyq"
+                },
+                {
+                    "original": "我感觉我现在大部分粉丝都是讲中文的…",
+                    "translation": "我感觉我现在大部分粉丝都是讲中文的……"
+                },
+                {
+                    "original": "I've always been bullish on memory with $MU / Samsung / solana:SKHYhSjuRWHgikq8eRKbtBbpABgJSkd7ytQV14i9EQ3 for the 2026-2027 period.  \n\nSame opinion, even after $NVDA call. \n\nAnd I've been fervently defending how high end memory demand is structural + OP for operating income",
+                    "translation": "我一直看好2026-2027年期间的存储板块，包括$MU、三星以及solana:SKHYhSjuRWHgikq8eRKbtBbpABgJSkd7ytQV14i9EQ3。\n\n即使$NVDA财报电话会议之后，我的观点依然不变。\n\n并且我一直坚定认为，高端存储需求是结构性的，并且利好营业利润（OP）。"
+                },
+                {
+                    "original": "I wanted exposure to DDR2/DDR3 bottleneck ongoing and found ESMT (3006). \n\nA $2.5B MC fabless company with PSMC wafer allocation (esp. focused on DDR2). \n\nLast month's net income was: $109.5M (July month), which annualized is $1.31B net profit (1.9x runrate P/E). \n\nIf we look at https://t.co/M3cWxKJ4bw",
+                    "translation": "我希望参与当前DDR2/DDR3供应瓶颈的机会，于是找到了ESMT（3006）。\n\n这是一家市值25亿美元的无晶圆厂存储芯片（MC）公司，拥有PSMC（力晶）的晶圆产能分配（尤其专注于DDR2）。\n\n上个月（7月）净利润为1.095亿美元，按年化计算净利润为13.1亿美元（当前运行率市盈率为1.9倍）。\n\n如果我们看看 https://t.co/M3cWxKJ4bw"
+                }
+            ]
+        },
+        {
+            "date": "2026-08-26",
+            "tweets": [
+                {
+                    "original": "$NVDA: \"We expect to grow revenue by approximately 70% in fiscal 2028. This is a supply constrained outlook\"\n\nThat statement alone is probably more important than the entire earnings beat just now? \n\nInsane upward revision beat from +43.9% expected to 70%. \n\n\"With cloud industry https://t.co/vjYbtuvg0j",
+                    "translation": "$NVDA：“我们预计2028财年营收将增长约70%。这是一个受供应约束的前景。”\n\n仅这一句话可能就比刚才整个财报超预期更重要？\n\n疯狂的上调幅度，从预期的+43.9%提升至70%。\n\n“随着云行业 https://t.co/vjYbtuvg0j"
+                },
+                {
+                    "original": "$NVDA earnings TLDR:\n\nRevenue: $96.22B vs. ~$92.17B (beat)\nAdj. EPS: $2.22 vs. $2.09-$2.10 (beat)\nDC: $89.0B vs. ~$86.3B (beat)\nAdj. gross margin: 75% vs. 75%\n\nHyperscaler Revenue: $48.71B from $43.05B last quarter (custom ASIC growth hasn't really prevented this revenue from",
+                    "translation": "$NVDA财报概要：\n\n营收：962.2亿美元，对比预期约921.7亿美元（超预期）\n调整后每股收益：2.22美元，对比预期2.09-2.10美元（超预期）\n数据中心：890亿美元，对比预期约863亿美元（超预期）\n调整后毛利率：75% vs 75%\n\n超大规模云厂商收入：487.1亿美元，上一季度为430.5亿美元（定制ASIC的增长并未真正阻止该收入……）"
+                },
+                {
+                    "original": "I know everyone’s watching $NVDA earnings right now…\n\nBut did you know Landmark signed a 4 year CW agreement with US customer to ensure “sufficient supply”?\n\nSo now you have:\n\n- $LITE (capacity gone)\n- $COHR (capacity gone)\n- Landmark (capacity committed)\n- $AAOI (capacity for https://t.co/98qy5Oww5s",
+                    "translation": "我知道大家都在关注$NVDA的财报……\n\n但你知道吗，Landmark与美国客户签署了一份为期4年的CW协议，以确保“充足供应”？\n\n所以现在的情况是：\n\n- $LITE（产能已满）\n- $COHR（产能已满）\n- Landmark（产能已被锁定）\n- $AAOI（产能用于 https://t.co/98qy5Oww5s"
+                },
+                {
+                    "original": "The concept of “cascading bottlenecks” is just super cool.\n\nBecause of DDR4 supply shocks and costs:\n\nLot of ODMs are redesigning downward from DDR4 -&gt; DDR3 -&gt; DDR2.\n\nBut even the legacy players themselves like Winbond are withdrawing from DDR2.\n\nMaking the bottleneck even worse",
+                    "translation": "“级联瓶颈”这个概念真是太酷了。\n\n由于DDR4供应冲击和成本问题：\n\n许多ODM（原始设计制造商）正在向下重新设计，从DDR4转向DDR3再转向DDR2。\n\n但即使是华邦电子（Winbond）这样的传统厂商，也在退出DDR2。\n\n这使瓶颈问题更加严重。"
+                },
+                {
+                    "original": "I love how so many people requested  $SIVE that Saxo Japan went out of their way to list it!\n\nJust goes to show how much demand there is for this laser company.\n\nSpecial shoutout to Saxo. And of course, excited for Sivers earnings + planned Nasdaq listing coming up.",
+                    "translation": "我很高兴有这么多人要求上架$SIVE，以至于盛宝日本（Saxo Japan）特意将其挂牌交易！\n\n这充分说明了市场对这家激光公司的巨大需求。\n\n特别感谢盛宝。当然，也非常期待Sivers的财报以及即将进行的纳斯达克上市计划。"
+                },
+                {
+                    "original": "All right back to $SMTC movie: \"The bottleneck go Brrr\":\n\nMy favorite quote was: \"availability currently matters more than pricing\". \n\nIn the current market for optical products. \n\n- No near-term erosion is expected on booked optical orders, which signals they're passing cost https://t.co/srwYZFstzV",
+                    "translation": "好了，回到$SMTC的故事：“瓶颈一直在加剧”。\n\n我最喜欢的一句话是：“目前供应可用性比定价更重要”。\n\n在当前的光通信产品市场中。\n\n- 已确认的光通信订单预计不会在近期出现（价格）侵蚀，这表明他们正在将成本…… https://t.co/srwYZFstzV"
+                }
+            ]
+        },
+        {
+            "date": "2026-08-25",
+            "tweets": [
+                {
+                    "original": "Lost interest in $SMTC and every other earnings report today after finding a memory name way too interesting not to research...",
+                    "translation": "今天在发现一个内存相关标的有趣到无法不去研究之后，我对$SMTC及其他所有财报都失去了兴趣……"
+                },
+                {
+                    "original": "Lot of people were wondering about $SIVE earnings in 2 days. \n\nWhat I'm watching out for: \n\n1. I'm hoping for more visibility on photonics co-development/qualifications/contracts. \n\n-&gt; $AAOI stated multiple customers approaching them for CPO lasers (but had to turn them away)\n-&gt;",
+                    "translation": "很多人都在关注$SIVE两天后的财报。\n\n我关注的重点：\n\n1. 我希望在光子学联合开发/资质认证/合同方面能有更清晰的指引。\n\n-> $AAOI表示有多家客户就CPO激光器与其接洽（但不得不婉拒）。\n->"
+                }
+            ]
+        },
+        {
+            "date": "2026-08-24",
+            "tweets": [
+                {
+                    "original": "I know everyone's focused on Nancy Pelosi copytraders sending $BE up 11.83%. Or Trump... \n\nBut you know what else is cool? \n\nFAU bottlenecks for CPO. \n\nI remember saying earlier this year FAU/Foci might be a future bottleneck around $TSM / $NVDA CPO roadmaps... \n\nThis was some https://t.co/yUbRRX1joz",
+                    "translation": "我知道大家都在关注南希·佩洛西的跟随交易者推动$BE上涨11.83%，或者特朗普……\n\n但你们知道还有什么很酷吗？\n\nCPO的FAU瓶颈。\n\n我记得今年早些时候说过，FAU/Foci可能会成为$TSM/$NVDA CPO路线图上的未来瓶颈……\n\n这是一些 https://t.co/yUbRRX1joz"
+                },
+                {
+                    "original": "$NVDA, following their $20B deal... Announces Groq3 LPX now in full production.\n\nWith $NBIS the first to adopt through Nebius token factory.\n\n- 3,400 tok/s in Artificial Analysis benchmarking running Gemma 4 31B, with 100k token context\n- 4x faster responsiveness than the nearest https://t.co/UKhqW5HphA",
+                    "translation": "$NVDA在其200亿美元交易之后...宣布Groq3 LPX现已全面投产。\n\n$NBIS率先通过Nebius token工厂采用。\n\n- 在Artificial Analysis基准测试中，运行Gemma 4 31B达到3,400 tok/s，上下文长度100k token\n- 响应速度比最接近的竞品快4倍 https://t.co/UKhqW5HphA"
+                },
+                {
+                    "original": "Bro why are we fighting a Trade War with our friendly Golden Retriever named Canada.\n\nShouldn't we be focusing on Iran today? \n\nTrump: Announces 50% Tariffs On Cars, Automotive Parts, and Steel From 2027. https://t.co/40SbPDPMFC",
+                    "translation": "兄弟，为什么我们要和那只叫加拿大的友好金毛猎犬打贸易战？\n\n我们今天不应该关注伊朗吗？\n\n特朗普：宣布自2027年起对汽车、汽车零部件和钢铁征收50%关税。https://t.co/40SbPDPMFC"
+                },
+                {
+                    "original": "$XPEV carves out its robotics unit and raises &gt;$900M at $6.3B+ valuations.\n\nThis is following’s Unitree IPO, which now has a ~$35-$36B MC.\n\nThen there’s $NVDA / $AMZN backed Agility… at a $2.5B premoney valuation. Which I’d argue is actually further ahead in commercialization https://t.co/VNjl9DTcgg",
+                    "translation": "$XPEV分拆其机器人部门，并以63亿+美元估值融资超过9亿美元。\n\n此前宇树科技(Unitree) IPO，目前市值约350-360亿美元。\n\n还有$NVDA/$AMZN支持的Agility……投前估值25亿美元。我认为后者在商业化方面实际上走得更远 https://t.co/VNjl9DTcgg"
+                },
+                {
+                    "original": "Lot of misinterpretations flying left and right around the $600m ATM. I'm still bullish on $AAOI and I have large positions (which is why I care more). \n\nWhat I've been consistent with is not being a fan of overusing ATMs/dilution for financing. I've said this before with $IREN +",
+                    "translation": "围绕6亿美元的ATM增发，市场上有很多误解。我仍然看好$AAOI，而且我持有大量仓位（所以更在意）。\n\n我一直以来的立场是不喜欢过度使用ATM/稀释来融资。我之前对$IREN也说过同样的话 +"
+                },
+                {
+                    "original": "\"At dawn begins an economic D-Day, \n\nThe single greatest financial offensive ​ever marshalled against an adversary\", per Bessent in FT. \n\nThe US would target nations that engage with Iran's economy and financial system. Press conference is today 1 PM ET.\n\nNot quite sure markets https://t.co/OLjqrSc0J8",
+                    "translation": "据贝森特在《金融时报》上的发言：“黎明时分，一场经济上的D-Day开始，\n\n这是有史以来针对对手发起的最大规模金融攻势。”\n\n美国将瞄准与伊朗经济和金融体系有接触的国家。新闻发布会将于今日美东时间下午1点举行。\n\n不太确定市场会如何反应 https://t.co/OLjqrSc0J8"
+                }
+            ]
+        },
+        {
+            "date": "2026-08-23",
+            "tweets": [
+                {
+                    "original": "After watching clips of China's humanoid Olympics... \n\nI think we're cooked chat. \n\nStill can't believe $GOOGL sold Boston Dynamics, don't think we have another humanoid that can backflip. https://t.co/uERCqW85F5",
+                    "translation": "看了中国的人形机器人奥运会片段之后……\n\n我觉得我们完了，各位。\n\n仍然不敢相信$GOOGL卖掉了波士顿动力，我不认为我们还有另一台能后空翻的人形机器人。https://t.co/uERCqW85F5"
+                },
+                {
+                    "original": "Having a mid-X identity crisis rn:\n\n✓ saw 2025 ideas from $AXTI to $NBIS play out with everyone\n✓ we got $AMD bandanas\n✓ #1 most subscribed person on X by accident\n✓ Chinese “White Hair” nicknames\n✓ 1M followers\n\nStill here to track ideas, but what’s the next side quest?",
+                    "translation": "此刻正经历一场X上的身份危机：\n\n✓ 和所有人一起见证了从$AXTI到$NBIS的2025年想法成真\n✓ 我们拿到了$AMD的头巾\n✓ 意外成为X上订阅人数第一的人\n✓ 中文“白发”昵称\n✓ 100万粉丝\n\n仍在这里追踪各种想法，但下一个支线任务是什么？"
+                }
+            ]
+        },
+        {
+            "date": "2026-08-22",
+            "tweets": [
+                {
+                    "original": "Apparently, $RDDT thinks $MRVL had two major catalysts recently:\n\nThe $12.2B Google TPU ecosystem agreement.\n\nAnd…\n\nSpider-Man: “Brand New Day” https://t.co/qmUvJqjcpo",
+                    "translation": "显然，$RDDT认为$MRVL近期有两大催化剂：\n\n122亿美元的谷歌TPU生态系统协议。\n\n以及……\n\n《蜘蛛侠：全新的一天》 https://t.co/qmUvJqjcpo"
+                },
+                {
+                    "original": "It's been fun to read these US Gov fact sheets (few a week) recently. \n\nEarlier this week was \"Golden Age of Space Transportation\", with $SPCX hard carrying the launch sector like Faker. \n\nAnd $RKLB + other rocket companies as beneficiaries of the 1K launch/reentry goal by 2030. https://t.co/JS0z1eDXlq",
+                    "translation": "最近读这些美国政府情况说明书（每周几份）很有趣。\n\n本周早些时候是关于“太空运输黄金时代”，$SPCX像Faker一样扛起了发射行业大旗。\n\n还有$RKLB和其他火箭公司，将是到2030年实现1000次发射/再入目标受益者。https://t.co/JS0z1eDXlq"
+                }
+            ]
+        },
+        {
+            "date": "2026-08-21",
+            "tweets": [
+                {
+                    "original": "It's getting much harder to support $AAOI when they keep dropping $500m or $600M ATMs left and right. \n\nAt a certain point, the operating outlook could be positive. \n\nBut the share structure/financing becomes increasingly shareholder unfriendly. \n\nReally, really, dislike ATMs and https://t.co/wjWylyXZVA",
+                    "translation": "当$AAOI不断左右抛售5亿或6亿美元的ATM增发时，我越来越难以支持它。\n\n从某种程度上说，运营前景可能是积极的。\n\n但股权结构/融资方式正变得越来越不利于股东。\n\n我真的、真的不喜欢ATM增发以及 https://t.co/wjWylyXZVA"
+                },
+                {
+                    "original": "Uhh Citadel?\n\n&gt; Say emergency rate hike. More crashes/liquidations follow\n\n&gt; No rate hike\n\n&gt; Reaches out to buy liquidated hedge fund portfolios\n\n&gt; buys billions of Situational Awareness holdings.\n\n&gt; Says AI bull case is intact\n\n&gt;markets rally\n\n&gt; Sells AI stocks into the buying https://t.co/SUvmkvybrt",
+                    "translation": "呃，Citadel？\n\n> 说紧急加息。随后更多崩盘/清算\n\n> 不加息\n\n> 出手买入被清算的对冲基金投资组合\n\n> 买入数十亿美元的Situational Awareness持仓。\n\n> 称AI多头逻辑依然完好\n\n> 市场反弹\n\n> 在买盘中将AI股票卖出 https://t.co/SUvmkvybrt"
+                },
+                {
+                    "original": "Since people are having fun speculating on $SKHY CPO roadmap supply chains.\n\nI'm gonna do my own guess and say SK Hynix is evaluating Celestial/Ayar. Then doing heavy evaluation into microLEDs past first-gen deployments. \n\nBoth have been kinda working on it for awhile. \n\n- Ayar https://t.co/s3WWW5lZ4Y",
+                    "translation": "既然大家都在乐此不疲地猜测$SKHY的CPO路线图供应链。\n\n我也来猜一下：SK海力士正在评估Celestial/Ayar。然后在第一代部署之后，对microLED进行重点评估。\n\n这两家公司都已经在这方面研究了一段时间。\n\n- Ayar https://t.co/s3WWW5lZ4Y"
+                },
+                {
+                    "original": "There’s a lot of viral fabricated screenshots of me going around recently. \n\nSome are annoying jokes for engagement, like text-edited posts from me citing bible verses.\n\nBut some like “Innolight secures Nvidia NPO orders” or off platform promotional content are maliciously https://t.co/VxV5T4ItR5",
+                    "translation": "最近关于我的虚假截图在大量传播。\n\n有些是为了互动的无聊玩笑，比如篡改我的帖子让我引用圣经经文。\n\n但有些像“中际旭创获得英伟达NPO订单”或平台外的推广内容则属于恶意行为 https://t.co/VxV5T4ItR5"
+                }
+            ]
+        },
+        {
+            "date": "2026-08-20",
+            "tweets": [
+                {
+                    "original": "After seeing how the robotics and space sectors reacted to Unitree and $SPCX IPOs\n\nI’m not quite sure I want Anthropic to go public… https://t.co/hY6tM1r4Qb",
+                    "translation": "看到机器人和航天板块对宇树科技和$SPCX IPO的反应后\n\n我不太确定是否希望Anthropic上市…… https://t.co/hY6tM1r4Qb"
+                },
+                {
+                    "original": "Very positive. My opinion is that the optical sector underperformance recently from $AAOI to $SIVE has been absurd.\n\nThe demand visibility... is just way too stupidly high.\n\nAOI: “Even combined AOI, Coherent program altogether, is still very tough to meet the customer demand in https://t.co/HHCQ0HwG3J",
+                    "translation": "非常正面。我的观点是，近期光通信板块从$AAOI到$SIVE的表现不佳很荒谬。\n\n需求可见性……实在是高得离谱。\n\nAOI：“即使把AOI和Coherent的项目全部加起来，也仍然很难满足客户需求，在 https://t.co/HHCQ0HwG3J"
+                },
+                {
+                    "original": "I'm glad the leverage bros moved from AI stocks back to Hyerliquid and biotech like $MRNA, so maybe we'll see a faster recovery. \n\nAside from that just some TLDR stuff:\n\n- $EWY up, primarily from SK Hynix buybacks (they're just too profitable), and Samsung Foundry roughly ~10-15%",
+                    "translation": "我很高兴杠杆玩家们从AI股票转回了高流动性股票和生物科技股如$MRNA，这样我们或许能看到更快的复苏。\n\n除此之外，简单总结几点：\n\n- $EWY上涨，主要受SK海力士回购推动（它们实在太赚钱了），三星代工大约上涨10-15%"
+                }
+            ]
+        },
+        {
+            "date": "2026-08-19",
+            "tweets": [
+                {
+                    "original": "$MRVL gives $GOOGL options to buy $12.2B of the company. \n\n\"The Marvell-Google deal covers a broad range of technologies used ​with TPUs, including processors that run AI models, manage data storage ​and  move information ⁠across networks.\"\n\nWhich could translate into ~$120 https://t.co/ce4dL62MXV",
+                    "translation": "$MRVL给予$GOOGL购买该公司价值122亿美元股份的选择权。\n\n“Marvell与谷歌的交易涵盖与TPU相关的广泛技术，包括运行AI模型的处理器、管理数据存储以及在网络中传输信息。”\n\n这可能意味着约120美元 https://t.co/ce4dL62MXV"
+                },
+                {
+                    "original": "We got $LITE, $MTSI, $AAOI all pointing to extreme demand imbalances with lasers/TIA/DSP/etc from earnings... \n\nAnd now Elazr GM at their investor conference stated: \n\nOptical supply is still far behind the market demand, the expected AI optical supply chain are likely to https://t.co/tl3Uh6ZBpD",
+                    "translation": "$LITE、$MTSI、$AAOI的财报均指向激光器/TIA/DSP等领域的极端需求失衡……\n\n现在Elazr总经理在其投资者大会上表示：\n\n光通信供应仍远落后于市场需求，预计AI光通信供应链可能 https://t.co/tl3Uh6ZBpD"
+                },
+                {
+                    "original": "Unitree (688836) is now public.\n\nAnd is valued at ~$53.3B, after rising +492.18%\n\nWe finally have a major public company benchmark for humanoids.\n\nFor reference, Agility (backed by $NVDA, $AMZN) via $CCXI is expected to go public at $2.5B premoney valuation Q4. \n\n$TSLA is $1T+, https://t.co/hcK1MIDVkq",
+                    "translation": "宇树科技（688836）现已上市。\n\n市值约533亿美元，在上涨+492.18%之后。\n\n我们终于有了人形机器人领域的主要上市公司基准。\n\n作为参考，由$NVDA、$AMZN支持的Agility，预计将通过$CCXI在第四季度以25亿美元投前估值上市。\n\n$TSLA市值超过1万亿美元， https://t.co/hcK1MIDVkq"
+                }
+            ]
+        },
+        {
+            "date": "2026-08-18",
+            "tweets": [
+                {
+                    "original": "My $AAOI TLDR notes at Rosenblatt summit:\n\n- Expected to get paid premiums for US production of 800g/1.6T (very positive for ASP/margins).\n\n- Several LTAs on the table, but doesn't want to sign to get capacity blocked by other customers (cough cough $NVDA). \n\n- Sold out at least https://t.co/4hGP1cbY1X",
+                    "translation": "(翻译暂无)"
+                },
+                {
+                    "original": "I'm getting Vietnam flashbacks to the launch of OpenAi. \n\nWhere with every model, it just keeps getting better... but now with hunanoids. \n\nUnitree has claimed that their humanoids:\n\n- Can now run faster than Usain Bolt.\n- Can now jump higher than any human. \n\nAnd with their IPO https://t.co/HlwmAuLoRR",
+                    "translation": "这让我产生了越南式闪回，让我想起OpenAI发布时的情景。\n\n每一次新模型都越来越好……但现在是人形机器人。\n\n宇树科技声称他们的人形机器人：\n\n- 现在跑得比博尔特还快。\n- 现在跳得比任何人类都高。\n\n而且随着他们的IPO https://t.co/HlwmAuLoRR"
+                },
+                {
+                    "original": "Looks like we're getting the Strait of America, a new US territory... https://t.co/HCQ139Ys4V",
+                    "translation": "看起来我们将迎来“美利坚海峡”，一个新的美国领土…… https://t.co/HCQ139Ys4V"
+                },
+                {
+                    "original": "So just tracking the MLCC cycle:\n\nComponentNews classified server MLCCs as “severe” shortage stage, with ETNews reporting:\n\n- Samsung has reached ~40 week lead times for some high capacitance MLCCs per DigiKey’s shipment data.\n\nEarlier this year, broader reports were ~20 weeks, https://t.co/T5x9aKArog",
+                    "translation": "简单追踪一下MLCC周期：\n\nComponentNews将服务器MLCC列为“严重”短缺阶段，ETNews报道：\n\n- 根据DigiKey的出货数据，三星部分高容值MLCC的交期已达到约40周。\n\n今年早些时候，更广泛的报道约为20周， https://t.co/T5x9aKArog"
+                }
+            ]
+        },
+        {
+            "date": "2026-08-17",
+            "tweets": [
+                {
+                    "original": "I've decided to name my next two pets Applied Optoelectronics and Sivers Semiconductors",
+                    "translation": "我决定给我接下来的两只宠物取名为Applied Optoelectronics和Sivers Semiconductors"
+                },
+                {
+                    "original": "It's official, Unitree the 8000x+ retail oversubscribed humanoid company in China.\n\nIs expected to go public in 2 days! So the 19th. \n\nOpening is implied to be around ~$41.66B MC per derivatives, around +363.3% above its ~$9B IPO valuation. \n\nFun times for humanoids this week. https://t.co/yav4oRs2bO",
+                    "translation": "官方消息，宇树科技，这家在中国获得8000倍以上散户超额认购的人形机器人公司。\n\n预计将在两天内上市！也就是19号。\n\n根据衍生品市场，开盘隐含市值约为416.6亿美元，较其约90亿美元的IPO估值高出约363.3%。\n\n本周对于人形机器人来说会很有趣。 https://t.co/yav4oRs2bO"
+                },
+                {
+                    "original": "Just some more demand imbalance visibility for $SNDK, $SKHY, $MU, Kioxia, and your NAND players. \n\nPhison CEO: \"2027 capacity constraints will be even more severe than in 2026.\"\n\n\"Upstream suppliers need up to 4 years from plant construction and equipment investment to actual https://t.co/acklqWM6nl",
+                    "translation": "再提供一些关于$SNDK、$SKHY、$MU、铠侠以及NAND厂商的需求失衡可见度。\n\n群联CEO：“2027年的产能限制将比2026年更加严重。”\n\n“上游供应商从工厂建设和设备投资到实际产能需要长达4年时间 https://t.co/acklqWM6nl"
+                },
+                {
+                    "original": "I think we're seeing AI server MLCC demand cause an interesting effect... with tightening capacity for consumer/general-purpose MLCCs.\n\nIf you get Vietnam flashbacks like I do to $MU / Samsung / SK Hynix -&gt; Legacy DRAM: \n\nMy thesis is we'll see the same thing here maybe late H2,",
+                    "translation": "我认为我们正在看到AI服务器MLCC需求引发的一个有趣效应……消费类/通用MLCC的产能正在收紧。\n\n如果你和我一样，对$MU / 三星 / SK海力士 -> 传统DRAM也有越南式闪回：\n\n我的论点是，我们可能也会在H2晚些时候看到同样的情况，"
+                },
+                {
+                    "original": "\"Severe InP Shortage Triggers Largest Price Hike Ever\" - $AXTI. \n\nSuppliers have bluntly stated that \"even if you have the money, you still may not be able to get the material\" (lol). \n\n- Industry sources revealed that InP substrate prices began rising in Q4 last year and was the https://t.co/ivU6zK4qUR",
+                    "translation": "“严重InP短缺引发史上最大幅度涨价”——$AXTI。供应商直言不讳地表示：“就算你有钱，也未必能拿到货”（笑）。业界消息人士透露，InP衬底价格自去年第四季度开始上涨，而且是…… https://t.co/ivU6zK4qUR"
+                },
+                {
+                    "original": "Stripe reportedly buys OpenRouter for $7 Billion.\n\nI think their orchestration is easy to replicate and switch from. And there's very little moat.\n\nBut atm, OpenRouter has the userbase, valuable dataset, + momentum. \n\nWhat's your take... Yay or Nay for the payments firm? https://t.co/AqOlKlwCzc",
+                    "translation": "据报道，Stripe以70亿美元收购OpenRouter。我认为他们的编排层很容易被复制和切换，护城河非常有限。但目前OpenRouter拥有用户基础、宝贵的数据集以及增长势头。你怎么看？对这家支付公司，是看好还是看空？ https://t.co/AqOlKlwCzc"
+                }
+            ]
+        },
+        {
+            "date": "2026-08-16",
+            "tweets": [
+                {
+                    "original": "I think @elonmusk said it best: \n\n“Robots don’t all need to be humanoid. \n\nBut a general-purpose robot intended to replace human labor should fit the world humans already built.\n\nRoger, roger.”\n\nPersonally, I expect $TSLA Optimus form factor to converge to the right image. https://t.co/il7tND3n59",
+                    "translation": "我认为@elonmusk说得最好：\n\n“机器人并不都需要人形。但旨在替代人类劳动的通用机器人，应该适应人类已经建成的世界。\n\n收到，收到。”\n\n就个人而言，我预计$TSLA Optimus的形态将收敛到正确的方向。 https://t.co/il7tND3n59"
+                },
+                {
+                    "original": "I feel like AI investing is simpler than what people expect. \n\nBecause $NVDA + Jensen literally tells everyone what's coming. \n\nBut somehow. Almost every. single. time. Markets dismiss it until it actually happens? \n\nBe Nvidia in 2025:  Buys up EML and laser capacity. \n\nMarkets",
+                    "translation": "我觉得AI投资比人们预期的要简单。因为$NVDA + Jensen（黄仁勋）简直是告诉了所有人接下来会发生什么。但不知为何，几乎每一次。每一次。市场都要等到它真正发生才肯买账？看看2025年的英伟达：买下EML和激光产能。市场……"
+                },
+                {
+                    "original": "Just some TLDRs of stuff I found interesting: \n\n- $SNDK 80% adjusted gross margins projections through 2030, ~75% operating margins and ~50% adjusted FCF margins from investor day. \n\nLTAs already 2/3rd of 2028 output. Minimum contracted revenue reaches $93B (MC is currently",
+                    "translation": "简单说几个我觉得有趣的点：\n\n- $SNDK在投资者日给出的预测：到2030年调整后毛利率80%，营业利润率约75%，调整后自由现金流利润率约50%。\n\n长期协议（LTA）已覆盖2028年产量的2/3。最低合同收入达930亿美元（当前市值……"
+                }
+            ]
+        },
+        {
+            "date": "2026-08-15",
+            "tweets": [
+                {
+                    "original": "说我归零的传闻未免也太夸张了吧 哈哈\n\n经历了7月份AI板块的崩盘后，我的YTD收益依然还有 +2,411.84% https://t.co/m49XcPRgC3",
+                    "translation": "说我归零的传闻未免也太夸张了吧 哈哈\n\n经历了7月份AI板块的崩盘后，我的YTD收益依然还有 +2,411.84% https://t.co/m49XcPRgC3"
+                },
+                {
+                    "original": "US Government urges $AAPL not to buy Chinese memory chips. \n\n$MU, $SKHY, and Samsung are happy to hear this...\n\nHilariously enough, CXMT/YMTC is price hiking too, so it's not exactly \"cheap Chinese memory that floods the market\". \n\nApple once upon a time actually had extreme https://t.co/9PbgjngIjS",
+                    "translation": "美国政府敦促$AAPL不要购买中国存储芯片。$MU、$SKHY和三星对此喜闻乐见……搞笑的是，CXMT/YMTC也在提价，所以这并非“廉价中国存储芯片冲击市场”。苹果曾经其实拥有极其…… https://t.co/9PbgjngIjS"
+                }
+            ]
+        },
+        {
+            "date": "2026-08-14",
+            "tweets": [
+                {
+                    "original": "The $SHKY, Samsung, $SNDK, $MU memory bottleneck never changed anon https://t.co/6Xyih3pM9D",
+                    "translation": "$SHKY、三星、$SNDK、$MU的存储瓶颈从未改变，anon。 https://t.co/6Xyih3pM9D"
+                },
+                {
+                    "original": "Donald Trump signs a proclamation to strengthen US supply chains for drones.\n\nBenefiting U.S. drone component suppliers like $UMAC to UAS manufacturers like $ONDS + $RCAT. \n\n TLDR, 100% tariffs on:\n- UAS docking stations + certain critical components\n- certain parts for &gt;25 kg https://t.co/ZwHZtTp1Tq",
+                    "translation": "唐纳德·特朗普签署公告，以加强美国无人机供应链。\n\n受益者包括美国无人机零部件供应商（如$UMAC）以及无人机系统（UAS）制造商（如$ONDS和$RCAT）。\n\n长话短说，对以下商品征收100%关税：\n- UAS对接站及某些关键部件\n- 重量超过25公斤的无人机的某些部件 https://t.co/ZwHZtTp1Tq"
+                },
+                {
+                    "original": "Feels like glass substrate timelines got pushed back at least another quarter.\n\n- \"Samsung Electro-Mechanics Delays Semiconductor Glass Substrate Investment\" due to a bottleneck in customer reliability evaluations of prototypes.\n\nAt its recent second-quarter earnings https://t.co/ojtEeSc0Gb",
+                    "translation": "感觉玻璃基板的时间线至少又推迟了一个季度。\n\n- “三星电机推迟半导体玻璃基板投资”，原因是客户对原型品的可靠性评估出现瓶颈。\n\n在其最近的第二季度财报中…… https://t.co/ojtEeSc0Gb"
+                }
+            ]
+        },
+        {
+            "date": "2026-08-13",
+            "tweets": [
+                {
+                    "original": "In IPO news… Vantage Data Centers is exploring going public at an enormous $100B valuation. \n\nIf you’re not familiar, $ORCL is their anchor tenant for Stargate (OpenAI end user), and Vantage develops/operates hyperscaler DCs.\n\nAnthropic IPO is also expected, with investors https://t.co/3UzxAyKP4t",
+                    "translation": "IPO消息方面……Vantage Data Centers正考虑以高达1000亿美元的估值上市。如果你不太熟悉，$ORCL是其Stargate（OpenAI终端用户）的锚定租户，而Vantage开发和运营超大规模数据中心。Anthropic的IPO也备受期待，投资者…… https://t.co/3UzxAyKP4t"
+                },
+                {
+                    "original": "Okay here's my take on $POET, since apparently people are celebrating on the subreddit that I took small positions. \n\n- I have 0 idea. ZERO. How they convinced shareholders to allow them dilute SO MUCH to the point:\n\nThey have an absurd ~$830m cash on hand now. \n\nAnd my guess is https://t.co/uG8BIlXPgc",
+                    "translation": "好吧，以下是我对$POET的看法，因为Reddit上显然有人在庆祝我建立了小仓位。\n\n- 我完全没有头绪。零。他们是如何说服股东允许他们稀释这么多，以致于：\n\n他们现在手头有约8.3亿美元的现金，这太离谱了。\n\n而我的猜测是…… https://t.co/uG8BIlXPgc"
+                },
+                {
+                    "original": "Feels like my $IQE thesis Feb this year got validated alongside $AXTI and others. (I still long on both)  \n\nSo I stopped covering them as much. But TLDR on  updates:\n\nEarly this year, IQE was a distressed but critical chokepoint in the optical supply chain with links to $LITE and https://t.co/D10vOH7Fsf",
+                    "translation": "感觉我今年2月关于$IQE的论点，连同$AXTI和其他标的，都得到了验证。（我仍做多两者）\n\n所以我不再那么频繁地覆盖它们了。但简单说一下最新情况：\n\n今年早些时候，IQE是光学供应链中一个陷入困境但至关重要的瓶颈，与$LITE和…… https://t.co/D10vOH7Fsf"
+                },
+                {
+                    "original": "$SIVE announces a $3.4M development program with SemiNex!\n\nFor CPO, DFB laser arrays, and optical amplifiers. \n\nEarly production is targeted H2 2027 (in line with early scale up CPO timelines)\n\nSeemed weird to me at first given product overlap, since SemiNex is a much smaller https://t.co/qpea7WuKSA",
+                    "translation": "$SIVE宣布与SemiNex达成一项340万美元的开发计划！用于CPO、DFB激光阵列和光放大器。早期生产目标为2027年下半年（与CPO早期规模化时间线一致）。起初我觉得有点奇怪，因为存在产品重叠，而SemiNex是一家规模小得多的…… https://t.co/qpea7WuKSA"
+                },
+                {
+                    "original": "Is it just me, or is the list of 3 letter optical jargon never ending?\n\nWe have LPO, LRO, NPO, XPO, CPO, OBO, and others for approaches.\n\nThen InP, EML, ELS, OCS, SOI, and others to add to the random terms.\n\nEven the industry events with OCP or OFC get their three letter names.",
+                    "translation": "是我一个人这么觉得，还是光学领域的三字母术语没完没了？\n\n我们有LPO、LRO、NPO、XPO、CPO、OBO等表示技术路线的缩写。\n\n然后还有InP、EML、ELS、OCS、SOI等一堆随机术语。\n\n就连OCP或OFC这类行业活动，也有自己的三字母名称。"
+                }
+            ]
+        },
+        {
+            "date": "2026-08-12",
+            "tweets": [
+                {
+                    "original": "My main takeaway was that your merchant CW laser suppliers seem to be EXTREMELY IMPORTANT now. \n\nBut TLDR of $COHR earnings:\n\n\"given the demand that we see in our DC business with transceivers, I don’t see any time in the near future where we would be selling indium phosphide https://t.co/6hqu5Eddcj",
+                    "translation": "我的主要结论是，贵公司的商用CW激光器供应商现在似乎极其重要。\n\n但$COHR财报要点概括如下：\n\n“鉴于我们在数据中心业务中看到的收发器需求，我认为在不久的将来我们不会出售磷化铟 https://t.co/6hqu5Eddcj"
+                },
+                {
+                    "original": "$NBIS outlook is pretty insane yet again.\n\n$582.3M revenue (+454% Y/Y, +46% Q/Q) off ~50% adjusted EBITDA margin (AI Cloud). $8.04B cash on hand. \n\nReiterates financial guide (2026 revenue: $3.0–$3.4B\n2026 EoY ARR: $7–$9B), I was hoping for a raise, but it's already massive https://t.co/A1N9YzfRNE",
+                    "translation": "$NBIS的前景再次相当惊人。\n\n营收5.823亿美元（同比增长454%，环比增长46%），调整后EBITDA利润率约为50%（AI云业务）。手持现金80.4亿美元。\n\n重申财务指引（2026年营收：30亿至34亿美元\n2026年底年度经常性收入（ARR）：70亿至90亿美元），我曾希望上调指引，但这一数字已经非常庞大。https://t.co/A1N9YzfRNE"
+                },
+                {
+                    "original": "$AEHR receives another $22M follow on order for AI processor wafer level burn in systems.\n\nBy their lead AI processor company.\n\nIt’s cool to see this tiny company grow up so fast across so many verticals (memory, silicon photonics, etc).\n\nUp +5.39% premarket off the news. https://t.co/YkOtELzkmo",
+                    "translation": "$AEHR再次获得一笔2200万美元的后续订单，用于AI处理器晶圆级老化测试系统。\n\n订单来自其最重要的AI处理器客户。\n\n看到这家小公司在存储、硅光子等多个垂直领域如此迅速地成长，令人欣喜。\n\n受此消息影响，盘前上涨5.39%。https://t.co/YkOtELzkmo"
+                },
+                {
+                    "original": "So this is just what I'm seeing with $SIVE and the CW DFB laser chokepoint right now. \n\nFrom optical earnings: \n\n1. $LITE: unexpected demand and imbalance for UHP CW lasers. \n\n- Had ability to price up ASP for lasers. \n- Scale up CPO on track for H2 2027 shipments, called out any",
+                    "translation": "以下是我目前对$SIVE和CW DFB激光器瓶颈的看法。\n\n来自光通信板块财报：\n\n1. $LITE：对超高功率（UHP）CW激光器的需求意外强劲，且供需失衡。\n\n- 有能力提高激光器的平均售价（ASP）。\n- CPO规模化量产按计划推进，将于2027年下半年出货，并指出了任何"
+                },
+                {
+                    "original": "What a legend, Situational Awareness bought 1/6th of the entire company of Taiyo Yuden.\n\nPretty wild to see this unfolding. https://t.co/nBQW5DOZ5f",
+                    "translation": "真是个传奇，Situational Awareness买下了太阳诱电整个公司的六分之一。\n\n看到这一幕逐步展开，相当震撼。https://t.co/nBQW5DOZ5f"
+                },
+                {
+                    "original": "It was reported today that Leopold’s Situational Awareness acquired 11.62% of Taiyo Yuden (6976).\n\nUp from 5.99% as of July 16th. \n\nI do agree with his position (if he still has it) in terms of how valuable this MLCC manufacturer is to global AI supply chains. https://t.co/fAQNpAFfhU",
+                    "translation": "今日有报道称，Leopold旗下的Situational Awareness收购了太阳诱电（6976）11.62%的股份。\n\n较7月16日的5.99%有所增加。\n\n我确实认同他的仓位（如果他仍持有），这家MLCC制造商对全球AI供应链的价值极高。https://t.co/fAQNpAFfhU"
+                },
+                {
+                    "original": "I didn’t know Leopold was a fellow MLCC bottleneck investor in Taiyo Yuden (6976)\n\nIt’s been disclosed today that Situational Awareness owns 5.99% of the company with a ~ ¥17,446/share avg as of June 29th. \n\nCurrent prices are ¥9,797. \n\nI actually added some today to show support https://t.co/lYg0XmfXZM",
+                    "translation": "我之前不知道Leopold也是太阳诱电（6976）的MLCC瓶颈投资者。\n\n今日披露，截至6月29日，Situational Awareness持有该公司5.99%的股份，平均成本约为每股17,446日元。\n\n当前股价为9,797日元。\n\n我今天实际上加仓了一些以示支持。https://t.co/lYg0XmfXZM"
+                },
+                {
+                    "original": "Bro Charles the $SMCI CEO needs to become a politician.\n\nI’ve never seen a guy dodge so many questions on a Q&amp;A earnings transcript before.\n\n- “what’s your 2027 gross margins”\n\nA: “we look forward to growing them\n\n- “do you anticipate margins to improve September?”\n\nA: September.",
+                    "translation": "老兄，$SMCI的CEO查尔斯真该去从政。\n\n我从未见过有人在财报电话会议问答记录中回避这么多问题。\n\n- “你们2027年的毛利率是多少？”\n\n答：“我们期待提高毛利率。”\n\n- “你预计9月份利润率会改善吗？”\n\n答：9月。"
+                },
+                {
+                    "original": "$LITE earnings transcript TLDRs:\n\n- \"Our visibility into the timing of CPO scale-up deployments has also sharpened. We remain confident in a demand ramp for our ultra-high-power  laser chips in the second half of calendar 2027\"\n\nH2 2027 start of CPO scale up ramp confirmed from https://t.co/H2DOhjCrbQ",
+                    "translation": "$LITE财报电话会议记录要点：\n\n- “我们对CPO规模化部署时间的可见度也有所提高。我们仍然相信，我们的超高功率激光芯片将在2027日历年下半年迎来需求增长。”\n\n2027年下半年CPO规模化增长启动，已从https://t.co/H2DOhjCrbQ得到确认。"
+                }
+            ]
+        },
+        {
+            "date": "2026-08-11",
+            "tweets": [
+                {
+                    "original": "Insane earnings today for the AI theme with $CRWV, $SMCI, and $LITE. \n\nCoreweave: Absurd ~$104B+ backlog, which doesn't include $25B+ of new customer agreements added in early Q3. \n\nCompute demand read through for Neoclouds is enormous (For Nebius, Iren and others)\n\nSupermicro:",
+                    "translation": "今天AI主题的财报表现惊人，涉及$CRWV、$SMCI和$LITE。\n\nCoreweave：积压订单规模约1040亿美元以上，且不包括Q3初新增的250多亿美元新客户协议。\n\nNeoclouds的计算需求传导效应巨大（对Nebius、Iren等）。\n\nSupermicro："
+                },
+                {
+                    "original": "$SMCI 2027 guidance was actually unholy: $65-$72 billion FY 2027 revenue guidance... \n\nvs. ~$52.4B expected, a casual +$16.1B above consensus. \n\nSMCI logged a massive $60B+ in news order from this earnings. \n\nThat timeline is also interesting when they announced a plan to",
+                    "translation": "$SMCI的2027财年指引实际上高得离谱：2027财年营收指引为650亿至720亿美元……\n\n而市场预期约为524亿美元，轻松超出市场共识161亿美元。\n\nSMCI在本次财报中录得了超过600亿美元的新订单。\n\n他们宣布计划……的时间点也很有趣。"
+                },
+                {
+                    "original": "$LITE earnings are out, very strong earnings:\n\nRevenue: $1.01B, +24.5% Q/Q, +109.3% Y/Y growth\nvs. ~$984.6M\nAdj. EPS: $3.23 vs. ~$2.95\nGross Margin (non-gaap): 50.4% / Operating margin (non-gaap) 36.6%\n\nQ1 FY2027 guidance is probably more important:\n\nRevenue: $1.225–1.275B vs.",
+                    "translation": "$LITE财报已发布，业绩非常强劲：\n\n营收：10.1亿美元，环比增长24.5%，同比增长109.3%\nvs. 约9.846亿美元\n调整后每股收益：3.23美元 vs. 约2.95美元\n毛利率（非GAAP）：50.4% / 营业利润率（非GAAP）：36.6%\n\n2027财年第一季度指引可能更重要：\n\n营收：12.25亿至12.75亿美元 vs."
+                },
+                {
+                    "original": "Just putting it out there for people that think AAOI is a one year cycle...\n\n$AAOI projects their ELSFP capacity for CPO to be 400K/units a month in 2028.\n\n400k * ~$400 ELS ASP (GS assumptions) = + another ~$1.92B 2028 annualized revenue capacity added as a new distinct (&gt;50%",
+                    "translation": "只是提出来供那些认为AAOI只是一年周期股的人参考……\n\n$AAOI预计到2028年，其用于CPO的ELSFP产能将达到每月40万件。\n\n40万 * 约400美元ELS平均售价（高盛假设）= 新增约19.2亿美元2028年年化营收产能，作为一个新的独立（>50%"
+                },
+                {
+                    "original": "Holy... We've reached 1,000,000 followers! \n\nIt's genuinely incredible that so many people care to read about my ideas around AI chokepoints and bottlenecks.\n\nFrom substrates, lasers, actuators, memory, power to some of the most niche parts of upstream supply chains.\n\nI've had a https://t.co/uQrJT94xcC",
+                    "translation": "天哪……我们达到了100万粉丝！\n\n有这么多人愿意阅读我关于AI关键节点和瓶颈的想法，真的令人难以置信。\n\n从衬底、激光器、执行器、存储、电源，到上游供应链中最冷门的部分。\n\n我经历了一段https://t.co/uQrJT94xcC"
+                },
+                {
+                    "original": "We're almost there...",
+                    "translation": "我们快要到了……"
+                },
+                {
+                    "original": "uhhh... the Unitree IPO is more than 8000 times oversubscribed by retail investors. \n\nThe demand for pure play humanoid companies is absolutely enormous?\n\nI'm personally in the US-based Agility Robotics club (Softbank, $NVDA, $AMZN, Foxconn, etc), at $2.5B premoney via $CCXI. https://t.co/kkQSfls4rO",
+                    "translation": "呃……宇树科技（Unitree）的IPO获散户投资者超额认购超8000倍。\n\n市场对纯人形机器人公司的需求真的如此巨大？\n\n我个人通过$CCXI参与了总部位于美国的Agility Robotics的投资阵营（软银、$NVDA、$AMZN、富士康等），投资前估值为25亿美元。https://t.co/kkQSfls4rO"
+                },
+                {
+                    "original": "Woah, $RIOT announced a $9.1B deal with Anthropic, with a possible contract extending to $16.1B, over 20Y.\n\n$AMD also exercised its option to expand its existing deal with Riot. (And they still have another 1 GW campus they have LOI with for a tenant)\n\nIn terms of timelines, seem https://t.co/jRPWwwtAnK",
+                    "translation": "哇，$RIOT宣布与Anthropic达成91亿美元的协议，合同期限20年，有可能扩展至161亿美元。\n\n$AMD也行使其选择权，扩大了与Riot的现有交易。（此外，他们还有一个1GW的园区，已与租户签署了意向书）\n\n从时间线来看，似乎 https://t.co/jRPWwwtAnK"
+                }
+            ]
+        },
+        {
+            "date": "2026-08-10",
+            "tweets": [
+                {
+                    "original": "Be Barrons:\n\n- Wants to write about optical supply supply chains like $AAOI\n\n- Hiring DPT: who needs engineers to write about this something this simple?  Let’s find underpaid political philosophy backgrounds.\n\n- proceeds to find a new hire from nonprofit communication consulting https://t.co/WSatyNGIPe",
+                    "translation": "看看Barron's的做派：\n\n- 想写光学供应链的文章，比如$AAOI\n\n- 招聘部门：写这么简单的东西还需要工程师？去找些薪资不高的政治哲学背景的人吧。\n\n- 接着从非营利传播咨询机构招了个新人 https://t.co/WSatyNGIPe"
+                },
+                {
+                    "original": "Now that markets are hosting a laser party again from $SIVE, OE Solutions, $LITE, Coherent, to $AAOI.\n\nThere’s a pretty interesting study:\n\nBoth from Fidelity and a UC Berkeley research paper, that the best investors are the ones who either…\n\n- Anecdotally forgot about their https://t.co/7IBPWMx1g0",
+                    "translation": "如今市场再度上演“激光派对”，从$SIVE、OE Solutions、$LITE、Coherent到$AAOI。\n\n有一项颇有意思的研究：\n\n来自富达投资（Fidelity）和加州大学伯克利分校（UC Berkeley）的研究论文均指出，最优秀的投资者是那些要么……\n\n- 从轶事角度看，忘记了自己持仓的人 https://t.co/7IBPWMx1g0"
+                },
+                {
+                    "original": "Just some near term events:\n\n- OCP APAC tomorrow (Ayar, Lightmatter, $AMD, $NVDA) and your CPO players are giving announcements/updates.\n\nThis should be a catalyst for certain optical players.\n\n- Earnings week: with $ASTS, $RKLB reporting today (space), $LITE on Tuesday https://t.co/FHMQUW3s6H",
+                    "translation": "简单列举近期事件：\n\n- 明天是OCP APAC（Ayar、Lightmatter、$AMD、$NVDA），各大CPO厂商将发布公告/更新。\n\n这应成为某些光学厂商的催化剂。\n\n- 财报周：$ASTS、$RKLB今日公布财报（太空领域），$LITE周二公布 https://t.co/FHMQUW3s6H"
+                }
+            ]
+        },
+        {
+            "date": "2026-08-09",
+            "tweets": [
+                {
+                    "original": "All right chat, it’s that time of the month again.\n\nWhat’s your #1 highest conviction stock and why? \n\nI actually learn a lot from reading these, so share some cool ideas.",
+                    "translation": "好了各位，又到了每月这个时候。\n\n你最有信心的一只股票是什么？为什么？\n\n我确实能从这些分享中学到很多，所以欢迎分享一些有意思的想法。"
+                },
+                {
+                    "original": "I think it’s a good time to revisit $SIVE ~$427m/yr midpoint capacity revenue modeled projections.\n\nGiven recent industry earnings:\n\n&gt; $AAOI cited +20-40% demand imbalance for transceivers (with lasers as the bottleneck).\n\n&gt; $MTSI saying many \"Customers are coming to us with https://t.co/Orq0M2qcNb",
+                    "translation": "我认为现在是重新审视$SIVE约4.27亿美元/年中点产能营收模型预测的好时机。\n\n鉴于近期行业财报：\n\n&gt; $AAOI指出收发器需求失衡达+20-40%（激光器是瓶颈）。\n\n&gt; $MTSI表示，许多“客户正在带着……来找我们 https://t.co/Orq0M2qcNb"
+                }
+            ]
+        },
+        {
+            "date": "2026-08-08",
+            "tweets": [
+                {
+                    "original": "Today I'm writing a weekend guide on how to do DD when shorting $NBIS:\n\nFirst, you look at hyperscaler earnings for AI cloud read through: \n\n&gt; $GOOGL: reports record AI cloud demand + backlog + margin increases from earnings\n\n&gt; $AMZN: reports record AI Cloud demand + backlog +",
+                    "translation": "今天我要写一份周末指南，讲解做空$NBIS时如何进行DD（尽调）：\n\n首先，你要看超大规模云服务商的财报，以判断AI云业务的传导效应：\n\n&gt; $GOOGL：财报显示AI云需求创纪录，积压订单增加，利润率提升\n\n&gt; $AMZN：财报显示AI云需求创纪录，积压订单增加，以及……"
+                },
+                {
+                    "original": "Yes, I'm still bullish on memory like $MU / Samsung.\n\nAs I said earlier, markets tend to rotate from bottleneck to bottleneck.\n\nThis week it looks $AXTI to $LITE in the photonics sector is the focus again. \n\nThe thing is... the primary thing that changed are the stock prices, https://t.co/UtDk77wJNh",
+                    "translation": "是的，我依然看好$MU/三星等存储类股票。\n\n正如我之前所说，市场往往从一个瓶颈轮动到另一个瓶颈。\n\n本周，光子学板块的焦点似乎又回到了$AXTI到$LITE。\n\n问题是……真正改变的其实只是股价，https://t.co/UtDk77wJNh"
+                },
+                {
+                    "original": "I've mapped the entire Wall Street bear playbook on AI names:\n\nHave your favorite institution/media insert one of these name down below:\n\n1. &lt; ______ [GPUs, Transcivers, MLCC, Memory...] are a commodity set to crash&gt; \n\n2. &lt; ______ [YMTC, CXMT, Dongshan...] from China will flood",
+                    "translation": "我梳理出了华尔街空头针对AI股票的全部套路：\n\n让你最喜爱的机构/媒体在下面填入其中一个名称：\n\n1. &lt; ______ [GPU、收发器、MLCC、存储……] 是大宗商品，注定崩盘&gt;\n\n2. &lt; ______ [YMTC、CXMT、东山精密……]（来自中国）将大量涌入&gt;"
+                }
+            ]
+        },
+        {
+            "date": "2026-08-07",
+            "tweets": [
+                {
+                    "original": "There we go, White House finally invests in more breath in critical minerals/materials. Amazing policy move, as a TLDR:\n\n- $WWR receives $25M (graphite)\n- $SRL (ASX) receives $400M (Scandium)\n- $FEAM receives $8M (Boron)\n- $HREE receives $4.8M (magnet rare earths)\n\nout of the https://t.co/wRR2xEAwvU",
+                    "translation": "终于，白宫在关键矿产/材料领域注入了更多活力。非常棒的政策举措，简单总结如下：\n\n- $WWR获得2500万美元（石墨）\n- $SRL（ASX）获得4亿美元（钪）\n- $FEAM获得800万美元（硼）\n- $HREE获得480万美元（磁铁稀土）\n\n来自…… https://t.co/wRR2xEAwvU"
+                },
+                {
+                    "original": "Some more TLDR takeaways from $AAOI ER:\n\n- They also flagged DSP and TIA bottlenecks, which is a positive industry read through for names like $MXL, then $SMTC and $MTSI. \n\n- For revenue growth, they're expecting more than $500 million revenue Q4, which is absurd growth. \n\nFor https://t.co/Q1mPPD4m7Q",
+                    "translation": "$AAOI财报的更多要点：\n\n- 他们还指出DSP和TIA存在瓶颈，这对$MXL、$SMTC和$MTSI等公司来说是一个积极的行业传导信号。\n\n- 就营收增长而言，他们预计Q4营收将超过5亿美元，这是惊人的增长。\n\n关于…… https://t.co/Q1mPPD4m7Q"
+                },
+                {
+                    "original": "I usually make fun of sellside, but Rosenblatt has pretty goated channel checks on optical names, and their reports are one of the few I like talking about. \n\n$AAOI, $LITE, $SIVE, and the laser party has started to recover around the est. timing windows. \n\neg. last month: https://t.co/NFH7Z5wlwS",
+                    "translation": "我通常喜欢嘲笑卖方，但Rosenblatt在光学股方面的渠道调研确实顶级，他们的报告是为数不多我喜欢谈论的。\n\n$AAOI、$LITE、$SIVE——激光派对已在预计的时间窗口附近开始复苏。\n\n例如上个月：https://t.co/NFH7Z5wlwS"
+                },
+                {
+                    "original": "Unitree, China's humanoid leader, is set to IPO this month at a $9B valuation! (~$6.2B originally per March filing). \n\nDerivative markets are pricing open at an implied $36.04B MC, roughly ~4X listing price. \n\n$CCXI / Agility Robotics, the first US publicly listed pure play https://t.co/9GRFzx11Zn",
+                    "translation": "宇树科技（Unitree），中国人形机器人领导者，将于本月以90亿美元估值进行IPO！（根据3月文件，最初估值约为62亿美元）。\n\n衍生品市场定价的开盘隐含市值（MC）为360.4亿美元，约为上市价格的4倍。\n\n$CCXI / Agility Robotics，第一家在美国公开上市的纯正标的 https://t.co/9GRFzx11Zn"
+                },
+                {
+                    "original": "Earlier today, optical interconnect company Lumilens \"emerges from stealth\" at a $5.5B valuation, after raising $700m.\n\nJust as a recap from $POET / $SIVE Linkedin OSINT mapping I shared earlier, Lumilens was supplying a top 3 hyperscaler customer. \n\nSo we got confirmation of https://t.co/P4vxICOMyW",
+                    "translation": "今天早些时候，光互连公司Lumilens在融资7亿美元后“走出隐身模式”，估值为55亿美元。\n\n正如我之前分享的基于$POET/$SIVE领英情报（OSINT）映射所回顾的，Lumilens一直在为一家排名前三的超大规模云服务商供货。\n\n因此我们确认了 https://t.co/P4vxICOMyW"
+                },
+                {
+                    "original": "Wow, there's gem after gem in $AAOI earnings for $SIVE + other laser player readthrough.\n\n1. AAOI not meaningfully participating in CPO first-gen deployments.\n\n\"We just can’t make enough of them [CPO lasers] to be involved in their current first-generation [CPO] deployments https://t.co/GZX0BYNkXV",
+                    "translation": "哇，$AAOI财报中对于$SIVE及其他激光器公司而言，可谓亮点纷呈。\n\n1. AAOI并未实质性参与第一代CPO部署。\n\n“我们就是无法制造出足够的[CPO激光器]，以参与他们当前第一代[CPO]的部署 https://t.co/GZX0BYNkXV"
+                }
+            ]
+        },
+        {
+            "date": "2026-08-06",
+            "tweets": [
+                {
+                    "original": "$MTSI earnings transcript: \n\n\"Customers are coming to us with urgency due to the general supply shortage of indium phosphide DFB lasers\"\n\nEmphasis on \"Urgency\", CW \"DFB lasers\", \"coming to us\".\n\nCW DFB names, such as like $SIVE and $LITE should be happy to hear about this laser https://t.co/YOtGp4tk9M",
+                    "translation": "$MTSI财报电话会议记录：\n\n“由于磷化铟DFB激光器的普遍供应短缺，客户纷纷紧急联系我们”\n\n重点在于“紧急”、“连续波（CW）DFB激光器”、“主动找上门来”。\n\n连续波DFB激光器相关标的，如$SIVE和$LITE，听到这一激光器的消息后应感到振奋 https://t.co/YOtGp4tk9M"
+                },
+                {
+                    "original": "Just some TLDR notes on $AAOI earnings:\n\n- Expects full qualification of 1.6T products by their hyperscaler customer within next couple of weeks \n\n(helpful revenue ramp #2, timelines)\n\n-  Continues to believe that AOI will have the largest AI DC transceiver production capacity in https://t.co/pug9cw6Ewj",
+                    "translation": "关于$AAOI财报的简要要点：\n\n- 预计未来几周内将获得超大规模客户对1.6T产品的全面认证\n\n（有助于收入增长 #2，时间线）\n\n- 继续认为AOI将拥有全球最大的AI数据中心光收发器产能 https://t.co/pug9cw6Ewj"
+                },
+                {
+                    "original": "I remain convinced nobody knows how to pronounce or talk about $AAOI in real life. \n\nIt’s one letter too long to say $TSM or $AMD. \n\nAnd nobody ever says to a friend“Wow, I like applied optoelectronics!”",
+                    "translation": "我依然确信，现实生活中没人知道如何发音或谈论$AAOI。\n\n它比$TSM或$AMD多一个字母，说起来太拗口。\n\n而且没人会对朋友说：“哇，我喜欢应用光电子学！”"
+                },
+                {
+                    "original": "The unexpected thing of the week... Was $AEVA becoming a CPO/NPO optical source player. \n\nFor background: $SIVE is viewed as the high confidence CW DFB laser supplier to Aeva (which is known for lidar). \n\nToday, Aeva reacted with +18.26% AH on news that they signed a JDA with an https://t.co/852GyoEdgL",
+                    "translation": "本周的意外之事……是$AEVA成为CPO/NPO光源参与者。\n\n背景：$SIVE被视为向Aeva（以激光雷达闻名）提供高置信度连续波DFB激光器的供应商。\n\n今日，Aeva在签署了一项与某方的联合开发协议（JDA）的消息公布后，盘后上涨18.26% https://t.co/852GyoEdgL"
+                },
+                {
+                    "original": "Funniest callout of the year from $VIAV on CPO timelines:\n\n\"Well, there's been a lot of industry talk [about delays], like, 'Oh, because the yield is going to be slower.' \n\nThat's all nonsense. CPO and all that thing is moving forward\"\n\nThey stated that Yes there's always issues, https://t.co/RUdtXYVsf2",
+                    "translation": "来自$VIAV关于CPO时间表的最有趣评论：\n\n“嗯，业内有很多关于延迟的讨论，比如‘哦，因为良率会更低。’\n\n那都是胡说八道。CPO以及所有相关事情都在向前推进”\n\n他们表示，是的，问题总是存在， https://t.co/RUdtXYVsf2"
+                }
+            ]
+        },
+        {
+            "date": "2026-08-05",
+            "tweets": [
+                {
+                    "original": "$RKLB has been awarded a $397M contract by the US Space Force.\n\nTo build out Flatellite satellites and launch them on their Medium Lift rocket, Neutron. https://t.co/0jsPPf9ucI",
+                    "translation": "$RKLB已获得美国太空军一份3.97亿美元的合同。\n\n用于建造Flatellite卫星，并利用其中型运载火箭Neutron进行发射。 https://t.co/0jsPPf9ucI"
+                }
+            ]
+        },
+        {
+            "date": "2026-08-04",
+            "tweets": [
+                {
+                    "original": "Bessent says: \"There may be deal Tuesday or Wednesday to open Strait of Hormuz with freedom of movement\"\n\nI think markets might like the sound of this. https://t.co/qXc8u2050N",
+                    "translation": "贝森特表示：“周二或周三可能会达成协议，以开放霍尔木兹海峡并保障航行自由。”\n\n我认为市场可能会喜欢这个消息。 https://t.co/qXc8u2050N"
+                },
+                {
+                    "original": "A very material catalyst came about for Western supply chains from $AAOI, $SIVE / Jabil, to $LITE and Coherent: \n\nThe Trump administration is drafting a ban of new Chinese optical transceivers and DC devices. \n\nWhich would likely hit China’s Innolight, Eoptolink, and other https://t.co/HFeh2CjDjl",
+                    "translation": "一个对西方供应链而言非常重要的催化剂出现了，涉及$AAOI、$SIVE/捷普（Jabil）、$LITE和Coherent：\n\n特朗普政府正在起草一项禁令，禁止新的中国光收发器和数据中心设备。\n\n这很可能冲击中国的中际旭创（Innolight）、易飞扬（Eoptolink）及其他企业。 https://t.co/HFeh2CjDjl"
+                },
+                {
+                    "original": "SK Hynix, $MU , and Samsung have sold out of 2027 capacity for DRAM/HBM.\n\n$SNDK, Samsung, Micron current annual NAND capacity has been sold out, with Kioxia and SK Hynix expected to finalize allocations by August 2026. \n\n- Customers are being allocated only 60–70% of the volumes https://t.co/dlCfU5FJpf",
+                    "translation": "SK海力士、$MU（美光）和三星的DRAM/HBM 2027年产能已售罄。\n\n$SNDK（闪迪）、三星、美光当前的年度NAND产能已售罄，铠侠（Kioxia）和SK海力士预计将在2026年8月前最终确定分配。\n\n- 客户仅能获得60%–70%的分配量 https://t.co/dlCfU5FJpf"
+                }
+            ]
+        },
+        {
+            "date": "2026-08-02",
+            "tweets": [
+                {
+                    "original": "Trump announced that US has cancelled its attack on Iran.\n\nAnd that they’ve agreed to the perimeters of a deal to open the Strait and end the nuclear program.\n\nAnyone else feel like they’ve aged a few years in the past 6 months? https://t.co/4PK671c548",
+                    "translation": "特朗普宣布美国已取消对伊朗的打击。\n\n并表示双方已就开放霍尔木兹海峡和终止核计划的协议框架达成一致。\n\n还有谁觉得自己在过去6个月里老了好几岁？ https://t.co/4PK671c548"
+                }
+            ]
+        },
+        {
+            "date": "2026-08-01",
+            "tweets": [
+                {
+                    "original": "$LITE CEO Michael Hurlston at the RAISE Summit warned that the supply gap for InP lasers for AI DCs:\n\nIs facing a more severe supply chain crisis than memory. \n\nAnd with Lumentum's 5 InP fabs, shipments would be more than 30%+ below customer demand.\n\nThis is especially visible https://t.co/sTFswD6ClV",
+                    "translation": "$LITE（Lumentum）CEO Michael Hurlston在RAISE峰会上警告称，AI数据中心用InP激光器的供应缺口：\n\n正面临比存储芯片更严重的供应链危机。\n\n而且凭借Lumentum的5座InP晶圆厂，出货量仍将比客户需求低30%以上。\n\n这一点尤为明显 https://t.co/sTFswD6ClV"
+                }
+            ]
+        },
+        {
+            "date": "2026-07-31",
+            "tweets": [
+                {
+                    "original": "The media framing and X reactions around Leopold are egregious.\n\nFraming his successful multi-year thesis from $SNDK to $BE as a \"collapse\" or \"failure\".\n\nAfter July's surprising crash, then personally attacking him on top is just pathetic to witness. \n\nIt's almost like everyone",
+                    "translation": "媒体和X平台对Leopold的报道和反应实在过分。\n\n将他从$SNDK到$BE成功的多年投资论点描述为“崩盘”或“失败”。\n\n在7月令人意外的暴跌之后，还对他进行人身攻击，真是令人唏嘘。\n\n几乎所有人都……"
+                },
+                {
+                    "original": "As a earnings recap: $AMZN, $META, $GOOGL, and $MSFT guided a 2026 combined capex forecast to ~$720-$745 Billion.\n\nUp from $695-$725B Billion previously.\n\nAmazon: $220B\nGoogle: $195B-$205B\nMeta: $130B-$145B\nMicrosoft: $175B\n\nWe've already seen significant deleveraging and https://t.co/siSgr8TFez",
+                    "translation": "财报回顾：$AMZN、$META、$GOOGL和$MSFT将2026年合计资本支出指引上调至约7200亿-7450亿美元。\n\n高于此前预期的6950亿-7250亿美元。\n\n亚马逊：2200亿美元\n谷歌：1950亿-2050亿美元\nMeta：1300亿-1450亿美元\n微软：1750亿美元\n\n我们已经看到显著的去杠杆化以及…… https://t.co/siSgr8TFez"
+                },
+                {
+                    "original": "$RDDT ER in a nutshell:\n\nRevenue: $804.9M vs. $730.4M (expected).\nEPS: $1.25 vs. ~$0.95.\nNet income: $252.8M vs. $196.5M\n\nQ3 guidance:\nRevenue: $860–870M vs. 829.1M\nAdjusted EBITDA: $385-395M vs. $369M\n\nBlowout financials, market always like to explain the drop 22.6% off some new https://t.co/isZIFbuzu6",
+                    "translation": "$RDDT财报概要：\n\n营收：8.049亿美元，预期7.304亿美元。\n每股收益：1.25美元，预期约0.95美元。\n净利润：2.528亿美元，预期1.965亿美元。\n\n第三季度指引：\n营收：8.60亿-8.70亿美元，预期8.291亿美元。\n调整后EBITDA：3.85亿-3.95亿美元，预期3.69亿美元。\n\n业绩亮眼，但市场总是喜欢用某些新……来解释22.6%的下跌。 https://t.co/isZIFbuzu6"
+                },
+                {
+                    "original": "Just a TLDR of this week:\n\nMedia: Hyperscalers overbuilt and are selling excess compute.\n-&gt; $GOOGL, $MSFT, $META, and $AMZN: Demand for compute far exceeds capacity. Capex go brrr.\n\nInstitutions: Emergency rate hike or 3x rate hikes, it's all over.\n-&gt; Kevin Warsh: No rate Hike.",
+                    "translation": "(翻译暂无)"
+                },
+                {
+                    "original": "Now that I think of it more, $POET optical interposer piece is actually a little more material than I thought with $SIVE. \n\nOriginally the wording was \"readiness\" for EOY 2026. \n\nBut $POET upgraded that wording, by stating \"production\" with Sivers lasers projected EOY 2026. \n\nSo https://t.co/U6YzQNPj1M",
+                    "translation": "现在仔细想想，$POET的光学中介层业务实际上比我对$SIVE的判断更具实质性。\n\n最初的措辞是2026年底“准备就绪”。\n\n但$POET升级了措辞，称预计2026年底与Sivers激光器实现“量产”。\n\n因此 https://t.co/U6YzQNPj1M"
+                },
+                {
+                    "original": "For $XFAB ER transcript:  \n\nJust to recap, my idea on $XFAB foundry growth opportunities stemmed from SiC for 800v and photonixfab/MTP for CPO applicability.   \n\n- $XFAB: \"We are making progress in co-packaged optics\".  \n\n- \"The transition to 800v... is expected to support demand https://t.co/ecHeOZxiHT",
+                    "translation": "关于$XFAB财报电话会议记录：\n\n简单回顾一下，我对$XFAB晶圆厂增长机会的判断源于800V SiC以及photonixfab/MTP在CPO（共封装光学）领域的应用。\n\n- $XFAB：“我们在共封装光学方面正在取得进展。”\n\n- “向800V的过渡……预计将支撑需求 https://t.co/ecHeOZxiHT"
+                },
+                {
+                    "original": "Few earnings TLDRs with my favorite $AXTI and $AMZN:\n\nAmazon:\n- Raised 2026 capex to $220B vs. prior $200B (partly due to higher memory costs, which is bullish on $MU to Samsung) \n- Even at $220B, Amazon will not have enough capacity to meet all 2026 demand; Jassy expects the",
+                    "translation": "几条我最爱的$AXTI和$AMZN财报简讯：\n\n亚马逊：\n- 将2026年资本开支上调至2200亿美元，此前为2000亿美元（部分原因是内存成本上升，这对$MU以及三星构成利好）\n- 即便达到2200亿美元，亚马逊仍将没有足够产能满足2026年全部需求；Jassy预计……"
+                }
+            ]
+        },
+        {
+            "date": "2026-07-30",
+            "tweets": [
+                {
+                    "original": "Did Citadel really just liquidate Situational Awareness…\n\nThen brought up entire markets the next day?\n\n$NBIS +26.25%\n$IREN +25.96%\n$SHAZ +22.82%\n$SNDK + 23.98%\n$BE +23.67%\n$SKHY +16.98%\n$INTC +12.16%\n\nAmid many others. This has gotta be one of the wildest liquidations I’ve https://t.co/CeHGSjnIsm",
+                    "translation": "Citadel真的刚刚清仓了Situational Awareness吗……\n\n然后第二天整个市场就被拉升了？\n\n$NBIS +26.25%\n$IREN +25.96%\n$SHAZ +22.82%\n$SNDK +23.98%\n$BE +23.67%\n$SKHY +16.98%\n$INTC +12.16%\n\n还有众多其他股票。这绝对是我见过最疯狂的清仓之一 https://t.co/CeHGSjnIsm"
+                },
+                {
+                    "original": "There's a lot of stupid commentary around Leopold raising funds. After names like $BE, $SNDK, $SHAZ, and others all had very sharp drawdowns in July.\n\nJust remember... here's a man in finance that's\n\n1.  6'5\n2. Blue Eyes\n3. Hedge Fund\n\nProbably better looking than you, and was up",
+                    "translation": "关于Leopold募资有很多愚蠢的评论。毕竟$BE、$SNDK、$SHAZ等股票在7月都经历了剧烈的回撤。\n\n只需记住……这位金融界人士，\n\n1. 身高6英尺5英寸\n2. 蓝眼睛\n3. 对冲基金\n\n很可能比你帅，而且盈利了"
+                },
+                {
+                    "original": "Just some interesting takeaways from $FORM earnings call on CPO:\n\nSince they attributed systems revenue nearly doubled due to: \"accelerating growth in co-packaged optics or CPO\". \n\nQ1 2026: \"we now expect 2026 CPO revenues to come in at the high end of the $10 million to $20 https://t.co/qLBzj5KeMD",
+                    "translation": "从$FORM关于CPO的财报电话会议中得到一些有趣要点：\n\n他们将系统业务收入几乎翻倍归因于：“共封装光学（CPO）的加速增长”。\n\n2026年第一季度：“我们现在预计2026年CPO收入将处于1000万至2000万美元区间的高端 https://t.co/qLBzj5KeMD"
+                }
+            ]
+        }
+    ]
+}
