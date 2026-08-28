@@ -7241,291 +7241,6 @@
     }
   });
 
-  // ../../src/client-edge/node_modules/react/cjs/react.production.min.js
-  var require_react_production_min2 = __commonJS({
-    "../../src/client-edge/node_modules/react/cjs/react.production.min.js"(exports) {
-      "use strict";
-      var l = /* @__PURE__ */ Symbol.for("react.element");
-      var n = /* @__PURE__ */ Symbol.for("react.portal");
-      var p = /* @__PURE__ */ Symbol.for("react.fragment");
-      var q = /* @__PURE__ */ Symbol.for("react.strict_mode");
-      var r = /* @__PURE__ */ Symbol.for("react.profiler");
-      var t = /* @__PURE__ */ Symbol.for("react.provider");
-      var u = /* @__PURE__ */ Symbol.for("react.context");
-      var v = /* @__PURE__ */ Symbol.for("react.forward_ref");
-      var w = /* @__PURE__ */ Symbol.for("react.suspense");
-      var x = /* @__PURE__ */ Symbol.for("react.memo");
-      var y = /* @__PURE__ */ Symbol.for("react.lazy");
-      var z = Symbol.iterator;
-      function A(a) {
-        if (null === a || "object" !== typeof a) return null;
-        a = z && a[z] || a["@@iterator"];
-        return "function" === typeof a ? a : null;
-      }
-      var B = { isMounted: function() {
-        return false;
-      }, enqueueForceUpdate: function() {
-      }, enqueueReplaceState: function() {
-      }, enqueueSetState: function() {
-      } };
-      var C = Object.assign;
-      var D = {};
-      function E(a, b, e) {
-        this.props = a;
-        this.context = b;
-        this.refs = D;
-        this.updater = e || B;
-      }
-      E.prototype.isReactComponent = {};
-      E.prototype.setState = function(a, b) {
-        if ("object" !== typeof a && "function" !== typeof a && null != a) throw Error("setState(...): takes an object of state variables to update or a function which returns an object of state variables.");
-        this.updater.enqueueSetState(this, a, b, "setState");
-      };
-      E.prototype.forceUpdate = function(a) {
-        this.updater.enqueueForceUpdate(this, a, "forceUpdate");
-      };
-      function F() {
-      }
-      F.prototype = E.prototype;
-      function G(a, b, e) {
-        this.props = a;
-        this.context = b;
-        this.refs = D;
-        this.updater = e || B;
-      }
-      var H = G.prototype = new F();
-      H.constructor = G;
-      C(H, E.prototype);
-      H.isPureReactComponent = true;
-      var I = Array.isArray;
-      var J = Object.prototype.hasOwnProperty;
-      var K = { current: null };
-      var L = { key: true, ref: true, __self: true, __source: true };
-      function M(a, b, e) {
-        var d, c = {}, k = null, h = null;
-        if (null != b) for (d in void 0 !== b.ref && (h = b.ref), void 0 !== b.key && (k = "" + b.key), b) J.call(b, d) && !L.hasOwnProperty(d) && (c[d] = b[d]);
-        var g = arguments.length - 2;
-        if (1 === g) c.children = e;
-        else if (1 < g) {
-          for (var f = Array(g), m = 0; m < g; m++) f[m] = arguments[m + 2];
-          c.children = f;
-        }
-        if (a && a.defaultProps) for (d in g = a.defaultProps, g) void 0 === c[d] && (c[d] = g[d]);
-        return { $$typeof: l, type: a, key: k, ref: h, props: c, _owner: K.current };
-      }
-      function N(a, b) {
-        return { $$typeof: l, type: a.type, key: b, ref: a.ref, props: a.props, _owner: a._owner };
-      }
-      function O(a) {
-        return "object" === typeof a && null !== a && a.$$typeof === l;
-      }
-      function escape(a) {
-        var b = { "=": "=0", ":": "=2" };
-        return "$" + a.replace(/[=:]/g, function(a2) {
-          return b[a2];
-        });
-      }
-      var P = /\/+/g;
-      function Q(a, b) {
-        return "object" === typeof a && null !== a && null != a.key ? escape("" + a.key) : b.toString(36);
-      }
-      function R(a, b, e, d, c) {
-        var k = typeof a;
-        if ("undefined" === k || "boolean" === k) a = null;
-        var h = false;
-        if (null === a) h = true;
-        else switch (k) {
-          case "string":
-          case "number":
-            h = true;
-            break;
-          case "object":
-            switch (a.$$typeof) {
-              case l:
-              case n:
-                h = true;
-            }
-        }
-        if (h) return h = a, c = c(h), a = "" === d ? "." + Q(h, 0) : d, I(c) ? (e = "", null != a && (e = a.replace(P, "$&/") + "/"), R(c, b, e, "", function(a2) {
-          return a2;
-        })) : null != c && (O(c) && (c = N(c, e + (!c.key || h && h.key === c.key ? "" : ("" + c.key).replace(P, "$&/") + "/") + a)), b.push(c)), 1;
-        h = 0;
-        d = "" === d ? "." : d + ":";
-        if (I(a)) for (var g = 0; g < a.length; g++) {
-          k = a[g];
-          var f = d + Q(k, g);
-          h += R(k, b, e, f, c);
-        }
-        else if (f = A(a), "function" === typeof f) for (a = f.call(a), g = 0; !(k = a.next()).done; ) k = k.value, f = d + Q(k, g++), h += R(k, b, e, f, c);
-        else if ("object" === k) throw b = String(a), Error("Objects are not valid as a React child (found: " + ("[object Object]" === b ? "object with keys {" + Object.keys(a).join(", ") + "}" : b) + "). If you meant to render a collection of children, use an array instead.");
-        return h;
-      }
-      function S(a, b, e) {
-        if (null == a) return a;
-        var d = [], c = 0;
-        R(a, d, "", "", function(a2) {
-          return b.call(e, a2, c++);
-        });
-        return d;
-      }
-      function T(a) {
-        if (-1 === a._status) {
-          var b = a._result;
-          b = b();
-          b.then(function(b2) {
-            if (0 === a._status || -1 === a._status) a._status = 1, a._result = b2;
-          }, function(b2) {
-            if (0 === a._status || -1 === a._status) a._status = 2, a._result = b2;
-          });
-          -1 === a._status && (a._status = 0, a._result = b);
-        }
-        if (1 === a._status) return a._result.default;
-        throw a._result;
-      }
-      var U = { current: null };
-      var V = { transition: null };
-      var W = { ReactCurrentDispatcher: U, ReactCurrentBatchConfig: V, ReactCurrentOwner: K };
-      function X() {
-        throw Error("act(...) is not supported in production builds of React.");
-      }
-      exports.Children = { map: S, forEach: function(a, b, e) {
-        S(a, function() {
-          b.apply(this, arguments);
-        }, e);
-      }, count: function(a) {
-        var b = 0;
-        S(a, function() {
-          b++;
-        });
-        return b;
-      }, toArray: function(a) {
-        return S(a, function(a2) {
-          return a2;
-        }) || [];
-      }, only: function(a) {
-        if (!O(a)) throw Error("React.Children.only expected to receive a single React element child.");
-        return a;
-      } };
-      exports.Component = E;
-      exports.Fragment = p;
-      exports.Profiler = r;
-      exports.PureComponent = G;
-      exports.StrictMode = q;
-      exports.Suspense = w;
-      exports.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED = W;
-      exports.act = X;
-      exports.cloneElement = function(a, b, e) {
-        if (null === a || void 0 === a) throw Error("React.cloneElement(...): The argument must be a React element, but you passed " + a + ".");
-        var d = C({}, a.props), c = a.key, k = a.ref, h = a._owner;
-        if (null != b) {
-          void 0 !== b.ref && (k = b.ref, h = K.current);
-          void 0 !== b.key && (c = "" + b.key);
-          if (a.type && a.type.defaultProps) var g = a.type.defaultProps;
-          for (f in b) J.call(b, f) && !L.hasOwnProperty(f) && (d[f] = void 0 === b[f] && void 0 !== g ? g[f] : b[f]);
-        }
-        var f = arguments.length - 2;
-        if (1 === f) d.children = e;
-        else if (1 < f) {
-          g = Array(f);
-          for (var m = 0; m < f; m++) g[m] = arguments[m + 2];
-          d.children = g;
-        }
-        return { $$typeof: l, type: a.type, key: c, ref: k, props: d, _owner: h };
-      };
-      exports.createContext = function(a) {
-        a = { $$typeof: u, _currentValue: a, _currentValue2: a, _threadCount: 0, Provider: null, Consumer: null, _defaultValue: null, _globalName: null };
-        a.Provider = { $$typeof: t, _context: a };
-        return a.Consumer = a;
-      };
-      exports.createElement = M;
-      exports.createFactory = function(a) {
-        var b = M.bind(null, a);
-        b.type = a;
-        return b;
-      };
-      exports.createRef = function() {
-        return { current: null };
-      };
-      exports.forwardRef = function(a) {
-        return { $$typeof: v, render: a };
-      };
-      exports.isValidElement = O;
-      exports.lazy = function(a) {
-        return { $$typeof: y, _payload: { _status: -1, _result: a }, _init: T };
-      };
-      exports.memo = function(a, b) {
-        return { $$typeof: x, type: a, compare: void 0 === b ? null : b };
-      };
-      exports.startTransition = function(a) {
-        var b = V.transition;
-        V.transition = {};
-        try {
-          a();
-        } finally {
-          V.transition = b;
-        }
-      };
-      exports.unstable_act = X;
-      exports.useCallback = function(a, b) {
-        return U.current.useCallback(a, b);
-      };
-      exports.useContext = function(a) {
-        return U.current.useContext(a);
-      };
-      exports.useDebugValue = function() {
-      };
-      exports.useDeferredValue = function(a) {
-        return U.current.useDeferredValue(a);
-      };
-      exports.useEffect = function(a, b) {
-        return U.current.useEffect(a, b);
-      };
-      exports.useId = function() {
-        return U.current.useId();
-      };
-      exports.useImperativeHandle = function(a, b, e) {
-        return U.current.useImperativeHandle(a, b, e);
-      };
-      exports.useInsertionEffect = function(a, b) {
-        return U.current.useInsertionEffect(a, b);
-      };
-      exports.useLayoutEffect = function(a, b) {
-        return U.current.useLayoutEffect(a, b);
-      };
-      exports.useMemo = function(a, b) {
-        return U.current.useMemo(a, b);
-      };
-      exports.useReducer = function(a, b, e) {
-        return U.current.useReducer(a, b, e);
-      };
-      exports.useRef = function(a) {
-        return U.current.useRef(a);
-      };
-      exports.useState = function(a) {
-        return U.current.useState(a);
-      };
-      exports.useSyncExternalStore = function(a, b, e) {
-        return U.current.useSyncExternalStore(a, b, e);
-      };
-      exports.useTransition = function() {
-        return U.current.useTransition();
-      };
-      exports.version = "18.3.1";
-    }
-  });
-
-  // ../../src/client-edge/node_modules/react/index.js
-  var require_react2 = __commonJS({
-    "../../src/client-edge/node_modules/react/index.js"(exports, module) {
-      "use strict";
-      if (true) {
-        module.exports = require_react_production_min2();
-      } else {
-        module.exports = null;
-      }
-    }
-  });
-
   // ../../node_modules/react/cjs/react-jsx-runtime.production.min.js
   var require_react_jsx_runtime_production_min = __commonJS({
     "../../node_modules/react/cjs/react-jsx-runtime.production.min.js"(exports) {
@@ -7563,51 +7278,14 @@
     }
   });
 
-  // ../../src/client-edge/node_modules/react/cjs/react-jsx-runtime.production.min.js
-  var require_react_jsx_runtime_production_min2 = __commonJS({
-    "../../src/client-edge/node_modules/react/cjs/react-jsx-runtime.production.min.js"(exports) {
-      "use strict";
-      var f = require_react2();
-      var k = /* @__PURE__ */ Symbol.for("react.element");
-      var l = /* @__PURE__ */ Symbol.for("react.fragment");
-      var m = Object.prototype.hasOwnProperty;
-      var n = f.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED.ReactCurrentOwner;
-      var p = { key: true, ref: true, __self: true, __source: true };
-      function q(c, a, g) {
-        var b, d = {}, e = null, h = null;
-        void 0 !== g && (e = "" + g);
-        void 0 !== a.key && (e = "" + a.key);
-        void 0 !== a.ref && (h = a.ref);
-        for (b in a) m.call(a, b) && !p.hasOwnProperty(b) && (d[b] = a[b]);
-        if (c && c.defaultProps) for (b in a = c.defaultProps, a) void 0 === d[b] && (d[b] = a[b]);
-        return { $$typeof: k, type: c, key: e, ref: h, props: d, _owner: n.current };
-      }
-      exports.Fragment = l;
-      exports.jsx = q;
-      exports.jsxs = q;
-    }
-  });
-
-  // ../../src/client-edge/node_modules/react/jsx-runtime.js
-  var require_jsx_runtime2 = __commonJS({
-    "../../src/client-edge/node_modules/react/jsx-runtime.js"(exports, module) {
-      "use strict";
-      if (true) {
-        module.exports = require_react_jsx_runtime_production_min2();
-      } else {
-        module.exports = null;
-      }
-    }
-  });
-
   // src/main.tsx
   var import_client = __toESM(require_client());
 
   // src/prediction-app.tsx
-  var import_react3 = __toESM(require_react());
+  var import_react4 = __toESM(require_react());
 
   // ../../src/client-edge/node_modules/lucide-react/dist/esm/createLucideIcon.js
-  var import_react2 = __toESM(require_react2());
+  var import_react2 = __toESM(require_react());
 
   // ../../src/client-edge/node_modules/lucide-react/dist/esm/shared/src/utils.js
   var toKebabCase = (string) => string.replace(/([a-z0-9])([A-Z])/g, "$1-$2").toLowerCase();
@@ -7616,7 +7294,7 @@
   }).join(" ");
 
   // ../../src/client-edge/node_modules/lucide-react/dist/esm/Icon.js
-  var import_react = __toESM(require_react2());
+  var import_react = __toESM(require_react());
 
   // ../../src/client-edge/node_modules/lucide-react/dist/esm/defaultAttributes.js
   var defaultAttributes = {
@@ -7677,6 +7355,12 @@
     return Component;
   };
 
+  // ../../src/client-edge/node_modules/lucide-react/dist/esm/icons/arrow-down.js
+  var ArrowDown = createLucideIcon("ArrowDown", [
+    ["path", { d: "M12 5v14", key: "s699le" }],
+    ["path", { d: "m19 12-7 7-7-7", key: "1idqje" }]
+  ]);
+
   // ../../src/client-edge/node_modules/lucide-react/dist/esm/icons/arrow-left.js
   var ArrowLeft = createLucideIcon("ArrowLeft", [
     ["path", { d: "m12 19-7-7 7-7", key: "1l729n" }],
@@ -7687,6 +7371,12 @@
   var ArrowRight = createLucideIcon("ArrowRight", [
     ["path", { d: "M5 12h14", key: "1ays0h" }],
     ["path", { d: "m12 5 7 7-7 7", key: "xquz4c" }]
+  ]);
+
+  // ../../src/client-edge/node_modules/lucide-react/dist/esm/icons/arrow-up.js
+  var ArrowUp = createLucideIcon("ArrowUp", [
+    ["path", { d: "m5 12 7-7 7 7", key: "hav0vg" }],
+    ["path", { d: "M12 19V5", key: "x0mq9r" }]
   ]);
 
   // ../../src/client-edge/node_modules/lucide-react/dist/esm/icons/calendar.js
@@ -7701,6 +7391,9 @@
   var ChevronDown = createLucideIcon("ChevronDown", [
     ["path", { d: "m6 9 6 6 6-6", key: "qrunsl" }]
   ]);
+
+  // ../../src/client-edge/node_modules/lucide-react/dist/esm/icons/chevron-up.js
+  var ChevronUp = createLucideIcon("ChevronUp", [["path", { d: "m18 15-6-6-6 6", key: "153udz" }]]);
 
   // ../../src/client-edge/node_modules/lucide-react/dist/esm/icons/cpu.js
   var Cpu = createLucideIcon("Cpu", [
@@ -7740,6 +7433,9 @@
     ["path", { d: "M14 18h6", key: "1m8k6r" }]
   ]);
 
+  // ../../src/client-edge/node_modules/lucide-react/dist/esm/icons/minus.js
+  var Minus = createLucideIcon("Minus", [["path", { d: "M5 12h14", key: "1ays0h" }]]);
+
   // ../../src/client-edge/node_modules/lucide-react/dist/esm/icons/pie-chart.js
   var PieChart = createLucideIcon("PieChart", [
     ["path", { d: "M21.21 15.89A10 10 0 1 1 8 2.83", key: "k2fpak" }],
@@ -7767,6 +7463,21 @@
     ["path", { d: "M12 16h.01", key: "1drbdi" }]
   ]);
 
+  // ../../src/client-edge/node_modules/lucide-react/dist/esm/icons/sparkles.js
+  var Sparkles = createLucideIcon("Sparkles", [
+    [
+      "path",
+      {
+        d: "M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z",
+        key: "4pj2yx"
+      }
+    ],
+    ["path", { d: "M20 3v4", key: "1olli1" }],
+    ["path", { d: "M22 5h-4", key: "1gvqau" }],
+    ["path", { d: "M4 17v2", key: "vumght" }],
+    ["path", { d: "M5 18H3", key: "zchphs" }]
+  ]);
+
   // ../../src/client-edge/node_modules/lucide-react/dist/esm/icons/terminal.js
   var Terminal = createLucideIcon("Terminal", [
     ["polyline", { points: "4 17 10 11 4 5", key: "akl6gq" }],
@@ -7792,7 +7503,7 @@
   }
 
   // ../../src/client-edge/src/app/prediction/components/Header.tsx
-  var import_jsx_runtime2 = __toESM(require_jsx_runtime2());
+  var import_jsx_runtime2 = __toESM(require_jsx_runtime());
   var Header = ({
     kols,
     selectedKolId,
@@ -7878,7 +7589,7 @@
   };
 
   // ../../src/client-edge/src/app/prediction/components/AnalysisCharts.tsx
-  var import_jsx_runtime3 = __toESM(require_jsx_runtime2());
+  var import_jsx_runtime3 = __toESM(require_jsx_runtime());
   var CHART_COLORS = [
     { stroke: "stroke-cyan-400", text: "text-cyan-400", bg: "bg-cyan-500/20", barBg: "bg-cyan-400" },
     { stroke: "stroke-emerald-400", text: "text-emerald-400", bg: "bg-emerald-500/20", barBg: "bg-emerald-400" },
@@ -7987,7 +7698,18 @@
   };
 
   // ../../src/client-edge/src/app/prediction/components/Watchlist.tsx
-  var import_jsx_runtime4 = __toESM(require_jsx_runtime2());
+  var import_jsx_runtime4 = __toESM(require_jsx_runtime());
+  var TREND_META = {
+    rising: { icon: /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(ArrowUp, { size: 11 }), text: "\u52A0\u4ED3\u4E2D", cls: "text-emerald-400 border-emerald-500/30 bg-emerald-500/10" },
+    steady: { icon: /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(Minus, { size: 11 }), text: "\u5E73\u53F0\u671F", cls: "text-slate-400 border-slate-700 bg-slate-900" },
+    declining: { icon: /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(ArrowDown, { size: 11 }), text: "\u51CF\u4ED3\u4E2D", cls: "text-rose-400 border-rose-500/30 bg-rose-500/10" },
+    new: { icon: /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(Sparkles, { size: 11 }), text: "\u65B0\u63D0\u53CA", cls: "text-cyan-400 border-cyan-500/30 bg-cyan-500/10" }
+  };
+  var HORIZON_META = {
+    long: { text: "\u957F\u671F\xB7\u7ED3\u6784\u6027", cls: "border-slate-700 text-slate-400" },
+    mid: { text: "\u4E2D\u671F\xB7\u666F\u6C14", cls: "border-slate-700 text-slate-400" },
+    short: { text: "\u77ED\u671F\xB7\u4E8B\u4EF6", cls: "border-slate-700 text-slate-400" }
+  };
   var Watchlist = ({ watchlist }) => {
     const getConvictionStyles = (level) => {
       if (level.includes("\u91CD\u4ED3") || level.includes("Core")) {
@@ -7999,30 +7721,65 @@
       return "border-slate-700 bg-slate-805/50 text-slate-400";
     };
     if (!watchlist || watchlist.length === 0) return null;
+    const sorted = [...watchlist].sort((a, b) => (b.conviction_score ?? 0) - (a.conviction_score ?? 0));
+    const visible = sorted.slice(0, 12);
     return /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)("section", { className: "rounded-3xl border border-slate-800 bg-slate-900/40 p-6 md:p-8 space-y-6 shadow-lg", children: [
-      /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)("h3", { className: "text-base font-extrabold text-white flex items-center gap-2", children: [
-        /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(TrendingUp, { size: 16, className: "text-[#00f2fe]" }),
-        "\u535A\u4E3B\u6838\u5FC3\u5173\u6CE8\u6807\u7684\u4FE1\u5FC3\u6307\u6570 (Conviction Watchlist)"
-      ] }),
-      /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("div", { className: "grid grid-cols-1 md:grid-cols-3 gap-6", children: watchlist.map((stock, i) => /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)("div", { className: "rounded-2xl border border-slate-800 bg-slate-955/50 p-5 flex flex-col justify-between space-y-4 hover:border-slate-700 transition-colors", children: [
-        /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)("div", { className: "flex items-center justify-between", children: [
-          /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("span", { className: "text-lg font-black text-white font-mono", children: stock.ticker }),
-          /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("span", { className: `text-[10px] font-mono px-2 py-0.5 rounded border font-semibold ${getConvictionStyles(stock.conviction_level)}`, children: stock.conviction_level })
+      /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)("div", { className: "flex items-center justify-between gap-2 flex-wrap", children: [
+        /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)("h3", { className: "text-base font-extrabold text-white flex items-center gap-2", children: [
+          /* @__PURE__ */ (0, import_jsx_runtime4.jsx)(TrendingUp, { size: 16, className: "text-[#00f2fe]" }),
+          "\u535A\u4E3B\u6838\u5FC3\u5173\u6CE8\u6807\u7684\u4FE1\u5FC3\u6307\u6570 (Conviction Watchlist)"
         ] }),
-        /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("p", { className: "text-xs text-slate-400 leading-5", children: stock.investment_thesis }),
-        /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)("div", { className: "border-t border-slate-800/80 pt-3 flex items-center justify-between text-[10px] font-mono text-slate-500", children: [
-          /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("span", { children: "\u65F6\u5E8F\u63D0\u53CA\u9891\u7387" }),
-          /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)("span", { className: "font-bold text-white bg-slate-900 px-2 py-0.5 rounded border border-slate-800", children: [
-            stock.mention_count,
-            " \u6B21\u63D0\u53CA"
-          ] })
+        /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)("span", { className: "text-[10px] font-mono text-slate-500", children: [
+          "\u5171 ",
+          watchlist.length,
+          " \u4E2A\u6807\u7684 \xB7 \u6309\u4FE1\u5FC3\u5206\u6392\u5E8F Top ",
+          visible.length
         ] })
-      ] }, i)) })
+      ] }),
+      /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("div", { className: "grid grid-cols-1 md:grid-cols-3 gap-6", children: visible.map((stock, i) => {
+        const trend = TREND_META[stock.trend || "new"] ?? TREND_META.new;
+        const horizon = HORIZON_META[stock.horizon || "mid"] ?? HORIZON_META.mid;
+        const score = stock.conviction_score ?? 0;
+        const scoreColor = score >= 80 ? "text-rose-400" : score >= 60 ? "text-emerald-400" : "text-slate-400";
+        const scoreBar = score >= 80 ? "bg-rose-500" : score >= 60 ? "bg-emerald-500" : "bg-slate-600";
+        return /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)("div", { className: "rounded-2xl border border-slate-800 bg-slate-955/50 p-5 flex flex-col justify-between space-y-4 hover:border-slate-700 transition-colors", children: [
+          /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)("div", { className: "space-y-2", children: [
+            /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)("div", { className: "flex items-center justify-between gap-2", children: [
+              /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("span", { className: "text-lg font-black text-white font-mono", children: stock.ticker }),
+              /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)("span", { className: "flex items-center gap-1.5", children: [
+                /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("span", { className: `text-xs font-mono font-bold ${scoreColor}`, children: score }),
+                /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("span", { className: `text-[10px] font-mono px-2 py-0.5 rounded border font-semibold ${getConvictionStyles(stock.conviction_level)}`, children: stock.conviction_level })
+              ] })
+            ] }),
+            /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("div", { className: "h-1 w-full rounded-full bg-slate-900 overflow-hidden border border-slate-800/60", children: /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("div", { className: `h-full rounded-full ${scoreBar}`, style: { width: `${score}%` } }) }),
+            /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("p", { className: "text-xs text-slate-400 leading-5", children: stock.investment_thesis })
+          ] }),
+          /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)("div", { className: "border-t border-slate-800/80 pt-3 space-y-2", children: [
+            /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)("div", { className: "flex items-center justify-between text-[10px] font-mono text-slate-500", children: [
+              /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("span", { children: "\u65F6\u5E8F\u63D0\u53CA" }),
+              /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)("span", { className: "font-bold text-white bg-slate-900 px-2 py-0.5 rounded border border-slate-800", children: [
+                stock.mention_count,
+                " \u6B21 \xB7 ",
+                stock.mention_days ?? 1,
+                " \u5929"
+              ] })
+            ] }),
+            /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)("div", { className: "flex items-center justify-between text-[10px] font-mono", children: [
+              /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)("span", { className: `inline-flex items-center gap-1 px-2 py-0.5 rounded border ${trend.cls}`, children: [
+                trend.icon,
+                " ",
+                trend.text
+              ] }),
+              /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("span", { className: `inline-flex items-center px-2 py-0.5 rounded border ${horizon.cls}`, children: horizon.text })
+            ] })
+          ] })
+        ] }, i);
+      }) })
     ] });
   };
 
   // ../../src/client-edge/src/app/prediction/components/ChainAnalysis.tsx
-  var import_jsx_runtime5 = __toESM(require_jsx_runtime2());
+  var import_jsx_runtime5 = __toESM(require_jsx_runtime());
   var ChainAnalysis = ({ bottlenecks, valueChain }) => {
     const hasBottlenecks = bottlenecks && bottlenecks.length > 0;
     const hasValueChain = valueChain && valueChain.length > 0;
@@ -8079,7 +7836,38 @@
   };
 
   // ../../src/client-edge/src/app/prediction/components/TweetTimeline.tsx
-  var import_jsx_runtime6 = __toESM(require_jsx_runtime2());
+  var import_react3 = __toESM(require_react());
+  var import_jsx_runtime6 = __toESM(require_jsx_runtime());
+  var TRUNCATE_CHARS = 220;
+  function TweetText({ text, tone }) {
+    const [expanded, setExpanded] = (0, import_react3.useState)(false);
+    const isLong = text.length > TRUNCATE_CHARS;
+    const showClamped = isLong && !expanded;
+    return /* @__PURE__ */ (0, import_jsx_runtime6.jsxs)("div", { children: [
+      /* @__PURE__ */ (0, import_jsx_runtime6.jsx)(
+        "p",
+        {
+          className: `text-sm leading-relaxed max-w-none break-words whitespace-pre-wrap font-sans ${tone === "en" ? "text-slate-200" : "text-emerald-300/90"} ${showClamped ? "line-clamp-4" : ""}`,
+          children: text
+        }
+      ),
+      isLong && /* @__PURE__ */ (0, import_jsx_runtime6.jsx)(
+        "button",
+        {
+          type: "button",
+          onClick: () => setExpanded((v) => !v),
+          className: "mt-1.5 inline-flex items-center gap-1 text-[10px] font-mono text-[#00f2fe] hover:text-white transition-colors",
+          children: expanded ? /* @__PURE__ */ (0, import_jsx_runtime6.jsxs)(import_jsx_runtime6.Fragment, { children: [
+            /* @__PURE__ */ (0, import_jsx_runtime6.jsx)(ChevronUp, { size: 12 }),
+            " \u6536\u8D77"
+          ] }) : /* @__PURE__ */ (0, import_jsx_runtime6.jsxs)(import_jsx_runtime6.Fragment, { children: [
+            /* @__PURE__ */ (0, import_jsx_runtime6.jsx)(ChevronDown, { size: 12 }),
+            " \u67E5\u770B\u66F4\u591A\uFF08\u5168\u6587\uFF09"
+          ] })
+        }
+      )
+    ] });
+  }
   var TweetTimeline = ({
     filteredTweets,
     selectedKolId,
@@ -8124,14 +7912,14 @@
                   /* @__PURE__ */ (0, import_jsx_runtime6.jsx)(Globe, { size: 12, className: "text-[#00f2fe]" }),
                   "Original English Post"
                 ] }),
-                /* @__PURE__ */ (0, import_jsx_runtime6.jsx)("p", { className: "text-sm text-slate-200 leading-relaxed max-w-none break-words whitespace-pre-wrap font-sans", children: tweet.original })
+                /* @__PURE__ */ (0, import_jsx_runtime6.jsx)(TweetText, { text: tweet.original, tone: "en" })
               ] }),
               /* @__PURE__ */ (0, import_jsx_runtime6.jsxs)("div", { className: "space-y-2 lg:pl-0", children: [
                 /* @__PURE__ */ (0, import_jsx_runtime6.jsxs)("div", { className: "flex items-center gap-2 text-[10px] tracking-wider uppercase text-slate-500 font-mono font-bold", children: [
                   /* @__PURE__ */ (0, import_jsx_runtime6.jsx)(Languages, { size: 12, className: "text-emerald-400" }),
                   "Bilingual Translation (\u4E2D\u6587\u5BF9\u7167)"
                 ] }),
-                /* @__PURE__ */ (0, import_jsx_runtime6.jsx)("p", { className: "text-sm text-emerald-300/90 leading-relaxed max-w-none break-words whitespace-pre-wrap font-sans", children: tweet.translation })
+                /* @__PURE__ */ (0, import_jsx_runtime6.jsx)(TweetText, { text: tweet.translation, tone: "zh" })
               ] })
             ] })
           },
@@ -8148,13 +7936,13 @@
   ];
   var KOL_ID = "1940360837547565056";
   function PredictionApp() {
-    const [kols, setKols] = (0, import_react3.useState)(KOL_LIST);
-    const [selectedKolId, setSelectedKolId] = (0, import_react3.useState)(KOL_ID);
-    const [report, setReport] = (0, import_react3.useState)(null);
-    const [timeFilter, setTimeFilter] = (0, import_react3.useState)("30");
-    const [loading, setLoading] = (0, import_react3.useState)(false);
-    const [error, setError] = (0, import_react3.useState)(null);
-    (0, import_react3.useEffect)(() => {
+    const [kols, setKols] = (0, import_react4.useState)(KOL_LIST);
+    const [selectedKolId, setSelectedKolId] = (0, import_react4.useState)(KOL_ID);
+    const [report, setReport] = (0, import_react4.useState)(null);
+    const [timeFilter, setTimeFilter] = (0, import_react4.useState)("30");
+    const [loading, setLoading] = (0, import_react4.useState)(false);
+    const [error, setError] = (0, import_react4.useState)(null);
+    (0, import_react4.useEffect)(() => {
       fetchReport(selectedKolId, timeFilter);
     }, [selectedKolId, timeFilter]);
     const fetchReport = async (kolId, days) => {
@@ -8260,7 +8048,6 @@
 /*! Bundled license information:
 
 react/cjs/react.production.min.js:
-react/cjs/react.production.min.js:
   (**
    * @license React
    * react.production.min.js
@@ -8294,7 +8081,6 @@ react-dom/cjs/react-dom.production.min.js:
    *)
 
 react/cjs/react-jsx-runtime.production.min.js:
-react/cjs/react-jsx-runtime.production.min.js:
   (**
    * @license React
    * react-jsx-runtime.production.min.js
@@ -8309,17 +8095,22 @@ lucide-react/dist/esm/shared/src/utils.js:
 lucide-react/dist/esm/defaultAttributes.js:
 lucide-react/dist/esm/Icon.js:
 lucide-react/dist/esm/createLucideIcon.js:
+lucide-react/dist/esm/icons/arrow-down.js:
 lucide-react/dist/esm/icons/arrow-left.js:
 lucide-react/dist/esm/icons/arrow-right.js:
+lucide-react/dist/esm/icons/arrow-up.js:
 lucide-react/dist/esm/icons/calendar.js:
 lucide-react/dist/esm/icons/chevron-down.js:
+lucide-react/dist/esm/icons/chevron-up.js:
 lucide-react/dist/esm/icons/cpu.js:
 lucide-react/dist/esm/icons/database.js:
 lucide-react/dist/esm/icons/globe.js:
 lucide-react/dist/esm/icons/languages.js:
+lucide-react/dist/esm/icons/minus.js:
 lucide-react/dist/esm/icons/pie-chart.js:
 lucide-react/dist/esm/icons/refresh-cw.js:
 lucide-react/dist/esm/icons/shield-alert.js:
+lucide-react/dist/esm/icons/sparkles.js:
 lucide-react/dist/esm/icons/terminal.js:
 lucide-react/dist/esm/icons/trending-up.js:
 lucide-react/dist/esm/lucide-react.js:

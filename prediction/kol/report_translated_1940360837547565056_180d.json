@@ -1,50 +1,50 @@
 {
     "user_id": "1940360837547565056",
     "range_days": 180,
-    "last_updated": "2026-08-28 22:54:11",
+    "last_updated": "2026-08-28 23:49:31",
     "hot_topics": [
         {
-            "topic": "光通信/CPO/激光器",
-            "count": 169,
-            "percentage": "38.67%"
+            "topic": "光模块/CPO/激光/硅光",
+            "count": 128,
+            "percentage": 29.3
         },
         {
-            "topic": "AI算力/云厂商资本开支",
-            "count": 94,
-            "percentage": "21.51%"
+            "topic": "供应链瓶颈/短缺/卡脖子",
+            "count": 85,
+            "percentage": 19.5
         },
         {
-            "topic": "上游供应链瓶颈/材料",
-            "count": 46,
-            "percentage": "10.53%"
+            "topic": "AI资本开支/算力基础设施/Hyperscaler",
+            "count": 65,
+            "percentage": 14.9
         },
         {
-            "topic": "存储/内存",
-            "count": 45,
-            "percentage": "10.30%"
+            "topic": "存储/内存（DRAM/NAND/HBM）",
+            "count": 48,
+            "percentage": 11.0
         },
         {
             "topic": "人形机器人/具身智能",
             "count": 44,
-            "percentage": "10.07%"
+            "percentage": 10.1
         }
     ],
     "industries": [
         {
             "name": "光学/光模块",
-            "value": 32
+            "value": 35
         },
         {
             "name": "半导体/芯片",
-            "value": 28
+            "value": 30
         },
         {
             "name": "硬件/DC服务器",
-            "value": 18
+            "value": 15
         },
         {
             "name": "软件/AI模型",
-            "value": 12
+            "value": 10
         },
         {
             "name": "汽车/机器人",
@@ -55,136 +55,500 @@
         {
             "ticker": "$SIVE",
             "conviction_level": "核心重仓 (Core Long)",
-            "mention_count": 61,
-            "investment_thesis": "CPO/可插拔/硅光架构下的CW DFB激光器核心卡口，已被Jabil、GlobalFoundries、Ayar等验证；产能扩张、机构增持和纳斯达克上市带来重估空间。"
+            "horizon": "long",
+            "investment_thesis": "CW DFB激光器在CPO/1.6T可插拔/硅光方案中形成卡位，并进入Jabil、GlobalFoundries、Ayar/Marvell等Nvidia NVLink供应链；纳斯达克上市叠加JPM等机构大举买入，结构性地位明确。",
+            "mention_count": 76,
+            "mention_days": 48,
+            "trend": "new",
+            "conviction_score": 100
         },
         {
             "ticker": "$AAOI",
             "conviction_level": "核心重仓 (Core Long)",
-            "mention_count": 44,
-            "investment_thesis": "美国本土800G/1.6T光模块产能稀缺，激光器与DSP/TIA瓶颈下供不应求；若执行到位营收具备翻倍以上弹性。"
-        },
-        {
-            "ticker": "$LITE",
-            "conviction_level": "核心重仓 (Core Long)",
-            "mention_count": 23,
-            "investment_thesis": "InP激光器与CPO规模出货预计H2 2027启动，现有EML/CW激光产能售罄，掌握上游激光器定价权。"
+            "horizon": "long",
+            "investment_thesis": "800G/1.6T光模块需求严重失衡，美国本土产能溢价+CPO ELSFP扩产至40万只/月；公司指引收入与毛利率持续上修，是AI光互连核心供应商。",
+            "mention_count": 45,
+            "mention_days": 32,
+            "trend": "new",
+            "conviction_score": 100
         },
         {
             "ticker": "$MU",
             "conviction_level": "核心重仓 (Core Long)",
-            "mention_count": 18,
-            "investment_thesis": "HBM/DRAM/NAND多周期短缺延续至2027-2030，LTA锁量叠加AI服务器与人形机器人带来的存储需求，盈利弹性巨大。"
+            "horizon": "long",
+            "investment_thesis": "DRAM/NAND/HBM 2027年前产能售罄，Nvidia供应承诺大幅上修；美光CEO预测人形机器人带来数十年存储需求周期，长单覆盖和定价权显著。",
+            "mention_count": 23,
+            "mention_days": 20,
+            "trend": "new",
+            "conviction_score": 100
+        },
+        {
+            "ticker": "$SNDK",
+            "conviction_level": "核心重仓 (Core Long)",
+            "horizon": "long",
+            "investment_thesis": "NAND结构性短缺持续至2030年，公司预计non-GAAP毛利率维持约80%，LTA已锁定2028年2/3产出；闪存涨价周期和现金流质量极高。",
+            "mention_count": 21,
+            "mention_days": 20,
+            "trend": "new",
+            "conviction_score": 100
+        },
+        {
+            "ticker": "$SKHY",
+            "conviction_level": "核心重仓 (Core Long)",
+            "horizon": "long",
+            "investment_thesis": "HBM/DRAM龙头，2027年产能已售罄，大规模回购叠加纳斯达克上市；AI内存短缺与先进封装能力构成长期壁垒。",
+            "mention_count": 5,
+            "mention_days": 5,
+            "trend": "new",
+            "conviction_score": 87
         },
         {
             "ticker": "$NBIS",
             "conviction_level": "核心重仓 (Core Long)",
-            "mention_count": 15,
-            "investment_thesis": "Neocloud龙头，AI云收入爆发且订单能见度高，在整个板块中表现最强，持续获得大型算力协议验证。"
+            "horizon": "long",
+            "investment_thesis": "Neocloud龙头，AI云收入同比+454%，2026年指引$3.0-3.4B；与Reflection AI等签订大单，获欧洲主权支持，算力供不应求。",
+            "mention_count": 24,
+            "mention_days": 21,
+            "trend": "new",
+            "conviction_score": 100
         },
         {
             "ticker": "$AXTI",
             "conviction_level": "核心重仓 (Core Long)",
-            "mention_count": 10,
-            "investment_thesis": "InP衬底全球关键供应商，涨价叠加长协锁定产能，中国出口管制凸显其战略稀缺性。"
+            "horizon": "long",
+            "investment_thesis": "InP衬底严重短缺，价格涨幅42-78%，与Lumentum/Coherent签长单预付款；中国出口管制强化其西方供应链关键节点地位。",
+            "mention_count": 20,
+            "mention_days": 17,
+            "trend": "new",
+            "conviction_score": 100
+        },
+        {
+            "ticker": "$IQE",
+            "conviction_level": "核心重仓 (Core Long)",
+            "horizon": "long",
+            "investment_thesis": "InP外延片稀缺产能，获MTSI入股和Tower多年代工长约；公司是欧美光芯片供应链绕不开的外延环节，量价齐升。",
+            "mention_count": 11,
+            "mention_days": 8,
+            "trend": "new",
+            "conviction_score": 99
+        },
+        {
+            "ticker": "$XFAB",
+            "conviction_level": "核心重仓 (Core Long)",
+            "horizon": "long",
+            "investment_thesis": "欧洲硅光子/碳化硅特色代工，获EU与US CHIPS Act资金，Nvidia/NOK参与验证；低市值+主权背书下具备重估空间。",
+            "mention_count": 16,
+            "mention_days": 11,
+            "trend": "new",
+            "conviction_score": 100
+        },
+        {
+            "ticker": "$LPK",
+            "conviction_level": "核心重仓 (Core Long)",
+            "horizon": "long",
+            "investment_thesis": "玻璃基板设备核心供应商，目标70%份额，客户覆盖全球主要玩家；SpaceX供应链隐含期权，等待玻璃基板放量周期。",
+            "mention_count": 8,
+            "mention_days": 8,
+            "trend": "new",
+            "conviction_score": 95
+        },
+        {
+            "ticker": "$SOI",
+            "conviction_level": "核心重仓 (Core Long)",
+            "horizon": "long",
+            "investment_thesis": "CPO/FAU光学组件中Taiwan供应链核心，受Nvidia CPO和800V/光互连拉动；公司处于批量导入前夕，弹性大。",
+            "mention_count": 8,
+            "mention_days": 8,
+            "trend": "new",
+            "conviction_score": 95
+        },
+        {
+            "ticker": "$ALRIB",
+            "conviction_level": "核心重仓 (Core Long)",
+            "horizon": "long",
+            "investment_thesis": "量子/光通信测试设备稀缺标的，ROSIE系统交付给美国领先量子客户，BTO/STO光子需求增长；欧洲量子主权受益。",
+            "mention_count": 3,
+            "mention_days": 3,
+            "trend": "new",
+            "conviction_score": 80
+        },
+        {
+            "ticker": "$RPI",
+            "conviction_level": "核心重仓 (Core Long)",
+            "horizon": "long",
+            "investment_thesis": "AI相关需求带动核心利润远超预期，公司被欧洲媒体错杀后业绩验证；作为上游材料和组件环节，成长确定性强。",
+            "mention_count": 3,
+            "mention_days": 3,
+            "trend": "new",
+            "conviction_score": 80
         },
         {
             "ticker": "$CCXI",
+            "conviction_level": "核心重仓 (Core Long)",
+            "horizon": "long",
+            "investment_thesis": "Agility Robotics为美国商用人形机器人第一股，AMZN/NVDA/SoftBank加持，V4已进入Amazon场景，NASDAQ上市临近；成本曲线好于同行。",
+            "mention_count": 13,
+            "mention_days": 11,
+            "trend": "new",
+            "conviction_score": 100
+        },
+        {
+            "ticker": "$CBRS",
             "conviction_level": "首仓买入 (Starter Long)",
+            "horizon": "mid",
+            "investment_thesis": "OpenAI GPT-5.6 Sol在Cerebras上运行，推理速度750 tokens/s；已建仓观察ASIC推理需求能否转化为持续订单。",
+            "mention_count": 2,
+            "mention_days": 2,
+            "trend": "new",
+            "conviction_score": 56
+        },
+        {
+            "ticker": "$JBL",
+            "conviction_level": "首仓买入 (Starter Long)",
+            "horizon": "mid",
+            "investment_thesis": "1.6T LRO光模块与Sivers激光器深度绑定，2027年H1放量；市场尚未定价该业务，EMS龙头存在重估机会。",
+            "mention_count": 9,
+            "mention_days": 8,
+            "trend": "new",
+            "conviction_score": 75
+        },
+        {
+            "ticker": "$TSEM",
+            "conviction_level": "首仓买入 (Starter Long)",
+            "horizon": "long",
+            "investment_thesis": "Tower与IQE签InP外延长约并扩产300mm硅光/先进封装，CPO和功率半导体代工需求增长；估值相较GFS/TSMC有折价。",
+            "mention_count": 11,
+            "mention_days": 10,
+            "trend": "new",
+            "conviction_score": 78
+        },
+        {
+            "ticker": "$EWY",
+            "conviction_level": "首仓买入 (Starter Long)",
+            "horizon": "mid",
+            "investment_thesis": "韩国存储权重指数，SK Hynix/Samsung盈利创纪录且回购，内存涨价周期带动指数波动率上行；已用LEAPS表达方向。",
             "mention_count": 8,
-            "investment_thesis": "Agility Robotics为美国商业化最领先的人形机器人标的，获NVIDIA、Amazon、SoftBank背书，BOM有望降至3万美元以下。"
+            "mention_days": 7,
+            "trend": "new",
+            "conviction_score": 74
+        },
+        {
+            "ticker": "$LITE",
+            "conviction_level": "中性观察 (Neutral)",
+            "horizon": "long",
+            "investment_thesis": "Lumentum InP激光/光模块产能全部售罄至2028，CPO scale-up 2027H2确认；但缺乏新增仓位信号，先观察毛利率和订单能见度。",
+            "mention_count": 38,
+            "mention_days": 29,
+            "trend": "new",
+            "conviction_score": 62
+        },
+        {
+            "ticker": "$MTSI",
+            "conviction_level": "中性观察 (Neutral)",
+            "horizon": "mid",
+            "investment_thesis": "客户因InP DFB激光短缺紧急下单，DSP/TIA亦紧张；公司受益行业缺货但无明确建仓表态，跟踪交期和价格传导。",
+            "mention_count": 6,
+            "mention_days": 6,
+            "trend": "new",
+            "conviction_score": 52
+        },
+        {
+            "ticker": "$COHR",
+            "conviction_level": "中性观察 (Neutral)",
+            "horizon": "mid",
+            "investment_thesis": "Coherent与AXTI签3年InP长约，CW激光/光模块需求旺盛；公司为传统光器件龙头，需等待盈利弹性进一步验证。",
+            "mention_count": 7,
+            "mention_days": 7,
+            "trend": "new",
+            "conviction_score": 55
+        },
+        {
+            "ticker": "$POET",
+            "conviction_level": "中性观察 (Neutral)",
+            "horizon": "mid",
+            "investment_thesis": "POET光学中介层与Sivers激光器合作，2026年底有望生产；但稀释和估值争议较大，现有信息不足以升级为核心持仓。",
+            "mention_count": 11,
+            "mention_days": 10,
+            "trend": "new",
+            "conviction_score": 60
+        },
+        {
+            "ticker": "$MRVL",
+            "conviction_level": "中性观察 (Neutral)",
+            "horizon": "mid",
+            "investment_thesis": "Google 120亿美元TPU生态协议和Jensen 'next $1T'背书提升AI网络/定制芯片叙事，但估值与兑现节奏不确定，继续观察。",
+            "mention_count": 17,
+            "mention_days": 13,
+            "trend": "new",
+            "conviction_score": 62
+        },
+        {
+            "ticker": "$GFS",
+            "conviction_level": "中性观察 (Neutral)",
+            "horizon": "long",
+            "investment_thesis": "GlobalFoundries获美国CHIPS Act 3亿美元且Sivers成为其硅光参考激光器；硅光代工战略意义强，但商业化收入仍需时间。",
+            "mention_count": 9,
+            "mention_days": 9,
+            "trend": "new",
+            "conviction_score": 58
+        },
+        {
+            "ticker": "$NVDA",
+            "conviction_level": "中性观察 (Neutral)",
+            "horizon": "long",
+            "investment_thesis": "Nvidia指引FY28收入+70%且供应受限，CPO/800V路线图未延迟；作为产业链核心不直接建仓，但其生态带动上下游。",
+            "mention_count": 57,
+            "mention_days": 33,
+            "trend": "new",
+            "conviction_score": 62
+        },
+        {
+            "ticker": "$AMD",
+            "conviction_level": "中性观察 (Neutral)",
+            "horizon": "mid",
+            "investment_thesis": "Trendforce称AMD正大举采购CW激光以锁定产能，凸显激光瓶颈；对上游激光器正面，但AMD自身AI收入弹性待观察。",
+            "mention_count": 11,
+            "mention_days": 10,
+            "trend": "new",
+            "conviction_score": 60
+        },
+        {
+            "ticker": "$GOOGL",
+            "conviction_level": "中性观察 (Neutral)",
+            "horizon": "long",
+            "investment_thesis": "Google TPU订单与Marvell深度绑定，AI云需求与backlog创纪录；但母公司capex融资和软件竞争格局需要更多信号。",
+            "mention_count": 13,
+            "mention_days": 11,
+            "trend": "new",
+            "conviction_score": 62
+        },
+        {
+            "ticker": "$AMZN",
+            "conviction_level": "中性观察 (Neutral)",
+            "horizon": "long",
+            "investment_thesis": "Amazon 2026 capex上调至$220B且仍不够用，RNG/OpenAI合作提升VCSEL/光模块需求；对上游供应链利好。",
+            "mention_count": 14,
+            "mention_days": 11,
+            "trend": "new",
+            "conviction_score": 62
+        },
+        {
+            "ticker": "$META",
+            "conviction_level": "中性观察 (Neutral)",
+            "horizon": "mid",
+            "investment_thesis": "Meta内部备忘录显示7GW部署/2027翻倍，还签Samsung/SNDK存储长约并拟建云业务；市场情绪反复，但capex并未下降。",
+            "mention_count": 21,
+            "mention_days": 15,
+            "trend": "new",
+            "conviction_score": 62
+        },
+        {
+            "ticker": "$AEHR",
+            "conviction_level": "中性观察 (Neutral)",
+            "horizon": "mid",
+            "investment_thesis": "AI处理器/硅光晶圆级老化测试订单持续落地，2027指引翻倍；公司小市值高弹性，但需等待更多批量订单。",
+            "mention_count": 5,
+            "mention_days": 5,
+            "trend": "new",
+            "conviction_score": 48
+        },
+        {
+            "ticker": "$SMCI",
+            "conviction_level": "中性观察 (Neutral)",
+            "horizon": "short",
+            "investment_thesis": "FY27指引$65-72B远超预期，但CEO回避毛利率问题；订单强劲与公司治理/利润率瑕疵并存。",
+            "mention_count": 3,
+            "mention_days": 2,
+            "trend": "new",
+            "conviction_score": 40
+        },
+        {
+            "ticker": "$TSLA",
+            "conviction_level": "中性观察 (Neutral)",
+            "horizon": "long",
+            "investment_thesis": "Optimus需匹配人类世界形态，量产成本有望低于$15K；但目前是主题催化，缺少新的交付数据。",
+            "mention_count": 7,
+            "mention_days": 7,
+            "trend": "new",
+            "conviction_score": 55
+        },
+        {
+            "ticker": "$IREN",
+            "conviction_level": "中性观察 (Neutral)",
+            "horizon": "short",
+            "investment_thesis": "管理层$6B ATM和巨额股权激励形成持续抛压，相比NBIS结构劣势明显；股价缺乏alpha，保持观望。",
+            "mention_count": 11,
+            "mention_days": 11,
+            "trend": "new",
+            "conviction_score": 60
+        },
+        {
+            "ticker": "$VRT",
+            "conviction_level": "中性观察 (Neutral)",
+            "horizon": "mid",
+            "investment_thesis": "800V DC提前至2026Q3小批量，Vertiv等电力设备供应商受益；订单能见度提升但仍需观察估值。",
+            "mention_count": 1,
+            "mention_days": 1,
+            "trend": "new",
+            "conviction_score": 35
+        },
+        {
+            "ticker": "$ARM",
+            "conviction_level": "中性观察 (Neutral)",
+            "horizon": "long",
+            "investment_thesis": "AI CPU授权收入超预期，Nvidia推出ARM处理器带来协同；但当前估值已快速扩张，不适合追高。",
+            "mention_count": 3,
+            "mention_days": 3,
+            "trend": "new",
+            "conviction_score": 42
+        },
+        {
+            "ticker": "$RKLB",
+            "conviction_level": "中性观察 (Neutral)",
+            "horizon": "long",
+            "investment_thesis": "Space Force $397M合同和Neutron火箭提供成长性，但估值已计入较多预期；等待火箭发射频率和卫星制造放量。",
+            "mention_count": 9,
+            "mention_days": 8,
+            "trend": "new",
+            "conviction_score": 58
+        },
+        {
+            "ticker": "$SPCX",
+            "conviction_level": "中性观察 (Neutral)",
+            "horizon": "long",
+            "investment_thesis": "SpaceX IPO与估值锚定效应强烈，Starlink和Starship稀缺性极高；但千亿美元以上估值对零售资金并不友好。",
+            "mention_count": 22,
+            "mention_days": 18,
+            "trend": "new",
+            "conviction_score": 62
+        },
+        {
+            "ticker": "$ASTS",
+            "conviction_level": "中性观察 (Neutral)",
+            "horizon": "long",
+            "investment_thesis": "Rakuten合资布局日本LEO卫星直连设备，地缘和频谱优势明显；但商业化收入仍处早期。",
+            "mention_count": 4,
+            "mention_days": 4,
+            "trend": "new",
+            "conviction_score": 45
+        },
+        {
+            "ticker": "$RDDT",
+            "conviction_level": "中性观察 (Neutral)",
+            "horizon": "long",
+            "investment_thesis": "Reddit收入与盈利超预期，91.5%毛利率和网络效应构成壁垒；但市场情绪波动大，当前更多是事件驱动反弹。",
+            "mention_count": 13,
+            "mention_days": 12,
+            "trend": "new",
+            "conviction_score": 62
         }
     ],
     "supply_chain_bottlenecks": [
         {
-            "category": "HBM/DRAM/NAND存储",
-            "status": "2027年产能基本售罄，NAND结构性紧缺至2030年，价格持续上涨",
+            "category": "HBM/DRAM/NAND 存储短缺",
+            "status": "2027年DRAM/HBM产能售罄；NAND结构性短缺持续至2030，客户仅获60-70%分配",
             "affected_tickers": [
                 "$MU",
                 "$SNDK",
                 "$SKHY",
-                "$EWY"
+                "$NVDA"
             ]
         },
         {
-            "category": "InP磷化铟衬底/外延片",
-            "status": "严重短缺，价格历史性上调42%-78%，中国出口管制威胁AI DC建设",
+            "category": "InP 磷化铟衬底短缺",
+            "status": "2吋/3吋衬底价格上涨42-78%，中国出口管制加剧西方供应链紧张",
             "affected_tickers": [
                 "$AXTI",
                 "$IQE",
                 "$LITE",
                 "$COHR",
                 "$SIVE",
-                "$TSEM"
+                "$MTSI"
             ]
         },
         {
-            "category": "CW DFB激光器",
-            "status": "激光器供应远落后需求，客户催促下单，Lumentum/Coherent等产能售罄",
+            "category": "CW DFB 激光器瓶颈",
+            "status": "MTSI/LITE/AAOI均称激光器供不应求，客户紧急采购，Lumentum未来两年售罄",
             "affected_tickers": [
                 "$SIVE",
                 "$LITE",
+                "$COHR",
                 "$AAOI",
-                "$MTSI",
-                "$COHR"
+                "$AMD",
+                "$NVDA"
             ]
         },
         {
-            "category": "MLCC",
-            "status": "AI服务器用MLCC严重短缺，部分高容值交期拉长至约40周",
+            "category": "MLCC 被动元件短缺",
+            "status": "服务器MLCC处于严重缺货，三星高容值交期拉长至40周，AI服务器挤占消费级产能",
             "affected_tickers": [
-                "6976.T",
                 "$VSH",
-                "Murata"
+                "Taiyo Yuden (6976)",
+                "Murata (6981)"
             ]
         },
         {
-            "category": "玻璃基板",
-            "status": "量产时间推迟至少一个季度，客户可靠性验证和良率仍是瓶颈",
+            "category": "玻璃基板量产延后",
+            "status": "Samsung Electro-Mechanics推迟玻璃基板投资，客户可靠性验证为瓶颈；LPKF称80%大厂选用其设备",
             "affected_tickers": [
                 "$LPK",
                 "$AMAT"
             ]
         },
         {
-            "category": "WF6（六氟化钨）",
-            "status": "中国对日出口管制导致全球25%-35%供应受影响，波及先进制程与存储",
+            "category": "InP 外延片/EPI 涨价",
+            "status": "VPEC上调外延片价格，IQE获MTSI投资和TSEM长约，产能优先锁定",
             "affected_tickers": [
-                "$TSM",
-                "$MU",
-                "$SKHY",
-                "$SNDK"
+                "$IQE",
+                "$MTSI",
+                "$TSEM"
             ]
         },
         {
-            "category": "BBU电池单元",
-            "status": "高功率圆柱电池短缺，数据中心BBU需求暴增",
+            "category": "WF6/钨化学品断供",
+            "status": "中国对日钨出口管制影响全球25-35%的WF6供应，波及存储与逻辑代工",
+            "affected_tickers": [
+                "$SKHY",
+                "$TSM",
+                "$MU",
+                "Samsung"
+            ]
+        },
+        {
+            "category": "高功率圆柱/BBU电池短缺",
+            "status": "Samsung SDI供应紧张，BBU组装影响Meta/Amazon等数据中心备电",
             "affected_tickers": [
                 "$META",
-                "$AMZN"
+                "$AMZN",
+                "$VRT"
             ]
         }
     ],
     "value_chain_mapping": [
         {
-            "upstream": "$SIVE / $AXTI / $IQE（InP衬底、CW激光器）",
-            "midstream": "$GFS / $JBL / $POET / $LITE / $COHR（硅光平台、光模块）",
-            "downstream": "$NVDA NVLink CPO -> Hyperscalers"
+            "upstream": "AXTI/IQE/InP衬底与外延",
+            "midstream": "SIVERS/LITE/COHR/AAOI 激光与光模块",
+            "downstream": "Jabil/POET/Nvidia CPO -> Hyperscalers"
         },
         {
-            "upstream": "$MU / SK Hynix / Samsung（HBM/NAND）",
-            "midstream": "$NVDA / $AMD（AI加速器平台）",
-            "downstream": "$GOOGL / $AMZN / $META / $MSFT（Hyperscaler DC）"
+            "upstream": "Micron/SK Hynix/Samsung HBM/NAND",
+            "midstream": "Nvidia GPU/ASIC 服务器",
+            "downstream": "AWS/Google/Meta/Microsoft AI数据中心"
         },
         {
-            "upstream": "LeaderDrive / Schaeffler（谐波减速器、执行器）",
-            "midstream": "$CCXI（Agility Robotics）/ Unitree / $TSLA Optimus",
-            "downstream": "$AMZN / $NVDA / 物流与制造业"
+            "upstream": "Sivers CW DFB激光器",
+            "midstream": "GlobalFoundries硅光平台/Jabil/POET/Ayar/Marvell Celestial",
+            "downstream": "Nvidia NVLink Fusion/CPO生态 -> Hyperscalers"
         },
         {
-            "upstream": "Taiyo Yuden / Murata / $VSH（MLCC）",
-            "midstream": "$SMCI / $CRWV / Server ODMs",
-            "downstream": "Hyperscalers / AI数据中心"
+            "upstream": "LPKF玻璃基板设备/Taiyo Yuden MLCC",
+            "midstream": "TSMC/Xintec/Amkor先进封装与载板",
+            "downstream": "Nvidia Rubin/AMD AI加速器 -> 云厂商"
+        },
+        {
+            "upstream": "Samsung SDI高功率电池",
+            "midstream": "Simplo BBU模块/Delta/Vertiv 800V DC",
+            "downstream": "Meta/Amazon等超大规模数据中心"
         }
     ],
     "data": [

@@ -13,6 +13,10 @@ npx --yes esbuild src/demo.tsx \
   --jsx=automatic \
   --loader:.css=css \
   --define:process.env.NODE_ENV='"production"' \
+  --alias:react=../../node_modules/react/index.js \
+  --alias:react/jsx-runtime=../../node_modules/react/jsx-runtime.js \
+  --alias:react/jsx-dev-runtime=../../node_modules/react/jsx-dev-runtime.js \
+  --alias:react-dom/client=../../node_modules/react-dom/client.js \
   --external:@mlc-ai/web-llm \
   --external:@huggingface/transformers \
   --outfile=dist/aiapp.js \

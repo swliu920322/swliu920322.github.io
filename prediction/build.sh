@@ -32,11 +32,16 @@ NODE_PATH=../../src/client-edge/node_modules npx --yes esbuild src/main.tsx \
   --loader:.css=css \
   --define:process.env.NODE_ENV='"production"' \
   --alias:next/link=./src/shims/next-link.tsx \
+  --alias:react=../../node_modules/react/index.js \
+  --alias:react/jsx-runtime=../../node_modules/react/jsx-runtime.js \
+  --alias:react/jsx-dev-runtime=../../node_modules/react/jsx-dev-runtime.js \
+  --alias:react-dom/client=../../node_modules/react-dom/client.js \
   --outfile=dist/prediction.js \
   --log-level=warning
 
 echo "[4/4] Copying static assets..."
 cp index.html dist/index.html
+rm -rf dist/kol
 cp -R kol dist/kol
 
 echo "Done. Deploy ./dist to GitHub Pages."
