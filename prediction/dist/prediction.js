@@ -7736,6 +7736,28 @@
           visible.length
         ] })
       ] }),
+      /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)("div", { className: "rounded-2xl border border-slate-800 bg-slate-950/40 p-4 text-[10px] font-mono text-slate-400 space-y-1.5 leading-relaxed", children: [
+        /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)("div", { children: [
+          /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("span", { className: "text-slate-300 font-bold", children: "\u4FE1\u5FC3\u5206 (0-100)" }),
+          " = AI \u8BDD\u8BED\u5F3A\u5EA6\uFF08\u7B49\u7EA7\uFF09\xD770% + \u63D0\u53CA\u9891\u6B21 \xD715% + \u8DE8\u5929\u4E00\u81F4\u6027 \xD715%\u3002\u7B49\u7EA7\u7531 AI \u5224\u5B9A\uFF1A\u6838\u5FC3\u91CD\u4ED3 / \u9996\u4ED3\u4E70\u5165 / \u4E2D\u6027\u89C2\u5BDF\uFF1B\u5206\u6570\u5728\u7B49\u7EA7\u57FA\u7840\u4E0A\u53E0\u52A0\u672C\u5730\u7EDF\u8BA1\uFF0C\u8D8A\u9AD8\u4EE3\u8868\u535A\u4E3B\u5BF9\u6807\u7684\u8D8A\u7B03\u5B9A\u3002"
+        ] }),
+        /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)("div", { children: [
+          /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("span", { className: "text-slate-300 font-bold", children: "\u8D8B\u52BF" }),
+          " = \u5BF9\u6BD4\u4E0A\u4E00\u7B49\u957F\u5468\u671F\u63D0\u53CA\u91CF\uFF1A",
+          /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("span", { className: "text-emerald-400", children: "\u52A0\u4ED3\u4E2D" }),
+          " / ",
+          /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("span", { className: "text-slate-400", children: "\u5E73\u53F0\u671F" }),
+          " / ",
+          /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("span", { className: "text-rose-400", children: "\u51CF\u4ED3\u4E2D" }),
+          " / ",
+          /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("span", { className: "text-cyan-400", children: "\u65B0\u63D0\u53CA" }),
+          "\u3002"
+        ] }),
+        /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)("div", { children: [
+          /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("span", { className: "text-slate-300 font-bold", children: "\u5468\u671F" }),
+          " = \u8BBA\u8FF0\u6027\u8D28\uFF1A\u957F\u671F\xB7\u7ED3\u6784\u6027\uFF08\u4EA7\u4E1A\u94FE\u4F4D\u7F6E\uFF09/ \u4E2D\u671F\xB7\u666F\u6C14\uFF08\u4F9B\u9700\u5468\u671F\uFF09/ \u77ED\u671F\xB7\u4E8B\u4EF6\uFF08\u6D88\u606F\u50AC\u5316\uFF09\u3002"
+        ] })
+      ] }),
       /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("div", { className: "grid grid-cols-1 md:grid-cols-3 gap-6", children: visible.map((stock, i) => {
         const trend = TREND_META[stock.trend || "new"] ?? TREND_META.new;
         const horizon = HORIZON_META[stock.horizon || "mid"] ?? HORIZON_META.mid;
@@ -7838,7 +7860,7 @@
   // ../../src/client-edge/src/app/prediction/components/TweetTimeline.tsx
   var import_react3 = __toESM(require_react());
   var import_jsx_runtime6 = __toESM(require_jsx_runtime());
-  var TRUNCATE_CHARS = 220;
+  var TRUNCATE_CHARS = 400;
   function TweetText({ text, tone }) {
     const [expanded, setExpanded] = (0, import_react3.useState)(false);
     const isLong = text.length > TRUNCATE_CHARS;
