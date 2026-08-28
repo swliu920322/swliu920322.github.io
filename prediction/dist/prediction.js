@@ -7526,7 +7526,8 @@
             ] })
           ] }),
           /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("h1", { className: "text-3xl md:text-4xl font-extrabold tracking-tight text-white mt-3", children: "\u5927 V \u6295\u8D44\u6DF1\u5EA6\u76D1\u63A7\u770B\u677F" }),
-          /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("p", { className: "text-sm text-slate-400 mt-2 max-w-3xl leading-relaxed", children: "\u672C\u6A21\u5757\u6574\u5408\u4E86\u5BF9\u5927 V \u63A8\u7279\u65F6\u5E8F\u6570\u636E\u7684\u6DF1\u5EA6\u6295\u7814\u63D0\u70BC\u3002\u5305\u542B\u6838\u5FC3\u6807\u7684\u4ED3\u4F4D\u4FE1\u5FC3\u3001\u786C\u6838\u4EA7\u4E1A\u94FE\u5361\u8116\u5B50\u5206\u6790\u53CA\u4E0A\u4E2D\u4E0B\u6E38\u6D41\u52A8\u56FE\u8C31\uFF0C\u4E0B\u65B9\u914D\u6709\u53CC\u8BED\u5BF9\u7167\u539F\u6587\u4F9B\u60A8\u81EA\u4E3B\u5BF9\u8D26\u3002" })
+          /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("p", { className: "text-sm text-slate-400 mt-2 max-w-3xl leading-relaxed", children: "\u672C\u6A21\u5757\u6574\u5408\u4E86\u5BF9\u5927 V \u63A8\u7279\u65F6\u5E8F\u6570\u636E\u7684\u6DF1\u5EA6\u6295\u7814\u63D0\u70BC\u3002\u5305\u542B\u6838\u5FC3\u6807\u7684\u4ED3\u4F4D\u4FE1\u5FC3\u3001\u786C\u6838\u4EA7\u4E1A\u94FE\u5361\u8116\u5B50\u5206\u6790\u53CA\u4E0A\u4E2D\u4E0B\u6E38\u6D41\u52A8\u56FE\u8C31\uFF0C\u4E0B\u65B9\u914D\u6709\u53CC\u8BED\u5BF9\u7167\u539F\u6587\u4F9B\u60A8\u81EA\u4E3B\u5BF9\u8D26\u3002" }),
+          /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("p", { className: "text-[10px] text-slate-500 mt-1.5 font-mono", children: "\u98CE\u9669\u63D0\u793A\uFF1A\u672C\u9875\u5185\u5BB9\u4EC5\u4E3A\u516C\u5F00\u4FE1\u606F\u6574\u7406\u5C55\u793A\uFF0C\u4E0D\u6784\u6210\u4EFB\u4F55\u6295\u8D44\u5EFA\u8BAE\uFF1B\u80A1\u5E02\u6709\u98CE\u9669\uFF0C\u5165\u5E02\u9700\u8C28\u614E\u3002" })
         ] }),
         /* @__PURE__ */ (0, import_jsx_runtime2.jsxs)("div", { className: "flex flex-wrap items-center gap-4", children: [
           /* @__PURE__ */ (0, import_jsx_runtime2.jsxs)("div", { className: "flex items-center gap-2 bg-slate-900/60 p-1.5 rounded-2xl border border-slate-800", children: [
@@ -7556,9 +7557,7 @@
                   children: [
                     /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("option", { value: "7", children: "\u8FD1\u4E00\u5468 (7\u5929)" }),
                     /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("option", { value: "30", children: "\u8FD1\u4E00\u4E2A\u6708 (30\u5929)" }),
-                    /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("option", { value: "90", children: "\u8FD1\u4E09\u4E2A\u6708 (90\u5929)" }),
-                    /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("option", { value: "180", children: "\u8FD1\u534A\u5E74 (180\u5929)" }),
-                    /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("option", { value: "365", children: "\u8FD1\u4E00\u5E74 (365\u5929)" })
+                    /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("option", { value: "90", children: "\u8FD1\u4E09\u4E2A\u6708 (90\u5929)" })
                   ]
                 }
               ),
@@ -7802,29 +7801,60 @@
 
   // ../../src/client-edge/src/app/prediction/components/ChainAnalysis.tsx
   var import_jsx_runtime5 = __toESM(require_jsx_runtime());
+  function getTightness(t) {
+    const v = t ?? 0;
+    if (v >= 8) return { label: "\u4E25\u91CD\u7D27\u7F3A", color: "text-rose-400", border: "border-rose-500/30", bar: "bg-rose-500" };
+    if (v >= 6) return { label: "\u504F\u7D27", color: "text-amber-400", border: "border-amber-500/30", bar: "bg-amber-500" };
+    if (v >= 4) return { label: "\u5747\u8861", color: "text-emerald-400", border: "border-emerald-500/30", bar: "bg-emerald-500" };
+    return { label: "\u5BBD\u677E/\u8FC7\u5269", color: "text-slate-400", border: "border-slate-700", bar: "bg-slate-600" };
+  }
   var ChainAnalysis = ({ bottlenecks, valueChain }) => {
     const hasBottlenecks = bottlenecks && bottlenecks.length > 0;
     const hasValueChain = valueChain && valueChain.length > 0;
     if (!hasBottlenecks && !hasValueChain) return null;
     return /* @__PURE__ */ (0, import_jsx_runtime5.jsxs)("div", { className: "grid grid-cols-1 lg:grid-cols-2 gap-6", children: [
       hasBottlenecks && /* @__PURE__ */ (0, import_jsx_runtime5.jsxs)("div", { className: "rounded-3xl border border-slate-800 bg-slate-900/40 p-6 md:p-8 space-y-6 shadow-md", children: [
-        /* @__PURE__ */ (0, import_jsx_runtime5.jsxs)("h3", { className: "text-base font-extrabold text-white flex items-center gap-2", children: [
-          /* @__PURE__ */ (0, import_jsx_runtime5.jsx)(ShieldAlert, { size: 16, className: "text-amber-500" }),
-          "\u4F9B\u5E94\u94FE\u5361\u8116\u5B50/\u7F3A\u8D27\u8DDF\u8E2A (Bottlenecks)"
+        /* @__PURE__ */ (0, import_jsx_runtime5.jsxs)("div", { className: "space-y-1.5", children: [
+          /* @__PURE__ */ (0, import_jsx_runtime5.jsxs)("h3", { className: "text-base font-extrabold text-white flex items-center gap-2", children: [
+            /* @__PURE__ */ (0, import_jsx_runtime5.jsx)(ShieldAlert, { size: 16, className: "text-amber-500" }),
+            "\u4F9B\u5E94\u94FE\u5361\u8116\u5B50/\u7F3A\u8D27\u8DDF\u8E2A (Bottlenecks)"
+          ] }),
+          /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("p", { className: "text-[10px] font-mono text-slate-500", children: "\u7D27\u7F3A\u5EA6 0-10\uFF1A\u22658 \u4E25\u91CD\u7D27\u7F3A / 6-7 \u504F\u7D27 / 4-5 \u5747\u8861 / \u22643 \u5BBD\u677E\uFF1B\u53D7\u76CA=\u6DA8\u4EF7\u4F20\u5BFC\u65B9\uFF0C\u53D7\u635F=\u6210\u672C\u627F\u538B\u65B9" })
         ] }),
-        /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("div", { className: "space-y-4", children: bottlenecks.map((item, i) => /* @__PURE__ */ (0, import_jsx_runtime5.jsxs)("div", { className: "rounded-2xl border border-amber-550/10 bg-amber-500/5 p-4 space-y-2 flex items-start gap-3", children: [
-          /* @__PURE__ */ (0, import_jsx_runtime5.jsx)(ShieldAlert, { className: "shrink-0 mt-1 text-amber-500", size: 16 }),
-          /* @__PURE__ */ (0, import_jsx_runtime5.jsxs)("div", { children: [
-            /* @__PURE__ */ (0, import_jsx_runtime5.jsxs)("div", { className: "flex items-center gap-2", children: [
-              /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("span", { className: "text-xs font-bold text-amber-200", children: item.category }),
-              /* @__PURE__ */ (0, import_jsx_runtime5.jsxs)("span", { className: "text-[9px] font-mono bg-amber-500/10 text-amber-400 px-1.5 py-0.2 rounded border border-amber-500/20", children: [
-                "\u5F71\u54CD\u6807\u7684: ",
-                Array.isArray(item.affected_tickers) ? item.affected_tickers.join(", ") : item.affected_tickers
+        /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("div", { className: "space-y-4", children: bottlenecks.map((item, i) => {
+          const t = getTightness(item.tightness);
+          const bens = item.beneficiaries ?? [];
+          const imps = item.impacted ?? [];
+          return /* @__PURE__ */ (0, import_jsx_runtime5.jsxs)("div", { className: "rounded-2xl border border-amber-550/10 bg-amber-500/5 p-4 space-y-3", children: [
+            /* @__PURE__ */ (0, import_jsx_runtime5.jsxs)("div", { className: "flex items-center justify-between gap-2 flex-wrap", children: [
+              /* @__PURE__ */ (0, import_jsx_runtime5.jsxs)("div", { className: "flex items-center gap-2", children: [
+                /* @__PURE__ */ (0, import_jsx_runtime5.jsx)(ShieldAlert, { className: "shrink-0 text-amber-500", size: 16 }),
+                /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("span", { className: "text-xs font-bold text-amber-200", children: item.category })
+              ] }),
+              /* @__PURE__ */ (0, import_jsx_runtime5.jsxs)("span", { className: `text-[10px] font-mono px-2 py-0.5 rounded border font-bold ${t.color} ${t.border}`, children: [
+                item.tightness ?? 0,
+                "/10 \xB7 ",
+                t.label
               ] })
             ] }),
-            /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("p", { className: "text-xs text-slate-400 leading-relaxed mt-1", children: item.status })
-          ] })
-        ] }, i)) })
+            /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("div", { className: "h-1 w-full rounded-full bg-slate-900 overflow-hidden border border-slate-800/60", children: /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("div", { className: `h-full rounded-full ${t.bar}`, style: { width: `${(item.tightness ?? 0) * 10}%` } }) }),
+            /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("p", { className: "text-xs text-slate-400 leading-relaxed", children: item.status }),
+            /* @__PURE__ */ (0, import_jsx_runtime5.jsxs)("div", { className: "text-[9px] font-mono text-slate-500", children: [
+              "\u5F71\u54CD\u6807\u7684: ",
+              Array.isArray(item.affected_tickers) ? item.affected_tickers.join(", ") : item.affected_tickers
+            ] }),
+            (bens.length > 0 || imps.length > 0) && /* @__PURE__ */ (0, import_jsx_runtime5.jsxs)("div", { className: "flex flex-wrap gap-1.5 text-[9px] font-mono", children: [
+              bens.map((b, bi) => /* @__PURE__ */ (0, import_jsx_runtime5.jsxs)("span", { className: "px-1.5 py-0.5 rounded border border-emerald-500/30 bg-emerald-500/10 text-emerald-400", children: [
+                "\u53D7\u76CA ",
+                b
+              ] }, bi)),
+              imps.map((b, bi) => /* @__PURE__ */ (0, import_jsx_runtime5.jsxs)("span", { className: "px-1.5 py-0.5 rounded border border-rose-500/30 bg-rose-500/10 text-rose-400", children: [
+                "\u53D7\u635F ",
+                b
+              ] }, bi))
+            ] })
+          ] }, i);
+        }) })
       ] }),
       hasValueChain && /* @__PURE__ */ (0, import_jsx_runtime5.jsxs)("div", { className: "rounded-3xl border border-slate-800 bg-slate-900/40 p-6 md:p-8 space-y-6 shadow-md", children: [
         /* @__PURE__ */ (0, import_jsx_runtime5.jsxs)("h3", { className: "text-base font-extrabold text-white flex items-center gap-2", children: [
